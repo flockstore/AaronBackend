@@ -1,0 +1,9 @@
+{
+  "extends": "@coara/nest-tslint/tslint-config",
+  "linterOptions": {
+    "exclude": ["**/some_folder/**"]
+  },
+  "rules": {
+    "indent": [true, "spaces", 4]
+  }
+}
