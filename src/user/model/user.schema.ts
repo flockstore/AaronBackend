@@ -24,7 +24,6 @@ export class User {
     @Prop({required: true, unique: true, validate: validateEmail})
     email: string;
 
-
     @IsNotEmpty()
     @Prop({required: true})
     password: string;

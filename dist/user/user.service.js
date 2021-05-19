@@ -25,6 +25,18 @@ let UserService = class UserService {
     create(user) {
         return rxjs_1.from(this.userModel.create(user));
     }
+    get(id) {
+        return rxjs_1.from(this.userModel.findById(id));
+    }
+    list(query, options) {
+        return rxjs_1.from(this.userModel.find(query || {}, options || {}));
+    }
+    update(id, user) {
+        return rxjs_1.from(this.userModel.findByIdAndUpdate(id, user));
+    }
+    delete(id) {
+        return rxjs_1.from(this.userModel.findByIdAndDelete(id));
+    }
 };
 UserService = __decorate([
     common_1.Injectable(),
