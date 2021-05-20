@@ -23,4 +23,8 @@ export class AppConfigService {
         return this.configService.get<string>('app.env');
     }
 
+    get secret(): string {
+        return this.configService.get<string>('app.secret');
+    }
+
 }

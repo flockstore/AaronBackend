@@ -12,7 +12,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.UserSchema = exports.UserPartial = exports.User = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = require("mongoose");
-const class_validator_1 = require("class-validator");
 const partial_model_1 = require("../../../common/model/partial-model");
 const validateEmail = function (email) {
     const re = /^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/;
@@ -21,25 +20,25 @@ const validateEmail = function (email) {
 let User = class User extends mongoose_2.Document {
 };
 __decorate([
-    class_validator_1.IsNotEmpty(),
     mongoose_1.Prop({ required: true }),
     __metadata("design:type", String)
 ], User.prototype, "name", void 0);
 __decorate([
-    class_validator_1.IsNotEmpty(),
     mongoose_1.Prop({ required: true }),
     __metadata("design:type", String)
 ], User.prototype, "surname", void 0);
 __decorate([
-    class_validator_1.IsEmail(),
     mongoose_1.Prop({ required: true, unique: true, validate: validateEmail }),
     __metadata("design:type", String)
 ], User.prototype, "email", void 0);
 __decorate([
-    class_validator_1.IsNotEmpty(),
-    mongoose_1.Prop({ required: true }),
+    mongoose_1.Prop({ required: false }),
     __metadata("design:type", String)
 ], User.prototype, "password", void 0);
+__decorate([
+    mongoose_1.Prop({ required: false }),
+    __metadata("design:type", String)
+], User.prototype, "salt", void 0);
 User = __decorate([
     mongoose_1.Schema()
 ], User);

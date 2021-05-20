@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ModelService = void 0;
 const rxjs_1 = require("rxjs");
+const operators_1 = require("rxjs/operators");
 class ModelService {
     constructor(model) {
         this.model = model;
@@ -19,7 +20,7 @@ class ModelService {
         return rxjs_1.from(this.model.findByIdAndUpdate(id, update, { new: true }));
     }
     delete(id) {
-        return rxjs_1.from(this.model.findByIdAndDelete(id));
+        return rxjs_1.from(this.model.findByIdAndDelete(id)).pipe(operators_1.map(value => true));
     }
 }
 exports.ModelService = ModelService;

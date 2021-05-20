@@ -10,16 +10,19 @@ exports.GlobalConfigModule = void 0;
 const common_1 = require("@nestjs/common");
 const config_module_1 = require("./app/config.module");
 const config_module_2 = require("./mongo/config.module");
+const config_module_3 = require("./auth/config.module");
 let GlobalConfigModule = class GlobalConfigModule {
 };
 GlobalConfigModule = __decorate([
     common_1.Module({
         imports: [
             config_module_1.AppConfigModule,
+            config_module_3.AuthConfigModule,
             config_module_2.MongoConfigModule
         ],
         exports: [
             config_module_1.AppConfigModule,
+            config_module_3.AuthConfigModule,
             config_module_2.MongoConfigModule
         ]
     })

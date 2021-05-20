@@ -6,6 +6,7 @@ export declare class User extends Document {
     surname: string;
     email: string;
     password: string;
+    salt: string;
 }
 export declare class UserPartial extends PartialModel {
 }

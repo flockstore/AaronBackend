@@ -8,5 +8,5 @@ export declare class UserController {
     create(user: UserCreate): Observable<UserDocument>;
     find(id: string): Observable<UserDocument>;
     update(id: string, user: UserDocument): Observable<UserDocument>;
-    delete(): void;
+    delete(id: string): Observable<boolean>;
 }

@@ -5,6 +5,7 @@ import { UserModule } from './model/user/user.module';
 import {GlobalConfigModule} from "./config/config.module";
 import {ProviderModule} from "./provider/provider.module";
 import {CommonModule} from "./common/common.module";
+import { AuthModule } from './auth/auth.module';
 
 
 @Module({
@@ -12,7 +13,8 @@ import {CommonModule} from "./common/common.module";
       GlobalConfigModule,
       ProviderModule,
       CommonModule,
-      UserModule
+      UserModule,
+      AuthModule
   ],
   controllers: [AppController],
   providers: [AppService],

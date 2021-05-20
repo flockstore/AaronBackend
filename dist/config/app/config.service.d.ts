@@ -5,4 +5,5 @@ export declare class AppConfigService {
     get port(): number;
     get url(): string;
     get env(): string;
+    get secret(): string;
 }

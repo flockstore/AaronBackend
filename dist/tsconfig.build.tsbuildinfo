@@ -1531,6 +1531,546 @@
         "signature": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f",
         "affectsGlobalScope": false
       },
+      "../src/common/model/partial-model.ts": {
+        "version": "6fb9926762408236beb953b76cb09fb4f0f0dcfa89103722d689aecfea0174e7",
+        "signature": "493b1eb85fd076363e8b414ba75830483155c8e48b5db8efe744fc5f9bc9fd40",
+        "affectsGlobalScope": false
+      },
+      "../src/model/user/entities/user.entity.ts": {
+        "version": "34e7dbcccf7dc5c15e0b7af4d0a5d47df773f081eaa62dcc47bda79e0ac07775",
+        "signature": "e9c3b76f9b78b16f57ec2fd994e32c53ec23477c7fd1eb293db880938a4ec2ba",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/audit.d.ts": {
+        "version": "fe936a68d281ccc2060f8c3de69a0682a807c8fd1b8abccc0a91b83195ca0f94",
+        "signature": "fe936a68d281ccc2060f8c3de69a0682a807c8fd1b8abccc0a91b83195ca0f94",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/audittime.d.ts": {
+        "version": "2b04ef3fd9be3b468a301f72c196442b86cd3b40ddf275d2b228fe2beb599c9a",
+        "signature": "2b04ef3fd9be3b468a301f72c196442b86cd3b40ddf275d2b228fe2beb599c9a",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/buffer.d.ts": {
+        "version": "d129e624947eeff1010fc28ae2c2bbf8c68b4b88c188a04a1eca4478295f5bf5",
+        "signature": "d129e624947eeff1010fc28ae2c2bbf8c68b4b88c188a04a1eca4478295f5bf5",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/buffercount.d.ts": {
+        "version": "94b7ea249855720c710a695109c586fcb728bcedb26b4ceb402cc8c70868eeba",
+        "signature": "94b7ea249855720c710a695109c586fcb728bcedb26b4ceb402cc8c70868eeba",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/buffertime.d.ts": {
+        "version": "e59d36b7b6e8ba2dd36d032a5f5c279d2460968c8b4e691ca384f118fb09b52a",
+        "signature": "e59d36b7b6e8ba2dd36d032a5f5c279d2460968c8b4e691ca384f118fb09b52a",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/buffertoggle.d.ts": {
+        "version": "4c6534725143687517f291840189289f76a718d0962e3fab076d61fd428174c9",
+        "signature": "4c6534725143687517f291840189289f76a718d0962e3fab076d61fd428174c9",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/bufferwhen.d.ts": {
+        "version": "fb941c28064e71ad9f5d552cc30eee727867522ca7e3138bc0c769366cf12058",
+        "signature": "fb941c28064e71ad9f5d552cc30eee727867522ca7e3138bc0c769366cf12058",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/catcherror.d.ts": {
+        "version": "89e061244da3fc21b7330f4bd32f47c1813dd4d7f1dc3d0883d88943f035b993",
+        "signature": "89e061244da3fc21b7330f4bd32f47c1813dd4d7f1dc3d0883d88943f035b993",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/combineall.d.ts": {
+        "version": "07bd2baf95d48b7dbc6cb5b24e13b83b5ec9657ceb0e122f9665057d2af03361",
+        "signature": "07bd2baf95d48b7dbc6cb5b24e13b83b5ec9657ceb0e122f9665057d2af03361",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/combinelatest.d.ts": {
+        "version": "b63ce995a548932a991700c7e677099d6ed85a7999b879372739d51dfbdee1fc",
+        "signature": "b63ce995a548932a991700c7e677099d6ed85a7999b879372739d51dfbdee1fc",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/concat.d.ts": {
+        "version": "81a46bb692ee40afbac3d5fdc2c834c402fc5a1102ee3d25918191f39d65935a",
+        "signature": "81a46bb692ee40afbac3d5fdc2c834c402fc5a1102ee3d25918191f39d65935a",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/concatall.d.ts": {
+        "version": "14a7e2a08ee486a88fd9746dfd988cf473a122ae518a24e2503a15dcd10bdf10",
+        "signature": "14a7e2a08ee486a88fd9746dfd988cf473a122ae518a24e2503a15dcd10bdf10",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/concatmap.d.ts": {
+        "version": "3480def9cb4acd4fc8878d9d3a5fd5a585b358eb25ae31b5ecbd14085b43fc5a",
+        "signature": "3480def9cb4acd4fc8878d9d3a5fd5a585b358eb25ae31b5ecbd14085b43fc5a",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/concatmapto.d.ts": {
+        "version": "ee317ef4a4ff674d77d6db14ed12236e1ae879184f7d50ff801609dc22530015",
+        "signature": "ee317ef4a4ff674d77d6db14ed12236e1ae879184f7d50ff801609dc22530015",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/count.d.ts": {
+        "version": "7ecd499836bd10605f54fb8d4c88a8fcd996c35be9b0bb5eaea9e1e66af8b8f2",
+        "signature": "7ecd499836bd10605f54fb8d4c88a8fcd996c35be9b0bb5eaea9e1e66af8b8f2",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/debounce.d.ts": {
+        "version": "338f6a3a5bf7ba0239c4f4e2aeac04d217c8b84d78e502745898fdac1aca4f61",
+        "signature": "338f6a3a5bf7ba0239c4f4e2aeac04d217c8b84d78e502745898fdac1aca4f61",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/debouncetime.d.ts": {
+        "version": "a38464c132d7a81bae689269621d9384668226f175b1f460d2bd3faf38bd103a",
+        "signature": "a38464c132d7a81bae689269621d9384668226f175b1f460d2bd3faf38bd103a",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/defaultifempty.d.ts": {
+        "version": "94d0255f8835da5b6e58b2c43c461ef1dcba345a44ad7a2d688c64b90a94ab9e",
+        "signature": "94d0255f8835da5b6e58b2c43c461ef1dcba345a44ad7a2d688c64b90a94ab9e",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/delay.d.ts": {
+        "version": "c1ee41df353b471e09c7b8b077d3f457dcbbb020a3970ac4b7eecefb15c92b29",
+        "signature": "c1ee41df353b471e09c7b8b077d3f457dcbbb020a3970ac4b7eecefb15c92b29",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/delaywhen.d.ts": {
+        "version": "4b58f42e8c058f8326405bfdea74bd1e38f1ee1782b2280248ac653df972ffab",
+        "signature": "4b58f42e8c058f8326405bfdea74bd1e38f1ee1782b2280248ac653df972ffab",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/dematerialize.d.ts": {
+        "version": "2f73eb263689362609bd9a2beb20e128f5237933553fa6d6d212ce83c2a7057d",
+        "signature": "2f73eb263689362609bd9a2beb20e128f5237933553fa6d6d212ce83c2a7057d",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/innersubscribe.d.ts": {
+        "version": "c4b9ab92a855ef10587607317b28312b70d94bef20b4df914ec456859e0fcb9c",
+        "signature": "c4b9ab92a855ef10587607317b28312b70d94bef20b4df914ec456859e0fcb9c",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/distinct.d.ts": {
+        "version": "d3adcb55318426dd1657e5c220af116f34d1d4e9395d4e8819f3aa4c0d33b080",
+        "signature": "d3adcb55318426dd1657e5c220af116f34d1d4e9395d4e8819f3aa4c0d33b080",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/distinctuntilchanged.d.ts": {
+        "version": "f773f743fa62974b10eff98ee4856135d055e437abafa9ececb9f702348faa5f",
+        "signature": "f773f743fa62974b10eff98ee4856135d055e437abafa9ececb9f702348faa5f",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/distinctuntilkeychanged.d.ts": {
+        "version": "6cf42a4f3cfec648545925d43afaa8bb364ac10a839ffed88249da109361b275",
+        "signature": "6cf42a4f3cfec648545925d43afaa8bb364ac10a839ffed88249da109361b275",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/elementat.d.ts": {
+        "version": "bc773c63d03bee4607b8cc0d195930e8e008ab832aec16594b283302646312e4",
+        "signature": "bc773c63d03bee4607b8cc0d195930e8e008ab832aec16594b283302646312e4",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/endwith.d.ts": {
+        "version": "4fa52e41c21594ef92e1773395bcc775b7f935506c6cea20dbca2c8a4b62a78a",
+        "signature": "4fa52e41c21594ef92e1773395bcc775b7f935506c6cea20dbca2c8a4b62a78a",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/every.d.ts": {
+        "version": "a3f29291dcfc8eac21bb961bd3e28a65a3696d83f02d6690c03404d08347aadd",
+        "signature": "a3f29291dcfc8eac21bb961bd3e28a65a3696d83f02d6690c03404d08347aadd",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/exhaust.d.ts": {
+        "version": "7e196a2d147a025189a0dbfd5b2884144442d9306aade72ac756c6d15ce44f01",
+        "signature": "7e196a2d147a025189a0dbfd5b2884144442d9306aade72ac756c6d15ce44f01",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/exhaustmap.d.ts": {
+        "version": "c4c368b0b139240b0efc44b98afb9bad864aaeb23b5b05ed54c3b8fcfa7788b9",
+        "signature": "c4c368b0b139240b0efc44b98afb9bad864aaeb23b5b05ed54c3b8fcfa7788b9",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/expand.d.ts": {
+        "version": "42c1f74ac5ddd0a3c63380973f1b75be13c10d8239aa5ce97d2024fa87bed65c",
+        "signature": "42c1f74ac5ddd0a3c63380973f1b75be13c10d8239aa5ce97d2024fa87bed65c",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/filter.d.ts": {
+        "version": "1c25b51b3d26010962b85c2020de84d4b16da0b18ea6b9e46f731066becf2fde",
+        "signature": "1c25b51b3d26010962b85c2020de84d4b16da0b18ea6b9e46f731066becf2fde",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/finalize.d.ts": {
+        "version": "22d35aa24b765208ea8cb637ac1ae52b1a8251fcd6902609ff9f8da8d5ba39ec",
+        "signature": "22d35aa24b765208ea8cb637ac1ae52b1a8251fcd6902609ff9f8da8d5ba39ec",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/find.d.ts": {
+        "version": "ec6f1b6ea4dea29f45484e99831f471da38c175febff3d3e0703320e84fab4bd",
+        "signature": "ec6f1b6ea4dea29f45484e99831f471da38c175febff3d3e0703320e84fab4bd",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/findindex.d.ts": {
+        "version": "571f401c7e7762c8af696b7fc3039138c465475a5bdff2455d19f6f20d21a04d",
+        "signature": "571f401c7e7762c8af696b7fc3039138c465475a5bdff2455d19f6f20d21a04d",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/first.d.ts": {
+        "version": "8d7e34101de761176a8af96b0dd3e8a4e38946c05160c8b61865faec0542fd0f",
+        "signature": "8d7e34101de761176a8af96b0dd3e8a4e38946c05160c8b61865faec0542fd0f",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/ignoreelements.d.ts": {
+        "version": "6afb806b7b32ee290623e5e28fef6331e7b257fc629ac4298c75a259d6a0d12b",
+        "signature": "6afb806b7b32ee290623e5e28fef6331e7b257fc629ac4298c75a259d6a0d12b",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/isempty.d.ts": {
+        "version": "5ba43139c886c3d57f2c7a31b7a5fa2f0dd1f9da836b1b7e6cfbacdcd510ff77",
+        "signature": "5ba43139c886c3d57f2c7a31b7a5fa2f0dd1f9da836b1b7e6cfbacdcd510ff77",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/last.d.ts": {
+        "version": "f3a9bdcf6d80e938918f8da065456ced3d06c6feaf0a7d238facf56c34ab63a7",
+        "signature": "f3a9bdcf6d80e938918f8da065456ced3d06c6feaf0a7d238facf56c34ab63a7",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/map.d.ts": {
+        "version": "18cb04ba74ce655a2d4987c4c13af903e8769b18a62f027c42ffff966ab7ec28",
+        "signature": "18cb04ba74ce655a2d4987c4c13af903e8769b18a62f027c42ffff966ab7ec28",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/mapto.d.ts": {
+        "version": "b2936d46b233beb8dcfb6197a7affd62a15c4fb537bc9078691d526672b6100e",
+        "signature": "b2936d46b233beb8dcfb6197a7affd62a15c4fb537bc9078691d526672b6100e",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/materialize.d.ts": {
+        "version": "1bf42e9bb6118d86c788e73a5557bbefe8ade252d73acfb5c3334830844c853e",
+        "signature": "1bf42e9bb6118d86c788e73a5557bbefe8ade252d73acfb5c3334830844c853e",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/max.d.ts": {
+        "version": "e6ec451de20b5fb79e370b6349ccbbcb14b956795039f2fb2d8b41de788660e8",
+        "signature": "e6ec451de20b5fb79e370b6349ccbbcb14b956795039f2fb2d8b41de788660e8",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/merge.d.ts": {
+        "version": "3c27a0638843e7d52bf65c15f4ab2cf14bf59283f33d42e5a1c3ade9c8797113",
+        "signature": "3c27a0638843e7d52bf65c15f4ab2cf14bf59283f33d42e5a1c3ade9c8797113",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/mergeall.d.ts": {
+        "version": "a83bba4791fa72490989525be6a09612579e52372af3986894313dd95f02440c",
+        "signature": "a83bba4791fa72490989525be6a09612579e52372af3986894313dd95f02440c",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/mergemap.d.ts": {
+        "version": "5fcf737f56559135e12017d08df4954a742e1e0e34546571a103b54148cbf26d",
+        "signature": "5fcf737f56559135e12017d08df4954a742e1e0e34546571a103b54148cbf26d",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/mergemapto.d.ts": {
+        "version": "75383d8bc4c00102ed03ffb72b4e7032cdaa5d7d19304cfcde9d30c2c4e4b6a1",
+        "signature": "75383d8bc4c00102ed03ffb72b4e7032cdaa5d7d19304cfcde9d30c2c4e4b6a1",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/mergescan.d.ts": {
+        "version": "266b4197b1e778d8bd04f87d9d9eab4f07db9de8dca7a0cbee13a82dd697877d",
+        "signature": "266b4197b1e778d8bd04f87d9d9eab4f07db9de8dca7a0cbee13a82dd697877d",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/min.d.ts": {
+        "version": "d0d225f3d20e063e76f22e9ff41751393f52d532b0e2c090202c148f620ca8a5",
+        "signature": "d0d225f3d20e063e76f22e9ff41751393f52d532b0e2c090202c148f620ca8a5",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/multicast.d.ts": {
+        "version": "70918fb79668cba2152739092fd9b8d6aa526f7ab16742d255a75d3dc5f552a1",
+        "signature": "70918fb79668cba2152739092fd9b8d6aa526f7ab16742d255a75d3dc5f552a1",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/observeon.d.ts": {
+        "version": "3ef3a13529463ae5a9f71e32508d3038273dac88de79da10c69ca4d39de7fe34",
+        "signature": "3ef3a13529463ae5a9f71e32508d3038273dac88de79da10c69ca4d39de7fe34",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/onerrorresumenext.d.ts": {
+        "version": "c84bc8b7d93a6f87b53f0913dffd692b013e2ec29c1025a63c16f2a28ca6c949",
+        "signature": "c84bc8b7d93a6f87b53f0913dffd692b013e2ec29c1025a63c16f2a28ca6c949",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/pairwise.d.ts": {
+        "version": "9bab019bed0382a5499940ac3cd414bbee242d14e3fc0f2cfa1149a10547fd2c",
+        "signature": "9bab019bed0382a5499940ac3cd414bbee242d14e3fc0f2cfa1149a10547fd2c",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/partition.d.ts": {
+        "version": "2f3bfb8b2968e8e82c204feaca4f2ed3030b886fa8500a271d9df2ed4c59dcf1",
+        "signature": "2f3bfb8b2968e8e82c204feaca4f2ed3030b886fa8500a271d9df2ed4c59dcf1",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/pluck.d.ts": {
+        "version": "13e1a28078841ebc6275499cb1314bedd425998b719949ea6ca6f4072a9421cf",
+        "signature": "13e1a28078841ebc6275499cb1314bedd425998b719949ea6ca6f4072a9421cf",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/publish.d.ts": {
+        "version": "d6c4a53f7630b1c489db74d29d97248bd64dd85175eb07a43027baefccac0502",
+        "signature": "d6c4a53f7630b1c489db74d29d97248bd64dd85175eb07a43027baefccac0502",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/publishbehavior.d.ts": {
+        "version": "251e3cde428b2d3eb8d515b1fae236469f76921e4b84bc7971fcd7f7a0ba97d2",
+        "signature": "251e3cde428b2d3eb8d515b1fae236469f76921e4b84bc7971fcd7f7a0ba97d2",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/publishlast.d.ts": {
+        "version": "0e5beb987094cdd78231e73b88da51f4305751e9d3831642b945adbb0ba35641",
+        "signature": "0e5beb987094cdd78231e73b88da51f4305751e9d3831642b945adbb0ba35641",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/publishreplay.d.ts": {
+        "version": "3d2135ac5b8b5832264990bf9c4f9bf065ac790d1fdcd8a201d182fefd067578",
+        "signature": "3d2135ac5b8b5832264990bf9c4f9bf065ac790d1fdcd8a201d182fefd067578",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/race.d.ts": {
+        "version": "7d29ec8698e7da1c7021455e7e19290c4029a039f214ddea1501ce3a31420e4e",
+        "signature": "7d29ec8698e7da1c7021455e7e19290c4029a039f214ddea1501ce3a31420e4e",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/reduce.d.ts": {
+        "version": "293e398e8b8308a6ab09d45aea6390df7782f64ed9fa410cecd507c212cd5e2c",
+        "signature": "293e398e8b8308a6ab09d45aea6390df7782f64ed9fa410cecd507c212cd5e2c",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/repeat.d.ts": {
+        "version": "c157032b7f1c1027d8adb59e54c51776c874740e89922578ea451f92e07884cc",
+        "signature": "c157032b7f1c1027d8adb59e54c51776c874740e89922578ea451f92e07884cc",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/repeatwhen.d.ts": {
+        "version": "f0d5e8f2fd30950ec0c446fcdab0caad38d93c2a224418ded899845e1249bdbb",
+        "signature": "f0d5e8f2fd30950ec0c446fcdab0caad38d93c2a224418ded899845e1249bdbb",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/retry.d.ts": {
+        "version": "2c924e8de0b69940602e43e572bfbdae86e0df44b13056ee1f74cdbc97b1527f",
+        "signature": "2c924e8de0b69940602e43e572bfbdae86e0df44b13056ee1f74cdbc97b1527f",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/retrywhen.d.ts": {
+        "version": "17864c2191f968c889ec449fe28848b0acd95b421d60a6266e68b9cc20c8b600",
+        "signature": "17864c2191f968c889ec449fe28848b0acd95b421d60a6266e68b9cc20c8b600",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/refcount.d.ts": {
+        "version": "46da5f627dba39e128c8b18e63788db5363fc56f9b8ab3bae2c834e7182af94c",
+        "signature": "46da5f627dba39e128c8b18e63788db5363fc56f9b8ab3bae2c834e7182af94c",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/sample.d.ts": {
+        "version": "524333ed3cac525c792bf3bf1bbbae3fadaf4a02d6346561e8e2291b49b2739d",
+        "signature": "524333ed3cac525c792bf3bf1bbbae3fadaf4a02d6346561e8e2291b49b2739d",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/sampletime.d.ts": {
+        "version": "c6dc775defa58432465c88c7cfcab52974b93f8fc344ac2a848a6baa8667f5de",
+        "signature": "c6dc775defa58432465c88c7cfcab52974b93f8fc344ac2a848a6baa8667f5de",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/scan.d.ts": {
+        "version": "04d98d047371661ca38e70ccdcdaef3487f27c65e243972ed43ee2fb30cf4677",
+        "signature": "04d98d047371661ca38e70ccdcdaef3487f27c65e243972ed43ee2fb30cf4677",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/sequenceequal.d.ts": {
+        "version": "057210af817106d0c11637613feb80efe81597e80c09826e3d586d887ef9c7ce",
+        "signature": "057210af817106d0c11637613feb80efe81597e80c09826e3d586d887ef9c7ce",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/share.d.ts": {
+        "version": "34445fc37bcf4157e3db40ccbd7e585ea5cd78575e57ca40de40c7bcc250b242",
+        "signature": "34445fc37bcf4157e3db40ccbd7e585ea5cd78575e57ca40de40c7bcc250b242",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/sharereplay.d.ts": {
+        "version": "7e0801db65552d2ba7902b6966c11a8e42a4b25cffc07944f9d21df7ffa5236e",
+        "signature": "7e0801db65552d2ba7902b6966c11a8e42a4b25cffc07944f9d21df7ffa5236e",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/single.d.ts": {
+        "version": "ebc84be7fec5d9282a698fb77d74e5e5e8d4ad61c43c6e27d1f9b1313a193419",
+        "signature": "ebc84be7fec5d9282a698fb77d74e5e5e8d4ad61c43c6e27d1f9b1313a193419",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/skip.d.ts": {
+        "version": "7777fee0b73dbf1604afc30bbdad7f3372f91f56c80980e65e6954a8bfdd6369",
+        "signature": "7777fee0b73dbf1604afc30bbdad7f3372f91f56c80980e65e6954a8bfdd6369",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/skiplast.d.ts": {
+        "version": "2e0d41d964fb93d4d79789958f11cb3d46cdca3fdf192ec79ae1bdb1b3b63961",
+        "signature": "2e0d41d964fb93d4d79789958f11cb3d46cdca3fdf192ec79ae1bdb1b3b63961",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/skipuntil.d.ts": {
+        "version": "4db7173a18a6af913b07b7b11e94de88d11ac4271ab9dc85d96492461cbd734a",
+        "signature": "4db7173a18a6af913b07b7b11e94de88d11ac4271ab9dc85d96492461cbd734a",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/skipwhile.d.ts": {
+        "version": "0e899f1046bbab07cbda4a714fc45b9aa1356cedfc301e92eafccfddec029a84",
+        "signature": "0e899f1046bbab07cbda4a714fc45b9aa1356cedfc301e92eafccfddec029a84",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/startwith.d.ts": {
+        "version": "99398c11de737c08ca12e46f825433719c2583f5c5ad79d07d85a50703fab993",
+        "signature": "99398c11de737c08ca12e46f825433719c2583f5c5ad79d07d85a50703fab993",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/subscribeon.d.ts": {
+        "version": "68eac6e1e2458dbf974d4448f4799fc996f79c8a1d730ef70770a10d2ac58ebd",
+        "signature": "68eac6e1e2458dbf974d4448f4799fc996f79c8a1d730ef70770a10d2ac58ebd",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/switchall.d.ts": {
+        "version": "29b76811be6e0ce8cceb0a286f3e41a996ebd89fafe327d59660e4ad4add61dd",
+        "signature": "29b76811be6e0ce8cceb0a286f3e41a996ebd89fafe327d59660e4ad4add61dd",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/switchmap.d.ts": {
+        "version": "3cc189d1560724be6c605a35aa970560b09725878fcb3db88b6efe633e57d42b",
+        "signature": "3cc189d1560724be6c605a35aa970560b09725878fcb3db88b6efe633e57d42b",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/switchmapto.d.ts": {
+        "version": "9501a95be053049b70d600fe071d2693b9854e45c6244e82bd5000f2187994a7",
+        "signature": "9501a95be053049b70d600fe071d2693b9854e45c6244e82bd5000f2187994a7",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/take.d.ts": {
+        "version": "a19853c5844ad6aa07cfafe35e9d06d293e095778f0bc3056b7ae4d9c18c683e",
+        "signature": "a19853c5844ad6aa07cfafe35e9d06d293e095778f0bc3056b7ae4d9c18c683e",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/takelast.d.ts": {
+        "version": "1b2c1ed7f1ab48de8e6dad638911a303468c33f8fb348ca2eacae20695669145",
+        "signature": "1b2c1ed7f1ab48de8e6dad638911a303468c33f8fb348ca2eacae20695669145",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/takeuntil.d.ts": {
+        "version": "fd6f2017a1f72092e88f4497f0ea034918fcfcbd33d03d1e8a44ac19adb8fd8d",
+        "signature": "fd6f2017a1f72092e88f4497f0ea034918fcfcbd33d03d1e8a44ac19adb8fd8d",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/takewhile.d.ts": {
+        "version": "214248208c27427623fc6462fceabd241a1dd19d8aa5bb75c2f0e5767e91f5e3",
+        "signature": "214248208c27427623fc6462fceabd241a1dd19d8aa5bb75c2f0e5767e91f5e3",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/tap.d.ts": {
+        "version": "ea36efec9fe424831dc9c42efd820d3db5c2d28c00ff8608ec9d25f55795c9de",
+        "signature": "ea36efec9fe424831dc9c42efd820d3db5c2d28c00ff8608ec9d25f55795c9de",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/throttle.d.ts": {
+        "version": "fd34e1c778435f973c182b7132782f3cf7a194b522f1ea09978c37d8fc0acd85",
+        "signature": "fd34e1c778435f973c182b7132782f3cf7a194b522f1ea09978c37d8fc0acd85",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/throttletime.d.ts": {
+        "version": "14903c96a1e9fdc7057e6ac5887859e9e40c8f32a4bd96a79dab42ccea83c9bb",
+        "signature": "14903c96a1e9fdc7057e6ac5887859e9e40c8f32a4bd96a79dab42ccea83c9bb",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/throwifempty.d.ts": {
+        "version": "0be995fa132ab206c7082feb314fe980b0810a20a8ce9f4c62097774357d5084",
+        "signature": "0be995fa132ab206c7082feb314fe980b0810a20a8ce9f4c62097774357d5084",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/timeinterval.d.ts": {
+        "version": "12d982374f5fe9b7dab1c5057353142096bf2645bf35843ba25fa3b8507d71e8",
+        "signature": "12d982374f5fe9b7dab1c5057353142096bf2645bf35843ba25fa3b8507d71e8",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/timeout.d.ts": {
+        "version": "a7f2d46aefbf412cddf56887687b907d8f978467215a0c03947f674187161530",
+        "signature": "a7f2d46aefbf412cddf56887687b907d8f978467215a0c03947f674187161530",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/timeoutwith.d.ts": {
+        "version": "312d803e3a4a8fcaf50557feacbc99b27d3893940ced758979a17eeb8374ca06",
+        "signature": "312d803e3a4a8fcaf50557feacbc99b27d3893940ced758979a17eeb8374ca06",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/timestamp.d.ts": {
+        "version": "5f2e3c41a86298505ded2ad2d598247b789167031d67a8d178601d3165518537",
+        "signature": "5f2e3c41a86298505ded2ad2d598247b789167031d67a8d178601d3165518537",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/toarray.d.ts": {
+        "version": "e91d36aa7649a5ddda296019f47e05cf6555907bae77223c4c95f2c79769edda",
+        "signature": "e91d36aa7649a5ddda296019f47e05cf6555907bae77223c4c95f2c79769edda",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/window.d.ts": {
+        "version": "25e3471bd16a78541a0a4ef9bb8b77abeab3cfc47334e012b0ccdb427bda4542",
+        "signature": "25e3471bd16a78541a0a4ef9bb8b77abeab3cfc47334e012b0ccdb427bda4542",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/windowcount.d.ts": {
+        "version": "020fe4b9d25a541f8887a672b77a9d58352ac4027c29e96898254c6b299ccbc7",
+        "signature": "020fe4b9d25a541f8887a672b77a9d58352ac4027c29e96898254c6b299ccbc7",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/windowtime.d.ts": {
+        "version": "0b0a7c93406a9ee05723a5db12ad2c6d78c9fe5e88254607b26ea6402d404ab0",
+        "signature": "0b0a7c93406a9ee05723a5db12ad2c6d78c9fe5e88254607b26ea6402d404ab0",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/windowtoggle.d.ts": {
+        "version": "377b7609a77de383f3d145303e002833eba77804962a6468a7bc53adeac0f89a",
+        "signature": "377b7609a77de383f3d145303e002833eba77804962a6468a7bc53adeac0f89a",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/windowwhen.d.ts": {
+        "version": "5b36ea6c3c58a987980aefad618a6673f61d2008f66e10b8d15f3ebafd969009",
+        "signature": "5b36ea6c3c58a987980aefad618a6673f61d2008f66e10b8d15f3ebafd969009",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/withlatestfrom.d.ts": {
+        "version": "28d01090136fcfd6db13d00e014ce2254cce0665c3da239295e2d7e336742c07",
+        "signature": "28d01090136fcfd6db13d00e014ce2254cce0665c3da239295e2d7e336742c07",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/zip.d.ts": {
+        "version": "aec08a458ce9ea11c13f74badae0aeaf8c292d5737b56cd06c199ce8fbe805f7",
+        "signature": "aec08a458ce9ea11c13f74badae0aeaf8c292d5737b56cd06c199ce8fbe805f7",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/zipall.d.ts": {
+        "version": "452fcf2c69908d1946d2f02cc975f450b2f70585eddab63dcf70e050e37b30ac",
+        "signature": "452fcf2c69908d1946d2f02cc975f450b2f70585eddab63dcf70e050e37b30ac",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/operators/index.d.ts": {
+        "version": "e80599bf4ef4579f28b0e623a64064a512330584dde58875b498ff8da7e347f7",
+        "signature": "e80599bf4ef4579f28b0e623a64064a512330584dde58875b498ff8da7e347f7",
+        "affectsGlobalScope": false
+      },
+      "../src/common/service/model.service.ts": {
+        "version": "14fa84ac7ed34e1f88f24373345ca39e49dd15a9515dde82cb2da2cc105e5ede",
+        "signature": "0f773cd708de5ca55fae41f2015e2d7cd392adae4d5e4b816f21ca2c9d6ff5c7",
+        "affectsGlobalScope": false
+      },
+      "../src/model/user/user.service.ts": {
+        "version": "60ef510ac0ec459bba0ab6c84bbecff1bb93618cd710d16036b66ce61e4422e5",
+        "signature": "3ad45e361cdc00be4e2cca8e0b68876b1b1df5dff6a5a2035107f3d71a175843",
+        "affectsGlobalScope": false
+      },
       "../node_modules/class-validator/types/validation/validationerror.d.ts": {
         "version": "e69d0b59db23f59172cb087ee44a71438f809bd214d4f4105abd6090b341cbdc",
         "signature": "e69d0b59db23f59172cb087ee44a71438f809bd214d4f4105abd6090b341cbdc",
@@ -2156,38 +2696,18 @@
         "signature": "441104b363d80fe57eb79a50d495e0b7e3ebeb45a5f0d1a4067d71ef75e8fbfa",
         "affectsGlobalScope": false
       },
-      "../src/common/model/partial-model.ts": {
-        "version": "6fb9926762408236beb953b76cb09fb4f0f0dcfa89103722d689aecfea0174e7",
-        "signature": "493b1eb85fd076363e8b414ba75830483155c8e48b5db8efe744fc5f9bc9fd40",
-        "affectsGlobalScope": false
-      },
-      "../src/model/user/entities/user.entity.ts": {
-        "version": "9a5f4c0db9ba975167236239dc5c2816de46164320fbfea66b5bd669f6e9482e",
-        "signature": "4259812eb7d5b88531985eceb1faec0368ecc9605e1b1237d4673469ed5e883a",
-        "affectsGlobalScope": false
-      },
-      "../src/common/service/model.service.ts": {
-        "version": "51d06de7817263f1027902840e6037f25b25e2e18f7002b16f97e25f7ae0b104",
-        "signature": "02cd320f40dc49b525ccec95be11f3b91eb26cfc5900105a0f183a9f78e6bc08",
-        "affectsGlobalScope": false
-      },
       "../src/model/user/entities/user-create.dto.ts": {
-        "version": "0ce7b4d8148023930e53b3b8e04be3da65382e48eaca41d1ebf68457b56efd2a",
+        "version": "72ea6f09221e67443c0d59d713704189f4a6e0b41c5fd3dbedea7777c77442e6",
         "signature": "557f27da4fd696e7844bda26472b74ccbf1a82644ece012a0e27ba6889a7ce06",
         "affectsGlobalScope": false
       },
-      "../src/model/user/user.service.ts": {
-        "version": "0510bec0ebeebb5ab22593829ab8c2a65e485f8e8d1d8fec64592ded108e2098",
-        "signature": "5113448c44e60c4875164d74c2da71bdbaecb3523c0529c4b07bdc43bcade2d6",
-        "affectsGlobalScope": false
-      },
       "../src/model/user/user.controller.ts": {
-        "version": "1a4112494c4dca4429d700ec0ffdde5d00bfc1dc83648bd2cbd05815735e85b0",
-        "signature": "652dcc19b22b587b533c8f53c52f7c506c40a20bdccaa6ebae4e74a87b7be0ab",
+        "version": "76094df413620f1521c92350fb05cb82c56fc42952d7fc563df757ccdfb1e888",
+        "signature": "51610c4ec37429b19b311ac8abc4b4b58f6c477b283ad7775c7770b8803f74ab",
         "affectsGlobalScope": false
       },
       "../src/model/user/user.module.ts": {
-        "version": "db1f41333cb5ae2556fe11b7eec155cfe174a67d40cf2f46da5887d6e68ea392",
+        "version": "8a161e41c7c1ac142d623972c34e4b4245ae14a3f70b3b5a98481205af3a644d",
         "signature": "482b8f0d35a3d453500a15b6c6057c1e4c40baa4329b39da9e1026d8e1de4329",
         "affectsGlobalScope": false
       },
@@ -2257,8 +2777,8 @@
         "affectsGlobalScope": false
       },
       "../src/config/app/configuration.ts": {
-        "version": "4b1398aded6bb7c1ebbe90a863f5362f0060fd426e63b36942b3ffda1f7075a2",
-        "signature": "9fcc8423f8ba18fcc50942db690f4ff5b3c3459bc1c14ec347ce0e257e71bd0b",
+        "version": "59c474acc1d7ee7e67809598d73d29cdfc9738c6d20f7fb13385273851435895",
+        "signature": "11629f3d7149cf835d72848827e9687774c98c462ea15c78c568bef5dd00f8f8",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/hapi__joi/index.d.ts": {
@@ -2267,12 +2787,12 @@
         "affectsGlobalScope": false
       },
       "../src/config/app/config.service.ts": {
-        "version": "96376c297f29b884485fdb8325c05c74a74401197c2ab19b243a08b7a0394066",
-        "signature": "8a7dd908d87c55722c232e54232cd385f4f9989319daaa97223fdde28c447f75",
+        "version": "6fea5866d4e6045562f302a74cf764215135921e01454058c0fd3f2915cd0e7c",
+        "signature": "83075f08beeef3f8582a72ba003676f4ec5c1152437ca6cb94abbe19ef12189a",
         "affectsGlobalScope": false
       },
       "../src/config/app/config.module.ts": {
-        "version": "b4eafcef47ca96db44abd81ffb5cf481b03d5acebdc505f85cb9b8f3faf6ad28",
+        "version": "468fd09cd471577923439eae428b9054efa22f60bf26d02b0a4cdaa77ad2c501",
         "signature": "c48d3c8e74439f840510a6a91fe5687a6e4caa7ce814de9892ecb78e592144d1",
         "affectsGlobalScope": false
       },
@@ -2291,8 +2811,23 @@
         "signature": "e6e38f9316ea0c04111a070205c2a678be6efac878bdf77597d0859391a6199a",
         "affectsGlobalScope": false
       },
+      "../src/config/auth/configuration.ts": {
+        "version": "8ca733956f0d2fe63e732701346ccf53b36cdf0c2058d52bee886a77d697a73b",
+        "signature": "b33459a124b3eb144a8555287d890f66d7025dcb073499409a723f23980ea7b1",
+        "affectsGlobalScope": false
+      },
+      "../src/config/auth/config.service.ts": {
+        "version": "8e641eaf9738f5b28b21489d501c72c10f1ff1decd2cdb5339f33adb733aaaae",
+        "signature": "20b922ff0a6892fde2fc2ac58af9764ed0c534d9a8b3f915235de2999b576a27",
+        "affectsGlobalScope": false
+      },
+      "../src/config/auth/config.module.ts": {
+        "version": "f9a8ed46aa6e9fb4518e58ab3eded2aa4cb5560738ef640b990997fa87843bd9",
+        "signature": "0450a062f4c2c32e0dbee75a86b4f0216b82293e75ce68bc56c130075dc5e14c",
+        "affectsGlobalScope": false
+      },
       "../src/config/config.module.ts": {
-        "version": "0eebb32cf769754d5a700f5ec42199d96da7901071e5121483ba35ad6a921c08",
+        "version": "ff5da58e29c980d26bab2f0bdadc3ea10a34da2fdff80f4350f0ec175d58aa1c",
         "signature": "6344e10f926ceb6f65d2b92207c7067d105a2212cdf713f4eb47a450752033b1",
         "affectsGlobalScope": false
       },
@@ -2311,8 +2846,83 @@
         "signature": "7214164cfa10573d2bf79da5174719e21aa58d3745730ba5464fd4491e9d5c6c",
         "affectsGlobalScope": false
       },
+      "../node_modules/argon2/argon2.d.ts": {
+        "version": "daedf662f5c12939c9e2098b24dfee1cb9726cfa2a872f2b0963655c434ad546",
+        "signature": "daedf662f5c12939c9e2098b24dfee1cb9726cfa2a872f2b0963655c434ad546",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/buffer/index.d.ts": {
+        "version": "8e9c23ba78aabc2e0a27033f18737a6df754067731e69dc5f52823957d60a4b6",
+        "signature": "8e9c23ba78aabc2e0a27033f18737a6df754067731e69dc5f52823957d60a4b6",
+        "affectsGlobalScope": false
+      },
+      "../src/auth/interface/authorization-compound.interface.ts": {
+        "version": "bb271aeac150034dbb58414253a4d78d1bee50683e8e68af409241e924e484e3",
+        "signature": "a83c91dae9ac58872ae02a07f251f007b1a9eca8e7cecf352ef319d921865c17",
+        "affectsGlobalScope": false
+      },
+      "../src/auth/serializer/password.serializer.ts": {
+        "version": "4958ce6861eb448de7042c3a97c12846f680589d2625fd80650dca73bb83e512",
+        "signature": "f6a12a5b1202e2770fcf694cf2254a42325b897fa0bd36e7988f157bb246b91c",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/jsonwebtoken/index.d.ts": {
+        "version": "f67c920eba6ab8e4558cb9ab661d900188f101c5657e19b1e15829a1d491d46e",
+        "signature": "f67c920eba6ab8e4558cb9ab661d900188f101c5657e19b1e15829a1d491d46e",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/jwt/dist/interfaces/jwt-module-options.interface.d.ts": {
+        "version": "fc0140cf41d169b3b77e09831c9d2eed1cdb131aa34f4fa27e4c01896ec97ad6",
+        "signature": "fc0140cf41d169b3b77e09831c9d2eed1cdb131aa34f4fa27e4c01896ec97ad6",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/jwt/dist/interfaces/index.d.ts": {
+        "version": "7c14e702387296711c1a829bc95052ff02f533d4aa27d53cc0186c795094a3a9",
+        "signature": "7c14e702387296711c1a829bc95052ff02f533d4aa27d53cc0186c795094a3a9",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/jwt/dist/jwt.module.d.ts": {
+        "version": "579f8828da42ae02db6915a0223d23b0da07157ff484fecdbf8a96fffa0fa4df",
+        "signature": "579f8828da42ae02db6915a0223d23b0da07157ff484fecdbf8a96fffa0fa4df",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/jwt/dist/jwt.service.d.ts": {
+        "version": "d1e16a1778a336ae49607ca0becd8688e74a020bea949047dcfcbb1bd2dc0f5a",
+        "signature": "d1e16a1778a336ae49607ca0becd8688e74a020bea949047dcfcbb1bd2dc0f5a",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/jwt/dist/index.d.ts": {
+        "version": "a13aac535101a942283e3d00bce50f483bfa9bed6e1f8dfda33a3bb072498776",
+        "signature": "a13aac535101a942283e3d00bce50f483bfa9bed6e1f8dfda33a3bb072498776",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/jwt/index.d.ts": {
+        "version": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f",
+        "signature": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f",
+        "affectsGlobalScope": false
+      },
+      "../src/auth/interface/jwt-token.interface.ts": {
+        "version": "51613493c2639aecc6a2c9fab97876a319c0cffd79f79ded1fe433c8ddaef12e",
+        "signature": "51613493c2639aecc6a2c9fab97876a319c0cffd79f79ded1fe433c8ddaef12e",
+        "affectsGlobalScope": false
+      },
+      "../src/auth/serializer/token.serializer.ts": {
+        "version": "0fed39d47ec7b94960111d638da237da24adc9104a83fc1c89f4dba0cb09b68f",
+        "signature": "97ae51e6a31f73a1f7f2a354bcfc8707051271115bc883d4ad4100479fd4d43f",
+        "affectsGlobalScope": false
+      },
+      "../src/auth/auth.service.ts": {
+        "version": "de3cb818f46760864f3d2e156a63aeacb082aef9f4e25873386acf0cba083544",
+        "signature": "a5428e719967d8ec49bfa4ec8313c4c5d11f9dfffd9e9fe6ba6ce5276ffb9d55",
+        "affectsGlobalScope": false
+      },
+      "../src/auth/auth.module.ts": {
+        "version": "1cd78e77fd6491c5813a56de7725ac3e87050e231816d0f2c4065ae3ebeea911",
+        "signature": "a28b5c0c372fb375910b3fe3c3ce4331509bc18ccef7cc39c9ee9d8daf8225d1",
+        "affectsGlobalScope": false
+      },
       "../src/app.module.ts": {
-        "version": "813fbc761b5a128b43ae01d7c90d423b5b6ae0e0ba1759a00e99728a9aaddc1e",
+        "version": "0b1ce41c8cf1f2badf460d64ddc54a1c669be3b0763a6a3f69e7053f05c5538a",
         "signature": "b82491e2990291580288c5602d4c017238977749d52b17391f0e45d9a29be644",
         "affectsGlobalScope": false
       },
@@ -2764,6 +3374,21 @@
       "../node_modules/@types/parse-json/index.d.ts": {
         "version": "2b8264b2fefd7367e0f20e2c04eed5d3038831fe00f5efbc110ff0131aab899b",
         "signature": "2b8264b2fefd7367e0f20e2c04eed5d3038831fe00f5efbc110ff0131aab899b",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/passport/index.d.ts": {
+        "version": "d504adcb8e0c47a5e8863da80db139e680b349842bd7c9d4518d2a1019c140a7",
+        "signature": "d504adcb8e0c47a5e8863da80db139e680b349842bd7c9d4518d2a1019c140a7",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/@types/passport-strategy/index.d.ts": {
+        "version": "29d59e921bc723594bbfc98230d24f38f0d5a669f28fcf989b7468f4f95b7c52",
+        "signature": "29d59e921bc723594bbfc98230d24f38f0d5a669f28fcf989b7468f4f95b7c52",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/passport-jwt/index.d.ts": {
+        "version": "991f4413ebcec9e96a13c02f596e9b75dca9c618ac8a3a2466e054b33632bf01",
+        "signature": "991f4413ebcec9e96a13c02f596e9b75dca9c618ac8a3a2466e054b33632bf01",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/prettier/index.d.ts": {
@@ -3473,6 +4098,31 @@
       "../node_modules/@nestjs/core/services/reflector.service.d.ts": [
         "../node_modules/@nestjs/common/index.d.ts"
       ],
+      "../node_modules/@nestjs/jwt/dist/index.d.ts": [
+        "../node_modules/@nestjs/jwt/dist/interfaces/index.d.ts",
+        "../node_modules/@nestjs/jwt/dist/jwt.module.d.ts",
+        "../node_modules/@nestjs/jwt/dist/jwt.service.d.ts"
+      ],
+      "../node_modules/@nestjs/jwt/dist/interfaces/index.d.ts": [
+        "../node_modules/@nestjs/jwt/dist/interfaces/jwt-module-options.interface.d.ts"
+      ],
+      "../node_modules/@nestjs/jwt/dist/interfaces/jwt-module-options.interface.d.ts": [
+        "../node_modules/@nestjs/common/interfaces/index.d.ts",
+        "../node_modules/@types/jsonwebtoken/index.d.ts",
+        "../node_modules/@types/node/index.d.ts"
+      ],
+      "../node_modules/@nestjs/jwt/dist/jwt.module.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/jwt/dist/interfaces/jwt-module-options.interface.d.ts"
+      ],
+      "../node_modules/@nestjs/jwt/dist/jwt.service.d.ts": [
+        "../node_modules/@nestjs/jwt/dist/interfaces/jwt-module-options.interface.d.ts",
+        "../node_modules/@types/jsonwebtoken/index.d.ts",
+        "../node_modules/@types/node/index.d.ts"
+      ],
+      "../node_modules/@nestjs/jwt/index.d.ts": [
+        "../node_modules/@nestjs/jwt/dist/index.d.ts"
+      ],
       "../node_modules/@nestjs/mongoose/dist/common/index.d.ts": [
         "../node_modules/@nestjs/mongoose/dist/common/mongoose.decorators.d.ts",
         "../node_modules/@nestjs/mongoose/dist/common/mongoose.utils.d.ts"
@@ -3675,6 +4325,9 @@
         "../node_modules/jest-diff/build/index.d.ts",
         "../node_modules/pretty-format/build/index.d.ts"
       ],
+      "../node_modules/@types/jsonwebtoken/index.d.ts": [
+        "../node_modules/@types/node/index.d.ts"
+      ],
       "../node_modules/@types/mongodb/index.d.ts": [
         "../node_modules/@types/bson/index.d.ts",
         "../node_modules/@types/node/events.d.ts",
@@ -3844,6 +4497,19 @@
       "../node_modules/@types/node/zlib.d.ts": [
         "../node_modules/@types/node/stream.d.ts"
       ],
+      "../node_modules/@types/passport-jwt/index.d.ts": [
+        "../node_modules/@types/express/index.d.ts",
+        "../node_modules/@types/jsonwebtoken/index.d.ts",
+        "../node_modules/@types/passport-strategy/index.d.ts"
+      ],
+      "../node_modules/@types/passport-strategy/index.d.ts": [
+        "../node_modules/@types/express/index.d.ts",
+        "../node_modules/@types/passport/index.d.ts"
+      ],
+      "../node_modules/@types/passport/index.d.ts": [
+        "../node_modules/@types/express/index.d.ts",
+        "../node_modules/@types/node/http.d.ts"
+      ],
       "../node_modules/@types/serve-static/index.d.ts": [
         "../node_modules/@types/mime/index.d.ts",
         "../node_modules/@types/node/http.d.ts",
@@ -3861,6 +4527,9 @@
       ],
       "../node_modules/@types/yargs/index.d.ts": [
         "../node_modules/@types/yargs-parser/index.d.ts"
+      ],
+      "../node_modules/argon2/argon2.d.ts": [
+        "../node_modules/@types/node/index.d.ts"
       ],
       "../node_modules/class-validator/types/decorator/array/arraycontains.d.ts": [
         "../node_modules/class-validator/types/decorator/validationoptions.d.ts"
@@ -4443,6 +5112,10 @@
         "../node_modules/rxjs/internal/subscriber.d.ts",
         "../node_modules/rxjs/internal/subscription.d.ts"
       ],
+      "../node_modules/rxjs/internal/innersubscribe.d.ts": [
+        "../node_modules/rxjs/internal/subscriber.d.ts",
+        "../node_modules/rxjs/internal/subscription.d.ts"
+      ],
       "../node_modules/rxjs/internal/innersubscriber.d.ts": [
         "../node_modules/rxjs/internal/outersubscriber.d.ts",
         "../node_modules/rxjs/internal/subscriber.d.ts"
@@ -4577,11 +5250,378 @@
         "../node_modules/rxjs/internal/subscriber.d.ts",
         "../node_modules/rxjs/internal/types.d.ts"
       ],
+      "../node_modules/rxjs/internal/operators/audit.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/audittime.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/buffer.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/buffercount.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/buffertime.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/buffertoggle.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/bufferwhen.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/catcherror.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/combineall.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/combinelatest.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/concat.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/concatall.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/concatmap.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/concatmapto.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/count.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/debounce.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/debouncetime.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/defaultifempty.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/delay.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/delaywhen.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/dematerialize.d.ts": [
+        "../node_modules/rxjs/internal/notification.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/distinct.d.ts": [
+        "../node_modules/rxjs/internal/innersubscribe.d.ts",
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/subscriber.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/distinctuntilchanged.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/distinctuntilkeychanged.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/elementat.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/endwith.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/every.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/exhaust.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/exhaustmap.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/expand.d.ts": [
+        "../node_modules/rxjs/internal/innersubscribe.d.ts",
+        "../node_modules/rxjs/internal/operator.d.ts",
+        "../node_modules/rxjs/internal/subscriber.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/filter.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/finalize.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/find.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/operator.d.ts",
+        "../node_modules/rxjs/internal/subscriber.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/findindex.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/first.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
       "../node_modules/rxjs/internal/operators/groupby.d.ts": [
         "../node_modules/rxjs/internal/observable.d.ts",
         "../node_modules/rxjs/internal/subject.d.ts",
         "../node_modules/rxjs/internal/subscriber.d.ts",
         "../node_modules/rxjs/internal/subscription.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/ignoreelements.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/isempty.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/last.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/map.d.ts": [
+        "../node_modules/rxjs/internal/operator.d.ts",
+        "../node_modules/rxjs/internal/subscriber.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/mapto.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/materialize.d.ts": [
+        "../node_modules/rxjs/internal/notification.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/max.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/merge.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/mergeall.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/mergemap.d.ts": [
+        "../node_modules/rxjs/internal/innersubscribe.d.ts",
+        "../node_modules/rxjs/internal/operator.d.ts",
+        "../node_modules/rxjs/internal/subscriber.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/mergemapto.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/mergescan.d.ts": [
+        "../node_modules/rxjs/internal/innersubscribe.d.ts",
+        "../node_modules/rxjs/internal/operator.d.ts",
+        "../node_modules/rxjs/internal/subscriber.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/min.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/multicast.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/observable/connectableobservable.d.ts",
+        "../node_modules/rxjs/internal/operator.d.ts",
+        "../node_modules/rxjs/internal/subject.d.ts",
+        "../node_modules/rxjs/internal/subscriber.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/observeon.d.ts": [
+        "../node_modules/rxjs/internal/notification.d.ts",
+        "../node_modules/rxjs/internal/operator.d.ts",
+        "../node_modules/rxjs/internal/subscriber.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/onerrorresumenext.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/pairwise.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/partition.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/pluck.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/publish.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/observable/connectableobservable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/publishbehavior.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/observable/connectableobservable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/publishlast.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/observable/connectableobservable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/publishreplay.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/race.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/reduce.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/refcount.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/repeat.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/repeatwhen.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/retry.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/retrywhen.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/sample.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/sampletime.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/scan.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/sequenceequal.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/operator.d.ts",
+        "../node_modules/rxjs/internal/subscriber.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/share.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/sharereplay.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/single.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/skip.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/skiplast.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/skipuntil.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/skipwhile.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/startwith.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/subscribeon.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/switchall.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/switchmap.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/switchmapto.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/take.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/takelast.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/takeuntil.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/takewhile.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/tap.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/throttle.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/throttletime.d.ts": [
+        "../node_modules/rxjs/internal/operators/throttle.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/throwifempty.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/timeinterval.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/timeout.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/timeoutwith.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/timestamp.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/toarray.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/window.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/windowcount.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/windowtime.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/windowtoggle.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/windowwhen.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/withlatestfrom.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/zip.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/zipall.d.ts": [
         "../node_modules/rxjs/internal/types.d.ts"
       ],
       "../node_modules/rxjs/internal/outersubscriber.d.ts": [
@@ -4673,6 +5713,111 @@
       "../node_modules/rxjs/internal/util/pipe.d.ts": [
         "../node_modules/rxjs/internal/types.d.ts"
       ],
+      "../node_modules/rxjs/operators/index.d.ts": [
+        "../node_modules/rxjs/internal/operators/audit.d.ts",
+        "../node_modules/rxjs/internal/operators/audittime.d.ts",
+        "../node_modules/rxjs/internal/operators/buffer.d.ts",
+        "../node_modules/rxjs/internal/operators/buffercount.d.ts",
+        "../node_modules/rxjs/internal/operators/buffertime.d.ts",
+        "../node_modules/rxjs/internal/operators/buffertoggle.d.ts",
+        "../node_modules/rxjs/internal/operators/bufferwhen.d.ts",
+        "../node_modules/rxjs/internal/operators/catcherror.d.ts",
+        "../node_modules/rxjs/internal/operators/combineall.d.ts",
+        "../node_modules/rxjs/internal/operators/combinelatest.d.ts",
+        "../node_modules/rxjs/internal/operators/concat.d.ts",
+        "../node_modules/rxjs/internal/operators/concatall.d.ts",
+        "../node_modules/rxjs/internal/operators/concatmap.d.ts",
+        "../node_modules/rxjs/internal/operators/concatmapto.d.ts",
+        "../node_modules/rxjs/internal/operators/count.d.ts",
+        "../node_modules/rxjs/internal/operators/debounce.d.ts",
+        "../node_modules/rxjs/internal/operators/debouncetime.d.ts",
+        "../node_modules/rxjs/internal/operators/defaultifempty.d.ts",
+        "../node_modules/rxjs/internal/operators/delay.d.ts",
+        "../node_modules/rxjs/internal/operators/delaywhen.d.ts",
+        "../node_modules/rxjs/internal/operators/dematerialize.d.ts",
+        "../node_modules/rxjs/internal/operators/distinct.d.ts",
+        "../node_modules/rxjs/internal/operators/distinctuntilchanged.d.ts",
+        "../node_modules/rxjs/internal/operators/distinctuntilkeychanged.d.ts",
+        "../node_modules/rxjs/internal/operators/elementat.d.ts",
+        "../node_modules/rxjs/internal/operators/endwith.d.ts",
+        "../node_modules/rxjs/internal/operators/every.d.ts",
+        "../node_modules/rxjs/internal/operators/exhaust.d.ts",
+        "../node_modules/rxjs/internal/operators/exhaustmap.d.ts",
+        "../node_modules/rxjs/internal/operators/expand.d.ts",
+        "../node_modules/rxjs/internal/operators/filter.d.ts",
+        "../node_modules/rxjs/internal/operators/finalize.d.ts",
+        "../node_modules/rxjs/internal/operators/find.d.ts",
+        "../node_modules/rxjs/internal/operators/findindex.d.ts",
+        "../node_modules/rxjs/internal/operators/first.d.ts",
+        "../node_modules/rxjs/internal/operators/groupby.d.ts",
+        "../node_modules/rxjs/internal/operators/ignoreelements.d.ts",
+        "../node_modules/rxjs/internal/operators/isempty.d.ts",
+        "../node_modules/rxjs/internal/operators/last.d.ts",
+        "../node_modules/rxjs/internal/operators/map.d.ts",
+        "../node_modules/rxjs/internal/operators/mapto.d.ts",
+        "../node_modules/rxjs/internal/operators/materialize.d.ts",
+        "../node_modules/rxjs/internal/operators/max.d.ts",
+        "../node_modules/rxjs/internal/operators/merge.d.ts",
+        "../node_modules/rxjs/internal/operators/mergeall.d.ts",
+        "../node_modules/rxjs/internal/operators/mergemap.d.ts",
+        "../node_modules/rxjs/internal/operators/mergemapto.d.ts",
+        "../node_modules/rxjs/internal/operators/mergescan.d.ts",
+        "../node_modules/rxjs/internal/operators/min.d.ts",
+        "../node_modules/rxjs/internal/operators/multicast.d.ts",
+        "../node_modules/rxjs/internal/operators/observeon.d.ts",
+        "../node_modules/rxjs/internal/operators/onerrorresumenext.d.ts",
+        "../node_modules/rxjs/internal/operators/pairwise.d.ts",
+        "../node_modules/rxjs/internal/operators/partition.d.ts",
+        "../node_modules/rxjs/internal/operators/pluck.d.ts",
+        "../node_modules/rxjs/internal/operators/publish.d.ts",
+        "../node_modules/rxjs/internal/operators/publishbehavior.d.ts",
+        "../node_modules/rxjs/internal/operators/publishlast.d.ts",
+        "../node_modules/rxjs/internal/operators/publishreplay.d.ts",
+        "../node_modules/rxjs/internal/operators/race.d.ts",
+        "../node_modules/rxjs/internal/operators/reduce.d.ts",
+        "../node_modules/rxjs/internal/operators/refcount.d.ts",
+        "../node_modules/rxjs/internal/operators/repeat.d.ts",
+        "../node_modules/rxjs/internal/operators/repeatwhen.d.ts",
+        "../node_modules/rxjs/internal/operators/retry.d.ts",
+        "../node_modules/rxjs/internal/operators/retrywhen.d.ts",
+        "../node_modules/rxjs/internal/operators/sample.d.ts",
+        "../node_modules/rxjs/internal/operators/sampletime.d.ts",
+        "../node_modules/rxjs/internal/operators/scan.d.ts",
+        "../node_modules/rxjs/internal/operators/sequenceequal.d.ts",
+        "../node_modules/rxjs/internal/operators/share.d.ts",
+        "../node_modules/rxjs/internal/operators/sharereplay.d.ts",
+        "../node_modules/rxjs/internal/operators/single.d.ts",
+        "../node_modules/rxjs/internal/operators/skip.d.ts",
+        "../node_modules/rxjs/internal/operators/skiplast.d.ts",
+        "../node_modules/rxjs/internal/operators/skipuntil.d.ts",
+        "../node_modules/rxjs/internal/operators/skipwhile.d.ts",
+        "../node_modules/rxjs/internal/operators/startwith.d.ts",
+        "../node_modules/rxjs/internal/operators/subscribeon.d.ts",
+        "../node_modules/rxjs/internal/operators/switchall.d.ts",
+        "../node_modules/rxjs/internal/operators/switchmap.d.ts",
+        "../node_modules/rxjs/internal/operators/switchmapto.d.ts",
+        "../node_modules/rxjs/internal/operators/take.d.ts",
+        "../node_modules/rxjs/internal/operators/takelast.d.ts",
+        "../node_modules/rxjs/internal/operators/takeuntil.d.ts",
+        "../node_modules/rxjs/internal/operators/takewhile.d.ts",
+        "../node_modules/rxjs/internal/operators/tap.d.ts",
+        "../node_modules/rxjs/internal/operators/throttle.d.ts",
+        "../node_modules/rxjs/internal/operators/throttletime.d.ts",
+        "../node_modules/rxjs/internal/operators/throwifempty.d.ts",
+        "../node_modules/rxjs/internal/operators/timeinterval.d.ts",
+        "../node_modules/rxjs/internal/operators/timeout.d.ts",
+        "../node_modules/rxjs/internal/operators/timeoutwith.d.ts",
+        "../node_modules/rxjs/internal/operators/timestamp.d.ts",
+        "../node_modules/rxjs/internal/operators/toarray.d.ts",
+        "../node_modules/rxjs/internal/operators/window.d.ts",
+        "../node_modules/rxjs/internal/operators/windowcount.d.ts",
+        "../node_modules/rxjs/internal/operators/windowtime.d.ts",
+        "../node_modules/rxjs/internal/operators/windowtoggle.d.ts",
+        "../node_modules/rxjs/internal/operators/windowwhen.d.ts",
+        "../node_modules/rxjs/internal/operators/withlatestfrom.d.ts",
+        "../node_modules/rxjs/internal/operators/zip.d.ts",
+        "../node_modules/rxjs/internal/operators/zipall.d.ts"
+      ],
       "../src/app.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/app.service.ts"
@@ -4681,6 +5826,7 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/app.controller.ts",
         "../src/app.service.ts",
+        "../src/auth/auth.module.ts",
         "../src/common/common.module.ts",
         "../src/config/config.module.ts",
         "../src/model/user/user.module.ts",
@@ -4689,12 +5835,49 @@
       "../src/app.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts"
       ],
+      "../src/auth/auth.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/jwt/index.d.ts",
+        "../src/auth/auth.service.ts",
+        "../src/auth/serializer/password.serializer.ts",
+        "../src/auth/serializer/token.serializer.ts",
+        "../src/config/auth/config.service.ts",
+        "../src/config/config.module.ts",
+        "../src/model/user/user.module.ts"
+      ],
+      "../src/auth/auth.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/rxjs/index.d.ts",
+        "../node_modules/rxjs/operators/index.d.ts",
+        "../src/auth/serializer/password.serializer.ts",
+        "../src/auth/serializer/token.serializer.ts",
+        "../src/model/user/entities/user.entity.ts",
+        "../src/model/user/user.service.ts"
+      ],
+      "../src/auth/interface/authorization-compound.interface.ts": [
+        "../node_modules/@types/node/buffer.d.ts"
+      ],
+      "../src/auth/serializer/password.serializer.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@types/node/buffer.d.ts",
+        "../node_modules/@types/node/crypto.d.ts",
+        "../node_modules/argon2/argon2.d.ts",
+        "../node_modules/rxjs/index.d.ts",
+        "../node_modules/rxjs/operators/index.d.ts",
+        "../src/auth/interface/authorization-compound.interface.ts"
+      ],
+      "../src/auth/serializer/token.serializer.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/jwt/index.d.ts",
+        "../src/auth/interface/jwt-token.interface.ts"
+      ],
       "../src/common/common.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts"
       ],
       "../src/common/service/model.service.ts": [
         "../node_modules/mongoose/index.d.ts",
         "../node_modules/rxjs/index.d.ts",
+        "../node_modules/rxjs/operators/index.d.ts",
         "../src/common/model/partial-model.ts"
       ],
       "../src/config/app/config.module.ts": [
@@ -4711,9 +5894,24 @@
       "../src/config/app/configuration.ts": [
         "../node_modules/@nestjs/config/index.d.ts"
       ],
+      "../src/config/auth/config.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/config/index.d.ts",
+        "../node_modules/@types/hapi__joi/index.d.ts",
+        "../src/config/auth/config.service.ts",
+        "../src/config/auth/configuration.ts"
+      ],
+      "../src/config/auth/config.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/config/index.d.ts"
+      ],
+      "../src/config/auth/configuration.ts": [
+        "../node_modules/@nestjs/config/index.d.ts"
+      ],
       "../src/config/config.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/config/app/config.module.ts",
+        "../src/config/auth/config.module.ts",
         "../src/config/mongo/config.module.ts"
       ],
       "../src/config/mongo/config.module.ts": [
@@ -4739,11 +5937,11 @@
       ],
       "../src/model/user/entities/user-create.dto.ts": [
         "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../node_modules/class-validator/types/index.d.ts",
         "../src/model/user/entities/user.entity.ts"
       ],
       "../src/model/user/entities/user.entity.ts": [
         "../node_modules/@nestjs/mongoose/index.d.ts",
-        "../node_modules/class-validator/types/index.d.ts",
         "../node_modules/mongoose/index.d.ts",
         "../src/common/model/partial-model.ts"
       ],
@@ -4766,7 +5964,6 @@
         "../node_modules/@nestjs/mongoose/index.d.ts",
         "../node_modules/mongoose/index.d.ts",
         "../src/common/service/model.service.ts",
-        "../src/model/user/entities/user-create.dto.ts",
         "../src/model/user/entities/user.entity.ts"
       ],
       "../src/provider/mongo/provider.module.ts": [
@@ -5437,6 +6634,31 @@
       "../node_modules/@nestjs/core/services/reflector.service.d.ts": [
         "../node_modules/@nestjs/common/index.d.ts"
       ],
+      "../node_modules/@nestjs/jwt/dist/index.d.ts": [
+        "../node_modules/@nestjs/jwt/dist/interfaces/index.d.ts",
+        "../node_modules/@nestjs/jwt/dist/jwt.module.d.ts",
+        "../node_modules/@nestjs/jwt/dist/jwt.service.d.ts"
+      ],
+      "../node_modules/@nestjs/jwt/dist/interfaces/index.d.ts": [
+        "../node_modules/@nestjs/jwt/dist/interfaces/jwt-module-options.interface.d.ts"
+      ],
+      "../node_modules/@nestjs/jwt/dist/interfaces/jwt-module-options.interface.d.ts": [
+        "../node_modules/@nestjs/common/interfaces/index.d.ts",
+        "../node_modules/@types/jsonwebtoken/index.d.ts",
+        "../node_modules/@types/node/index.d.ts"
+      ],
+      "../node_modules/@nestjs/jwt/dist/jwt.module.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/jwt/dist/interfaces/jwt-module-options.interface.d.ts"
+      ],
+      "../node_modules/@nestjs/jwt/dist/jwt.service.d.ts": [
+        "../node_modules/@nestjs/jwt/dist/interfaces/jwt-module-options.interface.d.ts",
+        "../node_modules/@types/jsonwebtoken/index.d.ts",
+        "../node_modules/@types/node/index.d.ts"
+      ],
+      "../node_modules/@nestjs/jwt/index.d.ts": [
+        "../node_modules/@nestjs/jwt/dist/index.d.ts"
+      ],
       "../node_modules/@nestjs/mongoose/dist/common/index.d.ts": [
         "../node_modules/@nestjs/mongoose/dist/common/mongoose.decorators.d.ts",
         "../node_modules/@nestjs/mongoose/dist/common/mongoose.utils.d.ts"
@@ -5639,6 +6861,9 @@
         "../node_modules/jest-diff/build/index.d.ts",
         "../node_modules/pretty-format/build/index.d.ts"
       ],
+      "../node_modules/@types/jsonwebtoken/index.d.ts": [
+        "../node_modules/@types/node/index.d.ts"
+      ],
       "../node_modules/@types/mongodb/index.d.ts": [
         "../node_modules/@types/bson/index.d.ts",
         "../node_modules/@types/node/events.d.ts",
@@ -5808,6 +7033,19 @@
       "../node_modules/@types/node/zlib.d.ts": [
         "../node_modules/@types/node/stream.d.ts"
       ],
+      "../node_modules/@types/passport-jwt/index.d.ts": [
+        "../node_modules/@types/express/index.d.ts",
+        "../node_modules/@types/jsonwebtoken/index.d.ts",
+        "../node_modules/@types/passport-strategy/index.d.ts"
+      ],
+      "../node_modules/@types/passport-strategy/index.d.ts": [
+        "../node_modules/@types/express/index.d.ts",
+        "../node_modules/@types/passport/index.d.ts"
+      ],
+      "../node_modules/@types/passport/index.d.ts": [
+        "../node_modules/@types/express/index.d.ts",
+        "../node_modules/@types/node/http.d.ts"
+      ],
       "../node_modules/@types/serve-static/index.d.ts": [
         "../node_modules/@types/mime/index.d.ts",
         "../node_modules/@types/node/http.d.ts",
@@ -5825,6 +7063,9 @@
       ],
       "../node_modules/@types/yargs/index.d.ts": [
         "../node_modules/@types/yargs-parser/index.d.ts"
+      ],
+      "../node_modules/argon2/argon2.d.ts": [
+        "../node_modules/@types/node/index.d.ts"
       ],
       "../node_modules/class-validator/types/decorator/array/arraycontains.d.ts": [
         "../node_modules/class-validator/types/decorator/validationoptions.d.ts"
@@ -6407,6 +7648,10 @@
         "../node_modules/rxjs/internal/subscriber.d.ts",
         "../node_modules/rxjs/internal/subscription.d.ts"
       ],
+      "../node_modules/rxjs/internal/innersubscribe.d.ts": [
+        "../node_modules/rxjs/internal/subscriber.d.ts",
+        "../node_modules/rxjs/internal/subscription.d.ts"
+      ],
       "../node_modules/rxjs/internal/innersubscriber.d.ts": [
         "../node_modules/rxjs/internal/outersubscriber.d.ts",
         "../node_modules/rxjs/internal/subscriber.d.ts"
@@ -6541,11 +7786,378 @@
         "../node_modules/rxjs/internal/subscriber.d.ts",
         "../node_modules/rxjs/internal/types.d.ts"
       ],
+      "../node_modules/rxjs/internal/operators/audit.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/audittime.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/buffer.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/buffercount.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/buffertime.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/buffertoggle.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/bufferwhen.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/catcherror.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/combineall.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/combinelatest.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/concat.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/concatall.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/concatmap.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/concatmapto.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/count.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/debounce.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/debouncetime.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/defaultifempty.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/delay.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/delaywhen.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/dematerialize.d.ts": [
+        "../node_modules/rxjs/internal/notification.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/distinct.d.ts": [
+        "../node_modules/rxjs/internal/innersubscribe.d.ts",
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/subscriber.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/distinctuntilchanged.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/distinctuntilkeychanged.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/elementat.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/endwith.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/every.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/exhaust.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/exhaustmap.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/expand.d.ts": [
+        "../node_modules/rxjs/internal/innersubscribe.d.ts",
+        "../node_modules/rxjs/internal/operator.d.ts",
+        "../node_modules/rxjs/internal/subscriber.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/filter.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/finalize.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/find.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/operator.d.ts",
+        "../node_modules/rxjs/internal/subscriber.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/findindex.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/first.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
       "../node_modules/rxjs/internal/operators/groupby.d.ts": [
         "../node_modules/rxjs/internal/observable.d.ts",
         "../node_modules/rxjs/internal/subject.d.ts",
         "../node_modules/rxjs/internal/subscriber.d.ts",
         "../node_modules/rxjs/internal/subscription.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/ignoreelements.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/isempty.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/last.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/map.d.ts": [
+        "../node_modules/rxjs/internal/operator.d.ts",
+        "../node_modules/rxjs/internal/subscriber.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/mapto.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/materialize.d.ts": [
+        "../node_modules/rxjs/internal/notification.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/max.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/merge.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/mergeall.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/mergemap.d.ts": [
+        "../node_modules/rxjs/internal/innersubscribe.d.ts",
+        "../node_modules/rxjs/internal/operator.d.ts",
+        "../node_modules/rxjs/internal/subscriber.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/mergemapto.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/mergescan.d.ts": [
+        "../node_modules/rxjs/internal/innersubscribe.d.ts",
+        "../node_modules/rxjs/internal/operator.d.ts",
+        "../node_modules/rxjs/internal/subscriber.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/min.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/multicast.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/observable/connectableobservable.d.ts",
+        "../node_modules/rxjs/internal/operator.d.ts",
+        "../node_modules/rxjs/internal/subject.d.ts",
+        "../node_modules/rxjs/internal/subscriber.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/observeon.d.ts": [
+        "../node_modules/rxjs/internal/notification.d.ts",
+        "../node_modules/rxjs/internal/operator.d.ts",
+        "../node_modules/rxjs/internal/subscriber.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/onerrorresumenext.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/pairwise.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/partition.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/pluck.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/publish.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/observable/connectableobservable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/publishbehavior.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/observable/connectableobservable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/publishlast.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/observable/connectableobservable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/publishreplay.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/race.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/reduce.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/refcount.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/repeat.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/repeatwhen.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/retry.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/retrywhen.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/sample.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/sampletime.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/scan.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/sequenceequal.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/operator.d.ts",
+        "../node_modules/rxjs/internal/subscriber.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/share.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/sharereplay.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/single.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/skip.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/skiplast.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/skipuntil.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/skipwhile.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/startwith.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/subscribeon.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/switchall.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/switchmap.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/switchmapto.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/take.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/takelast.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/takeuntil.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/takewhile.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/tap.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/throttle.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/throttletime.d.ts": [
+        "../node_modules/rxjs/internal/operators/throttle.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/throwifempty.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/timeinterval.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/timeout.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/timeoutwith.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/timestamp.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/toarray.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/window.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/windowcount.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/windowtime.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/windowtoggle.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/windowwhen.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/withlatestfrom.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/zip.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/zipall.d.ts": [
         "../node_modules/rxjs/internal/types.d.ts"
       ],
       "../node_modules/rxjs/internal/outersubscriber.d.ts": [
@@ -6637,8 +8249,128 @@
       "../node_modules/rxjs/internal/util/pipe.d.ts": [
         "../node_modules/rxjs/internal/types.d.ts"
       ],
+      "../node_modules/rxjs/operators/index.d.ts": [
+        "../node_modules/rxjs/internal/operators/audit.d.ts",
+        "../node_modules/rxjs/internal/operators/audittime.d.ts",
+        "../node_modules/rxjs/internal/operators/buffer.d.ts",
+        "../node_modules/rxjs/internal/operators/buffercount.d.ts",
+        "../node_modules/rxjs/internal/operators/buffertime.d.ts",
+        "../node_modules/rxjs/internal/operators/buffertoggle.d.ts",
+        "../node_modules/rxjs/internal/operators/bufferwhen.d.ts",
+        "../node_modules/rxjs/internal/operators/catcherror.d.ts",
+        "../node_modules/rxjs/internal/operators/combineall.d.ts",
+        "../node_modules/rxjs/internal/operators/combinelatest.d.ts",
+        "../node_modules/rxjs/internal/operators/concat.d.ts",
+        "../node_modules/rxjs/internal/operators/concatall.d.ts",
+        "../node_modules/rxjs/internal/operators/concatmap.d.ts",
+        "../node_modules/rxjs/internal/operators/concatmapto.d.ts",
+        "../node_modules/rxjs/internal/operators/count.d.ts",
+        "../node_modules/rxjs/internal/operators/debounce.d.ts",
+        "../node_modules/rxjs/internal/operators/debouncetime.d.ts",
+        "../node_modules/rxjs/internal/operators/defaultifempty.d.ts",
+        "../node_modules/rxjs/internal/operators/delay.d.ts",
+        "../node_modules/rxjs/internal/operators/delaywhen.d.ts",
+        "../node_modules/rxjs/internal/operators/dematerialize.d.ts",
+        "../node_modules/rxjs/internal/operators/distinct.d.ts",
+        "../node_modules/rxjs/internal/operators/distinctuntilchanged.d.ts",
+        "../node_modules/rxjs/internal/operators/distinctuntilkeychanged.d.ts",
+        "../node_modules/rxjs/internal/operators/elementat.d.ts",
+        "../node_modules/rxjs/internal/operators/endwith.d.ts",
+        "../node_modules/rxjs/internal/operators/every.d.ts",
+        "../node_modules/rxjs/internal/operators/exhaust.d.ts",
+        "../node_modules/rxjs/internal/operators/exhaustmap.d.ts",
+        "../node_modules/rxjs/internal/operators/expand.d.ts",
+        "../node_modules/rxjs/internal/operators/filter.d.ts",
+        "../node_modules/rxjs/internal/operators/finalize.d.ts",
+        "../node_modules/rxjs/internal/operators/find.d.ts",
+        "../node_modules/rxjs/internal/operators/findindex.d.ts",
+        "../node_modules/rxjs/internal/operators/first.d.ts",
+        "../node_modules/rxjs/internal/operators/groupby.d.ts",
+        "../node_modules/rxjs/internal/operators/ignoreelements.d.ts",
+        "../node_modules/rxjs/internal/operators/isempty.d.ts",
+        "../node_modules/rxjs/internal/operators/last.d.ts",
+        "../node_modules/rxjs/internal/operators/map.d.ts",
+        "../node_modules/rxjs/internal/operators/mapto.d.ts",
+        "../node_modules/rxjs/internal/operators/materialize.d.ts",
+        "../node_modules/rxjs/internal/operators/max.d.ts",
+        "../node_modules/rxjs/internal/operators/merge.d.ts",
+        "../node_modules/rxjs/internal/operators/mergeall.d.ts",
+        "../node_modules/rxjs/internal/operators/mergemap.d.ts",
+        "../node_modules/rxjs/internal/operators/mergemapto.d.ts",
+        "../node_modules/rxjs/internal/operators/mergescan.d.ts",
+        "../node_modules/rxjs/internal/operators/min.d.ts",
+        "../node_modules/rxjs/internal/operators/multicast.d.ts",
+        "../node_modules/rxjs/internal/operators/observeon.d.ts",
+        "../node_modules/rxjs/internal/operators/onerrorresumenext.d.ts",
+        "../node_modules/rxjs/internal/operators/pairwise.d.ts",
+        "../node_modules/rxjs/internal/operators/partition.d.ts",
+        "../node_modules/rxjs/internal/operators/pluck.d.ts",
+        "../node_modules/rxjs/internal/operators/publish.d.ts",
+        "../node_modules/rxjs/internal/operators/publishbehavior.d.ts",
+        "../node_modules/rxjs/internal/operators/publishlast.d.ts",
+        "../node_modules/rxjs/internal/operators/publishreplay.d.ts",
+        "../node_modules/rxjs/internal/operators/race.d.ts",
+        "../node_modules/rxjs/internal/operators/reduce.d.ts",
+        "../node_modules/rxjs/internal/operators/refcount.d.ts",
+        "../node_modules/rxjs/internal/operators/repeat.d.ts",
+        "../node_modules/rxjs/internal/operators/repeatwhen.d.ts",
+        "../node_modules/rxjs/internal/operators/retry.d.ts",
+        "../node_modules/rxjs/internal/operators/retrywhen.d.ts",
+        "../node_modules/rxjs/internal/operators/sample.d.ts",
+        "../node_modules/rxjs/internal/operators/sampletime.d.ts",
+        "../node_modules/rxjs/internal/operators/scan.d.ts",
+        "../node_modules/rxjs/internal/operators/sequenceequal.d.ts",
+        "../node_modules/rxjs/internal/operators/share.d.ts",
+        "../node_modules/rxjs/internal/operators/sharereplay.d.ts",
+        "../node_modules/rxjs/internal/operators/single.d.ts",
+        "../node_modules/rxjs/internal/operators/skip.d.ts",
+        "../node_modules/rxjs/internal/operators/skiplast.d.ts",
+        "../node_modules/rxjs/internal/operators/skipuntil.d.ts",
+        "../node_modules/rxjs/internal/operators/skipwhile.d.ts",
+        "../node_modules/rxjs/internal/operators/startwith.d.ts",
+        "../node_modules/rxjs/internal/operators/subscribeon.d.ts",
+        "../node_modules/rxjs/internal/operators/switchall.d.ts",
+        "../node_modules/rxjs/internal/operators/switchmap.d.ts",
+        "../node_modules/rxjs/internal/operators/switchmapto.d.ts",
+        "../node_modules/rxjs/internal/operators/take.d.ts",
+        "../node_modules/rxjs/internal/operators/takelast.d.ts",
+        "../node_modules/rxjs/internal/operators/takeuntil.d.ts",
+        "../node_modules/rxjs/internal/operators/takewhile.d.ts",
+        "../node_modules/rxjs/internal/operators/tap.d.ts",
+        "../node_modules/rxjs/internal/operators/throttle.d.ts",
+        "../node_modules/rxjs/internal/operators/throttletime.d.ts",
+        "../node_modules/rxjs/internal/operators/throwifempty.d.ts",
+        "../node_modules/rxjs/internal/operators/timeinterval.d.ts",
+        "../node_modules/rxjs/internal/operators/timeout.d.ts",
+        "../node_modules/rxjs/internal/operators/timeoutwith.d.ts",
+        "../node_modules/rxjs/internal/operators/timestamp.d.ts",
+        "../node_modules/rxjs/internal/operators/toarray.d.ts",
+        "../node_modules/rxjs/internal/operators/window.d.ts",
+        "../node_modules/rxjs/internal/operators/windowcount.d.ts",
+        "../node_modules/rxjs/internal/operators/windowtime.d.ts",
+        "../node_modules/rxjs/internal/operators/windowtoggle.d.ts",
+        "../node_modules/rxjs/internal/operators/windowwhen.d.ts",
+        "../node_modules/rxjs/internal/operators/withlatestfrom.d.ts",
+        "../node_modules/rxjs/internal/operators/zip.d.ts",
+        "../node_modules/rxjs/internal/operators/zipall.d.ts"
+      ],
       "../src/app.controller.ts": [
         "../src/app.service.ts"
+      ],
+      "../src/auth/auth.service.ts": [
+        "../node_modules/rxjs/index.d.ts",
+        "../src/auth/serializer/password.serializer.ts",
+        "../src/auth/serializer/token.serializer.ts",
+        "../src/model/user/entities/user.entity.ts",
+        "../src/model/user/user.service.ts"
+      ],
+      "../src/auth/serializer/password.serializer.ts": [
+        "../node_modules/rxjs/index.d.ts",
+        "../src/auth/interface/authorization-compound.interface.ts"
+      ],
+      "../src/auth/serializer/token.serializer.ts": [
+        "../node_modules/@nestjs/jwt/index.d.ts",
+        "../src/auth/interface/jwt-token.interface.ts"
       ],
       "../src/common/service/model.service.ts": [
         "../node_modules/mongoose/index.d.ts",
@@ -6649,6 +8381,12 @@
         "../node_modules/@nestjs/config/index.d.ts"
       ],
       "../src/config/app/configuration.ts": [
+        "../node_modules/@nestjs/config/index.d.ts"
+      ],
+      "../src/config/auth/config.service.ts": [
+        "../node_modules/@nestjs/config/index.d.ts"
+      ],
+      "../src/config/auth/configuration.ts": [
         "../node_modules/@nestjs/config/index.d.ts"
       ],
       "../src/config/mongo/config.service.ts": [
@@ -6673,7 +8411,6 @@
       "../src/model/user/user.service.ts": [
         "../node_modules/mongoose/index.d.ts",
         "../src/common/service/model.service.ts",
-        "../src/model/user/entities/user-create.dto.ts",
         "../src/model/user/entities/user.entity.ts"
       ]
     },

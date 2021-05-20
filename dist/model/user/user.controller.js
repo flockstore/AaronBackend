@@ -30,7 +30,8 @@ let UserController = class UserController {
     update(id, user) {
         return this.userService.update(id, user);
     }
-    delete() {
+    delete(id) {
+        return this.userService.delete(id);
     }
 };
 __decorate([
@@ -56,9 +57,10 @@ __decorate([
 ], UserController.prototype, "update", null);
 __decorate([
     common_1.Delete(':id'),
+    __param(0, common_1.Param('id')),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", []),
-    __metadata("design:returntype", void 0)
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", rxjs_1.Observable)
 ], UserController.prototype, "delete", null);
 UserController = __decorate([
     common_1.Controller('user'),

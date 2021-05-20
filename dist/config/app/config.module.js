@@ -24,7 +24,8 @@ AppConfigModule = __decorate([
                         .valid('development', 'production', 'test')
                         .default('development'),
                     APP_URL: Joi.string().default('localhost'),
-                    APP_PORT: Joi.number().default(3000)
+                    APP_PORT: Joi.number().default(3000),
+                    APP_SECRET: Joi.string().default('')
                 })
             })
         ],

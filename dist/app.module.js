@@ -14,6 +14,7 @@ const user_module_1 = require("./model/user/user.module");
 const config_module_1 = require("./config/config.module");
 const provider_module_1 = require("./provider/provider.module");
 const common_module_1 = require("./common/common.module");
+const auth_module_1 = require("./auth/auth.module");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -22,7 +23,8 @@ AppModule = __decorate([
             config_module_1.GlobalConfigModule,
             provider_module_1.ProviderModule,
             common_module_1.CommonModule,
-            user_module_1.UserModule
+            user_module_1.UserModule,
+            auth_module_1.AuthModule
         ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],

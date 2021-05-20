@@ -25,6 +25,9 @@ let AppConfigService = class AppConfigService {
     get env() {
         return this.configService.get('app.env');
     }
+    get secret() {
+        return this.configService.get('app.secret');
+    }
 };
 AppConfigService = __decorate([
     common_1.Injectable(),
