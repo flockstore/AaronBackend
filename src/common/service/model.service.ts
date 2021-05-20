@@ -1,14 +1,11 @@
 import {Document, FilterQuery, Model, QueryOptions} from "mongoose";
 import {from, Observable} from "rxjs";
 import {PartialModel} from "../model/partial-model";
-import {SoftDeleteDocument, SoftDeleteModel} from "mongoose-delete";
+import {map} from "rxjs/operators";
 
-export abstract class ModelService<T extends Document & SoftDeleteDocument, P extends PartialModel> {
+export abstract class ModelService<T extends Document, P extends PartialModel> {
 
-    private readonly model: SoftDeleteModel<T>
-
-    protected constructor(private hardModel: Model<T>) {
-        this.model = hardModel as SoftDeleteModel<T>;
+    protected constructor(private model: Model<T>) {
     }
 
     create(user: P): Observable<T> {
@@ -27,8 +24,10 @@ export abstract class ModelService<T extends Document & SoftDeleteDocument, P ex
         return from(this.model.findByIdAndUpdate(id, update, {new: true}));
     }
 
-    delete(id: string, author?: string): Observable<T> {
-        return this.model.deleteById(id, author);
+    delete(id: string): Observable<boolean> {
+        return from(this.model.findByIdAndDelete(id)).pipe(
+            map(value => true)
+        );
     }
 
 }

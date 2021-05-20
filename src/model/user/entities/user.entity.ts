@@ -1,6 +1,7 @@
 import {Prop, Schema, SchemaFactory} from '@nestjs/mongoose';
 import { Document } from 'mongoose';
-import {isEmail, IsEmail, IsNotEmpty} from "class-validator";
+import {IsEmail, IsNotEmpty} from "class-validator";
+import {PartialModel} from "../../../common/model/partial-model";
 
 export type UserDocument = User & Document;
 
@@ -10,7 +11,7 @@ const validateEmail = function(email) {
 };
 
 @Schema()
-export class User {
+export class User extends Document {
 
     @IsNotEmpty()
     @Prop({required: true})
@@ -29,5 +30,7 @@ export class User {
     password: string;
 
 }
+
+export class UserPartial extends PartialModel {}
 
 export const UserSchema = SchemaFactory.createForClass(User);

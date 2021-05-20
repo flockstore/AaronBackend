@@ -7,7 +7,6 @@ import {User, UserSchema} from "./entities/user.entity";
 import {INestApplication} from "@nestjs/common";
 import * as request from "supertest";
 import {map} from "rxjs/operators";
-import * as deletePlugin from "mongoose-delete";
 
 describe('UserController', () => {
 
@@ -26,16 +25,7 @@ describe('UserController', () => {
         const module: TestingModule = await Test.createTestingModule({
             imports: [
                 rootMongooseTestModule(),
-                MongooseModule.forFeatureAsync([
-                    {
-                        name: User.name,
-                        useFactory: () => {
-                            const schema = UserSchema;
-                            schema.plugin(deletePlugin);
-                            return schema;
-                        }
-                    }
-                ])
+                MongooseModule.forFeature([{name: User.name, schema: UserSchema}])
             ],
             providers: [UserService],
             controllers: [UserController]
@@ -74,6 +64,18 @@ describe('UserController', () => {
                     .send({...validUser, name: 'Jonas'})
                     .expect(200)
                     .expect(res => res.body instanceof User && res.body.name === 'Jonas')
+            )
+        ).toPromise();
+    });
+
+    it('/user/:id (DELETE)', () => {
+        return service.create(validUser).pipe(
+            map(user =>
+                request(app.getHttpServer())
+                    .delete('/user/' + user._id)
+                    .send({...validUser, name: 'Jonas'})
+                    .expect(200)
+                    .expect(res => res.body === true)
             )
         ).toPromise();
     });

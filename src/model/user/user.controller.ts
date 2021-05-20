@@ -21,13 +21,13 @@ export class UserController {
     }
 
     @Put(':id')
-    update(@Param('id') id: string, @Body() user: UserCreate): Observable<UserDocument> {
+    update(@Param('id') id: string, @Body() user: UserDocument): Observable<UserDocument> {
         return this.userService.update(id, user);
     }
 
     @Delete(':id')
-    delete(): void {
-
+    delete(@Param('id') id: string): Observable<boolean> {
+        return this.userService.delete(id);
     }
 
 }

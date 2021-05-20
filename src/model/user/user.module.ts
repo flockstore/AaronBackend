@@ -3,18 +3,13 @@ import {MongooseModule} from "@nestjs/mongoose";
 import {User, UserSchema} from "./entities/user.entity";
 import { UserController } from './user.controller';
 import {UserService} from "./user.service";
-import * as deletePlugin from "mongoose-delete";
 
 @Module({
     imports: [
-        MongooseModule.forFeatureAsync([
+        MongooseModule.forFeature([
             {
                 name: User.name,
-                useFactory: () => {
-                    const schema = UserSchema;
-                    schema.plugin(deletePlugin);
-                    return schema;
-                }
+                schema: UserSchema
             }
         ])
     ],

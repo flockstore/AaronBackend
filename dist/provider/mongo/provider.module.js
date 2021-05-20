@@ -19,7 +19,10 @@ MongoDatabaseProviderModule = __decorate([
             mongoose_1.MongooseModule.forRootAsync({
                 imports: [config_module_1.MongoConfigModule],
                 useFactory: async (mongoService) => ({
-                    uri: mongoService.uri
+                    uri: mongoService.uri,
+                    useCreateIndex: true,
+                    useNewUrlParser: true,
+                    useFindAndModify: false
                 }),
                 inject: [config_service_1.MongoConfigService]
             })

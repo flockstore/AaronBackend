@@ -5,7 +5,6 @@ import {User, UserSchema} from "./entities/user.entity";
 import {closeInMongodConnection, rootMongooseTestModule} from "../../../test/mongoose-memory.helper";
 import {mergeMap} from "rxjs/operators";
 import {UserCreate} from "./entities/user-create.dto";
-import * as deletePlugin from "mongoose-delete";
 
 describe('UserService', () => {
 
@@ -22,16 +21,7 @@ describe('UserService', () => {
         const module: TestingModule = await Test.createTestingModule({
             imports: [
                 rootMongooseTestModule(),
-                MongooseModule.forFeatureAsync([
-                    {
-                        name: User.name,
-                        useFactory: () => {
-                            const schema = UserSchema;
-                            schema.plugin(deletePlugin);
-                            return schema;
-                        }
-                    }
-                ])
+                MongooseModule.forFeature([{name: User.name, schema: UserSchema}])
             ],
             providers: [UserService]
         }).compile();
@@ -90,8 +80,7 @@ describe('UserService', () => {
             mergeMap(user => service.delete(user._id))
         ).subscribe(
             response => {
-                console.log(response);
-                expect(response).toBe([]);
+                expect(response).toBe(true);
                 done();
             },
             error => {
