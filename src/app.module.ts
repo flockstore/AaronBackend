@@ -1,15 +1,17 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { UserModule } from './user/user.module';
+import { UserModule } from './model/user/user.module';
 import {GlobalConfigModule} from "./config/config.module";
 import {ProviderModule} from "./provider/provider.module";
+import {CommonModule} from "./common/common.module";
 
 
 @Module({
   imports: [
       GlobalConfigModule,
       ProviderModule,
+      CommonModule,
       UserModule
   ],
   controllers: [AppController],
