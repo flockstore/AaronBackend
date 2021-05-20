@@ -31,8 +31,10 @@ yarn-error.log
 /coverage
 /.nyc_output
 /packages/graphql
-/benchmarks/memory
 build/config\.gypi
 
 # environment
 .env
+
+# dist
+dist
