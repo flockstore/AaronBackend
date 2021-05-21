@@ -1,6 +1,6 @@
 import {Injectable, NotFoundException, UnauthorizedException} from "@nestjs/common";
 import {Observable, throwError} from "rxjs";
-import {UserDocument} from "../model/user/entities/user.entity";
+import {UserDocument} from "../model/user/entity/user.entity";
 import {UserService} from "../model/user/user.service";
 import {PasswordSerializer} from "./serializer/password.serializer";
 import {map, mergeMap} from "rxjs/operators";

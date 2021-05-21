@@ -3,7 +3,7 @@ import { UserController } from './user.controller';
 import {UserService} from "./user.service";
 import {closeInMongodConnection, rootMongooseTestModule} from "../../../test/mongoose-memory.helper";
 import {MongooseModule} from "@nestjs/mongoose";
-import {User, UserSchema} from "./entities/user.entity";
+import {User, UserSchema} from "./entity/user.entity";
 import {INestApplication} from "@nestjs/common";
 import * as request from "supertest";
 import {map} from "rxjs/operators";

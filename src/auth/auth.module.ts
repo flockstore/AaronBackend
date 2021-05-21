@@ -6,17 +6,30 @@ import {AuthService} from "./auth.service";
 import {GlobalConfigModule} from "../config/config.module";
 import {UserModule} from "../model/user/user.module";
 import {TokenSerializer} from "./serializer/token.serializer";
+import {APP_GUARD} from "@nestjs/core";
+import {JwtAuthGuard} from "./guard/jwt-auth.guard";
+import {AuthController} from "./auth.controller";
+import {JwtStrategy} from "./strategy/jwt.strategy";
+import {PassportModule} from "@nestjs/passport";
 
 @Module({
     providers: [
         PasswordSerializer,
         AuthService,
-        TokenSerializer
+        TokenSerializer,
+        JwtStrategy,
+        {
+            provide: APP_GUARD,
+            useClass: JwtAuthGuard
+        }
     ],
-    exports: [PasswordSerializer],
+    controllers: [
+        AuthController
+    ],
     imports: [
         GlobalConfigModule,
         UserModule,
+        PassportModule,
         JwtModule.registerAsync({
             imports: [GlobalConfigModule],
             useFactory: async (authConfigService: AuthConfigService) => ({
@@ -25,6 +38,11 @@ import {TokenSerializer} from "./serializer/token.serializer";
             }),
             inject: [AuthConfigService]
         })
-    ]
+    ],
+
+    exports: [
+        PasswordSerializer,
+        JwtModule
+    ],
 })
 export class AuthModule {}

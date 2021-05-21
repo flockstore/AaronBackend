@@ -1,16 +1,16 @@
 import { Injectable } from '@nestjs/common';
 import {InjectModel} from "@nestjs/mongoose";
-import {User, UserDocument, UserPartial} from "./entity/user.entity";
 import {Model} from "mongoose";
 import {ModelService} from "../../common/service/model.service";
+import {Group, GroupDocument} from "./entity/group.entity";
 
 @Injectable()
-export class UserService extends ModelService<UserDocument, UserPartial> {
+export class GroupService extends ModelService<GroupDocument, GroupDocument> {
 
     constructor(
-        @InjectModel(User.name) private userModel: Model<User>
+        @InjectModel(Group.name) private groupModel: Model<Group>
     ) {
-        super(userModel);
+        super(groupModel);
     }
 
 }

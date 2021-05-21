@@ -1,10 +1,10 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { UserService } from './user.service';
 import {MongooseModule} from "@nestjs/mongoose";
-import {User, UserSchema} from "./entities/user.entity";
+import {User, UserSchema} from "./entity/user.entity";
 import {closeInMongodConnection, rootMongooseTestModule} from "../../../test/mongoose-memory.helper";
 import {mergeMap} from "rxjs/operators";
-import {UserCreate} from "./entities/user-create.dto";
+import {UserCreate} from "./entity/user-create.dto";
 
 describe('UserService', () => {
 
