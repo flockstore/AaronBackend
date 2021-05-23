@@ -1,4 +1,3 @@
-
 import {Test, TestingModule} from "@nestjs/testing";
 import {PasswordSerializer} from "./password.serializer";
 import {mergeMap} from "rxjs/operators";
@@ -28,7 +27,6 @@ describe('PasswordSerializer', () => {
         ).subscribe(
 
             response => {
-                console.log(response);
                 expect(response).toBeDefined();
                 expect(response).toBe(true);
                 done();

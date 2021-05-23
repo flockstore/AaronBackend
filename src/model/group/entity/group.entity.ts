@@ -1,28 +1,32 @@
-import {Prop, Schema, SchemaFactory} from "@nestjs/mongoose";
-import { Document } from 'mongoose';
-import {PermissionRegistry} from "./permission-registry.entity";
+import {Document} from "mongoose";
 import {IsNotEmpty} from "class-validator";
 
-export type GroupDocument = Group & Document;
-
-@Schema()
 export class Group extends Document {
 
     @IsNotEmpty()
-    @Prop({required: true})
     name: string;
 
     @IsNotEmpty()
-    @Prop({required: true})
     color: string;
 
     @IsNotEmpty()
-    @Prop({required: true})
     priority: number;
 
-    @Prop({required: true, default: null})
     permissions: PermissionRegistry;
 
 }
 
-export const GroupSchema = SchemaFactory.createForClass(Group);
+export class PermissionRegistry {
+    user: CRUDOperation;
+    group: CRUDOperation;
+}
+
+export class CRUDOperation {
+    create: boolean;
+    read: boolean;
+    update: boolean;
+    delete: boolean;
+    manage: boolean;
+}
+
+export type GroupDocument = Group & Document;

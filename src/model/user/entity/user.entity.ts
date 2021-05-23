@@ -1,34 +1,21 @@
-import {Prop, Schema, SchemaFactory} from '@nestjs/mongoose';
-import { Document } from 'mongoose';
+import {Document} from 'mongoose';
 import {PartialModel} from "../../../common/model/partial-model";
+import {Group} from "../../group/entity/group.entity";
 
-export type UserDocument = User & Document;
-
-const validateEmail = function(email) {
-    const re = /^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/;
-    return re.test(email)
-};
-
-@Schema()
 export class User extends Document {
-
-    @Prop({required: true})
     name: string;
-
-    @Prop({required: true})
     surname: string;
-
-    @Prop({required: true, unique: true, validate: validateEmail})
     email: string;
-
-    @Prop({required: false})
     password: string;
-
-    @Prop({required: false})
     salt: string;
-
+    groups: UserGroup[];
 }
 
 export class UserPartial extends PartialModel {}
 
-export const UserSchema = SchemaFactory.createForClass(User);
+export class UserGroup {
+    group: string | Group;
+    joinedAt: Date;
+}
+
+export type UserDocument = User & Document;

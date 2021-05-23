@@ -1,14 +1,15 @@
-import { Test, TestingModule } from '@nestjs/testing';
+import {Test, TestingModule} from '@nestjs/testing';
 import {MongooseModule} from "@nestjs/mongoose";
 import {INestApplication} from "@nestjs/common";
 import * as request from "supertest";
 import {map, mergeMap} from "rxjs/operators";
 import {UserService} from "../model/user/user.service";
 import {AuthService} from "./auth.service";
-import {UserCreate} from "../model/user/entity/user-create.dto";
 import {AuthModule} from "./auth.module";
 import {closeInMongodConnection, rootMongooseTestModule} from "../../test/mongoose-memory.helper";
-import {User, UserSchema} from "../model/user/entity/user.entity";
+import {User} from "../model/user/entity/user.entity";
+import {UserSchema} from "../model/user/entity/user.schema";
+import {userMock} from "../model/user/entity/user.mock";
 
 describe('AuthController', () => {
 
@@ -17,20 +18,13 @@ describe('AuthController', () => {
 
     let app: INestApplication;
 
-    const validUser: UserCreate = {
-        name: "John",
-        surname: "Doe",
-        email: "admin@martina.com.co",
-        password: "MyAwesomePassword123"
-    } as UserCreate;
-
     beforeEach(async () => {
 
         const module: TestingModule = await Test.createTestingModule({
             imports: [
-                AuthModule,
                 rootMongooseTestModule(),
-                MongooseModule.forFeature([{name: User.name, schema: UserSchema}])
+                MongooseModule.forFeature([{name: User.name, schema: UserSchema}]),
+                AuthModule
             ]
         }).compile();
 
@@ -42,14 +36,14 @@ describe('AuthController', () => {
     });
 
     it('/auth/login (POST)', () => {
-        return userService.create(validUser).pipe(
+        return userService.create(userMock).pipe(
             mergeMap(rawUser =>
                 service.register(rawUser._id, 'testPassword')
             ),
             map(user =>
                 request(app.getHttpServer())
                     .post('/auth/login')
-                    .send({email: validUser.email, password: 'testPassword'})
+                    .send({email: userMock.email, password: 'testPassword'})
                     .expect(201)
             )
         ).toPromise();

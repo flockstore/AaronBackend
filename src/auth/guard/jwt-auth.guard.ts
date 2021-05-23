@@ -1,5 +1,5 @@
 import {ExecutionContext, Injectable, SetMetadata} from "@nestjs/common";
-import { AuthGuard } from "@nestjs/passport";
+import {AuthGuard} from "@nestjs/passport";
 import {Reflector} from "@nestjs/core";
 import {AppConfigService} from "../../config/app/config.service";
 

@@ -8,8 +8,8 @@ export abstract class ModelService<T extends Document, P extends PartialModel> {
     protected constructor(private model: Model<T>) {
     }
 
-    create(user: P): Observable<T> {
-        return from(this.model.create(user));
+    create(model: P): Observable<T> {
+        return from(this.model.create(model));
     }
 
     get(id: string): Observable<T> {
@@ -20,8 +20,8 @@ export abstract class ModelService<T extends Document, P extends PartialModel> {
         return from(this.model.find(query, projection, options));
     }
 
-    update(id: string, update: P): Observable<T> {
-        return from(this.model.findByIdAndUpdate(id, update, {new: true}));
+    update(id: string, partial: P): Observable<T> {
+        return from(this.model.findByIdAndUpdate(id, partial as any, {new: true}));
     }
 
     delete(id: string): Observable<boolean> {

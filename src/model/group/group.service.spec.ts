@@ -1,19 +1,15 @@
-import { Test, TestingModule } from '@nestjs/testing';
+import {Test, TestingModule} from '@nestjs/testing';
 import {MongooseModule} from "@nestjs/mongoose";
 import {closeInMongodConnection, rootMongooseTestModule} from "../../../test/mongoose-memory.helper";
-import {Group, GroupDocument, GroupSchema} from "./entity/group.entity";
+import {GroupSchema} from "./entity/group.schema";
 import {GroupService} from "./group.service";
-import {PermissionRegistry} from "./entity/permission-registry.entity";
+import {Group, GroupDocument} from "./entity/group.entity";
+import {mergeMap} from "rxjs/operators";
+import {groupMock} from "./entity/group.mock";
 
 describe('GroupService', () => {
 
     let service: GroupService;
-    const validGroup: GroupDocument = {
-        name: 'Administrator',
-        color: 'ffffff',
-        priority: 1,
-        permissions: {} as PermissionRegistry
-    } as GroupDocument;
 
     beforeEach(async () => {
 
@@ -39,9 +35,9 @@ describe('GroupService', () => {
     });
 
     it('should create a group', done => {
-        service.create(validGroup).subscribe(
+        service.create(groupMock).subscribe(
             response => {
-                expect((response instanceof Group)).toBe(true);
+                expect(response).toHaveProperty('_id');
                 done();
             },
             error => {
@@ -49,6 +45,40 @@ describe('GroupService', () => {
                 done();
             }
         );
+    });
+
+    it('should update a group', done => {
+
+        service.create(groupMock).pipe(
+            mergeMap(group => service.update(group._id, {name: 'Moderator'} as GroupDocument))
+        ).subscribe(
+            response => {
+                expect(response.name).toBe('Moderator');
+                done();
+            },
+            error => {
+                expect(error).toBeNull();
+                done();
+            }
+        );
+
+    });
+
+    it('should soft delete a group', done => {
+
+        service.create(groupMock).pipe(
+            mergeMap(group => service.delete(group._id))
+        ).subscribe(
+            response => {
+                expect(response).toBe(true);
+                done();
+            },
+            error => {
+                expect(error).toBeNull();
+                done();
+            }
+        );
+
     });
 
     afterEach(async () => {

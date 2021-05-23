@@ -1,2 +1,4 @@
-export class PartialModel {
+import {Document} from "mongoose";
+
+export class PartialModel extends Document{
 }

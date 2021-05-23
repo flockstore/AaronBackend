@@ -1,7 +1,8 @@
-import { Module } from '@nestjs/common';
+import {Module} from '@nestjs/common';
 import {MongooseModule} from "@nestjs/mongoose";
-import {Group, GroupSchema} from "./entity/group.entity";
+import {GroupSchema} from "./entity/group.schema";
 import {GroupService} from "./group.service";
+import {Group} from "./entity/group.entity";
 
 @Module({
     imports: [

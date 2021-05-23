@@ -1,8 +1,6 @@
-import {Schema} from "@nestjs/mongoose";
-import {UserPartial} from "./user.entity";
+import {UserGroup, UserPartial} from "./user.entity";
 import {IsEmail, IsNotEmpty} from "class-validator";
 
-@Schema()
 export class UserCreate extends UserPartial {
 
     @IsNotEmpty()
@@ -16,5 +14,7 @@ export class UserCreate extends UserPartial {
 
     @IsNotEmpty()
     password: string;
+
+    groups: UserGroup[];
 
 }

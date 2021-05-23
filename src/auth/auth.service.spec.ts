@@ -2,13 +2,14 @@ import {Test, TestingModule} from '@nestjs/testing';
 import {MongooseModule} from "@nestjs/mongoose";
 import {map, mergeMap} from "rxjs/operators";
 import {UserService} from "../model/user/user.service";
-import {UserCreate} from "../model/user/entity/user-create.dto";
 import {closeInMongodConnection, rootMongooseTestModule} from "../../test/mongoose-memory.helper";
-import {User, UserDocument, UserSchema} from "../model/user/entity/user.entity";
+import {User, UserDocument} from "../model/user/entity/user.entity";
 import {AuthModule} from "./auth.module";
 import {AuthService} from "./auth.service";
 import {TokenSerializer} from "./serializer/token.serializer";
 import {Observable} from "rxjs";
+import {UserSchema} from "../model/user/entity/user.schema";
+import {userMock} from "../model/user/entity/user.mock";
 
 describe('AuthService', () => {
 
@@ -16,20 +17,14 @@ describe('AuthService', () => {
     let service: AuthService;
     let tokenSerializer: TokenSerializer;
 
-    const validUser: UserCreate = {
-        name: "John",
-        surname: "Doe",
-        email: "admin@martina.com.co",
-        password: "MyAwesomePassword123"
-    } as UserCreate;
 
     beforeEach(async () => {
 
         const module: TestingModule = await Test.createTestingModule({
             imports: [
-                AuthModule,
                 rootMongooseTestModule(),
-                MongooseModule.forFeature([{name: User.name, schema: UserSchema}])
+                MongooseModule.forFeature([{name: User.name, schema: UserSchema}]),
+                AuthModule
             ]
         }).compile();
 
@@ -92,7 +87,7 @@ describe('AuthService', () => {
     });
 
     function getRegisteredUser(): Observable<UserDocument> {
-        return userService.create(validUser).pipe(
+        return userService.create(userMock).pipe(
             mergeMap(pendingUser =>
                 service.register(pendingUser._id, 'testPassword')
             )

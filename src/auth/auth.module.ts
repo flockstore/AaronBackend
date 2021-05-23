@@ -1,4 +1,4 @@
-import { Module } from '@nestjs/common';
+import {Module} from '@nestjs/common';
 import {PasswordSerializer} from "./serializer/password.serializer";
 import {JwtModule} from "@nestjs/jwt";
 import {AuthConfigService} from "../config/auth/config.service";

@@ -1,4 +1,4 @@
-import { Module } from '@nestjs/common';
+import {Module} from '@nestjs/common';
 import {UserModule} from "./user/user.module";
 import {GroupModule} from "./group/group.module";
 
