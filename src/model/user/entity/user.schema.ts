@@ -15,7 +15,8 @@ export const UserSchema = new mongoose.Schema({
         group: {
             type: Schema.Types.ObjectId,
             ref: 'Group',
-            required: true
+            required: true,
+            autopopulate: true
         },
         joinedAt: {
             type: Date,
@@ -25,3 +26,5 @@ export const UserSchema = new mongoose.Schema({
     password: {type: String, required: false},
     salt: {type: String, required: false}
 });
+
+UserSchema.plugin(require('mongoose-autopopulate'));

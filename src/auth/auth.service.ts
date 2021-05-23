@@ -43,7 +43,7 @@ export class AuthService {
     public register(id: string, password: string): Observable<UserDocument> {
         return this.passwordSerializer.serialize(password).pipe(
             mergeMap(compound =>
-                this.userService.update(id, {password: compound.hash, salt: compound.salt.toString()}).pipe()
+                this.userService.update(id, {password: compound.hash, salt: compound.salt.toString()} as any).pipe()
             )
         );
     }

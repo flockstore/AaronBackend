@@ -2,8 +2,8 @@ import {Body, Controller, Delete, Get, Param, Post, Put} from '@nestjs/common';
 import {UserDocument} from "./entity/user.entity";
 import {UserService} from "./user.service";
 import {Observable} from "rxjs";
-import {UserCreate} from "./entity/user-create.dto";
-import {UserGroupAction} from "./entity/user-group-action.dto";
+import {UserCreate} from "./entity/dto/user-create.dto";
+import {UserGroupAction} from "./entity/dto/user-group-action.dto";
 
 @Controller('user')
 export class UserController {

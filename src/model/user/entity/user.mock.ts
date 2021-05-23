@@ -1,4 +1,4 @@
-import {UserCreate} from "./user-create.dto";
+import {UserCreate} from "./dto/user-create.dto";
 
 export const userMock: UserCreate = {
     name: "John",

@@ -2,13 +2,13 @@ import {Test, TestingModule} from '@nestjs/testing';
 import {UserController} from './user.controller';
 import {UserService} from "./user.service";
 import {closeInMongodConnection, rootMongooseTestModule} from "../../../test/mongoose-memory.helper";
-import {MongooseModule} from "@nestjs/mongoose";
 import {User} from "./entity/user.entity";
 import {INestApplication} from "@nestjs/common";
 import * as request from "supertest";
 import {map} from "rxjs/operators";
-import {UserSchema} from "./entity/user.schema";
 import {userMock} from "./entity/user.mock";
+import {UserModule} from "./user.module";
+import {GroupModule} from "../group/group.module";
 
 describe('UserController', () => {
 
@@ -20,9 +20,9 @@ describe('UserController', () => {
         const module: TestingModule = await Test.createTestingModule({
             imports: [
                 rootMongooseTestModule(),
-                MongooseModule.forFeature([{name: User.name, schema: UserSchema}])
+                GroupModule,
+                UserModule
             ],
-            providers: [UserService],
             controllers: [UserController]
         }).compile();
 

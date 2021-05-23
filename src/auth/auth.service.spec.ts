@@ -1,15 +1,15 @@
 import {Test, TestingModule} from '@nestjs/testing';
-import {MongooseModule} from "@nestjs/mongoose";
 import {map, mergeMap} from "rxjs/operators";
 import {UserService} from "../model/user/user.service";
 import {closeInMongodConnection, rootMongooseTestModule} from "../../test/mongoose-memory.helper";
-import {User, UserDocument} from "../model/user/entity/user.entity";
+import {UserDocument} from "../model/user/entity/user.entity";
 import {AuthModule} from "./auth.module";
 import {AuthService} from "./auth.service";
 import {TokenSerializer} from "./serializer/token.serializer";
 import {Observable} from "rxjs";
-import {UserSchema} from "../model/user/entity/user.schema";
 import {userMock} from "../model/user/entity/user.mock";
+import {GroupModule} from "../model/group/group.module";
+import {UserModule} from "../model/user/user.module";
 
 describe('AuthService', () => {
 
@@ -23,7 +23,8 @@ describe('AuthService', () => {
         const module: TestingModule = await Test.createTestingModule({
             imports: [
                 rootMongooseTestModule(),
-                MongooseModule.forFeature([{name: User.name, schema: UserSchema}]),
+                GroupModule,
+                UserModule,
                 AuthModule
             ]
         }).compile();

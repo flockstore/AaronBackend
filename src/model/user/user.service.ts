@@ -5,6 +5,7 @@ import {Model} from "mongoose";
 import {ModelService} from "../../common/service/model.service";
 import {from, Observable} from "rxjs";
 import {mergeMap} from "rxjs/operators";
+import {Group} from "../group/entity/group.entity";
 
 @Injectable()
 export class UserService extends ModelService<UserDocument, UserPartial> {
@@ -32,7 +33,7 @@ export class UserService extends ModelService<UserDocument, UserPartial> {
     removeGroup(user: string, group: string): Observable<UserDocument> {
         return this.get(user).pipe(
             mergeMap(record => {
-                record.groups = record.groups.filter(g => g.group.toString() !== group.toString());
+                record.groups = record.groups.filter(g => (g.group as Group)._id.toString() !== group.toString());
                 return from(record.save());
             })
         )

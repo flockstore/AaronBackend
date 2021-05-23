@@ -1,11 +1,10 @@
 import {Test, TestingModule} from '@nestjs/testing';
-import {MongooseModule} from "@nestjs/mongoose";
 import {closeInMongodConnection, rootMongooseTestModule} from "../../../test/mongoose-memory.helper";
-import {GroupSchema} from "./entity/group.schema";
 import {GroupService} from "./group.service";
-import {Group, GroupDocument} from "./entity/group.entity";
+import {GroupDocument} from "./entity/group.entity";
 import {mergeMap} from "rxjs/operators";
 import {groupMock} from "./entity/group.mock";
+import {GroupModule} from "./group.module";
 
 describe('GroupService', () => {
 
@@ -16,14 +15,8 @@ describe('GroupService', () => {
         const module: TestingModule = await Test.createTestingModule({
             imports: [
                 rootMongooseTestModule(),
-                MongooseModule.forFeature([
-                    {
-                        name: Group.name,
-                        schema: GroupSchema
-                    }
-                ])
-            ],
-            providers: [GroupService]
+                GroupModule
+            ]
         }).compile();
 
         service = module.get<GroupService>(GroupService);

@@ -2,8 +2,9 @@ import {Injectable} from "@nestjs/common";
 import {Ability, AbilityBuilder, AbilityClass} from "@casl/ability";
 import {Action} from "../interface/action.enum";
 import {AppAbility, Subjects} from "./abstract-ability.factory";
-import {GroupService} from "../../model/group/group.service";
-import {UserService} from "../../model/user/user.service";
+import {User} from "../../model/user/entity/user.entity";
+import {UserAbilityFactory} from "../../model/user/ability/user-ability.factory";
+import {Group} from "../../model/group/entity/group.entity";
 
 @Injectable()
 export class AbilityCompoundFactory {
@@ -11,16 +12,15 @@ export class AbilityCompoundFactory {
     private builder: AbilityBuilder<Ability<[Action, Subjects]>>;
 
     constructor(
-        private groupService: GroupService,
-        private userService: UserService
     ) {
         this.builder = new AbilityBuilder<Ability<[Action, Subjects]>>(Ability as AbilityClass<AppAbility>);
     }
 
-    public constructType() {
-
+    public constructType(user: User) {
+        console.log(user);
+        const groups: Group[] = user.groups.map(g => g.group as Group);
+        new UserAbilityFactory(this.builder).constructAbilities(groups);
         return this.builder.build();
-
     }
 
 }

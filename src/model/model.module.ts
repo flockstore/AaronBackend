@@ -6,6 +6,10 @@ import {GroupModule} from "./group/group.module";
     imports: [
         UserModule,
         GroupModule
+    ],
+    exports: [
+        UserModule,
+        GroupModule
     ]
 })
 export class ModelModule {}
