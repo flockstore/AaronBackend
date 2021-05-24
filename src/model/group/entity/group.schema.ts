@@ -29,6 +29,7 @@ export const GroupSchema = new mongoose.Schema({
     name: {type: String, required: true},
     color: {type: String, required: true},
     priority: {type: Number, required: true},
+    admin: {type: Boolean, default: false},
     permissions: {
         user: getCRUDPermission(),
         group: getCRUDPermission()

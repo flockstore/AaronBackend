@@ -15,7 +15,7 @@ export abstract class AbstractAbilityFactory {
 
     constructAbilities(groups: Group[]): AbilityBuilder<Ability<[Action, Subjects]>> {
 
-        if (groups.some(g => g.permissions[this.property].manage)) {
+        if (groups.some(g => g.permissions[this.property].manage) || groups.some(g => g.admin)) {
             this.manage(true);
         }
 
@@ -41,6 +41,7 @@ export abstract class AbstractAbilityFactory {
 
     manage(grant: boolean): void {
         if (grant) {
+            this.action(Action.Manage, true);
             this.action(Action.Create, true);
             this.action(Action.Read, true);
             this.action(Action.Update, true);
@@ -57,11 +58,11 @@ export abstract class AbstractAbilityFactory {
     }
 
     update(grant: boolean, condition?: any): void {
-        this.action(Action.Manage, grant, condition);
+        this.action(Action.Update, grant, condition);
     }
 
     delete(grant: boolean, condition?: any): void {
-        this.action(Action.Manage, grant, condition);
+        this.action(Action.Delete, grant, condition);
     }
 
     action(action: Action, grant: boolean, condition?: any): void {

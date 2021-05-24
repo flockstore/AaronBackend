@@ -12,6 +12,9 @@ export class Group extends Document {
     @IsNotEmpty()
     priority: number;
 
+    @IsNotEmpty()
+    admin: boolean;
+
     permissions: PermissionRegistry;
 
 }

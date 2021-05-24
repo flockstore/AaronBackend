@@ -5,6 +5,7 @@ import {AppAbility, Subjects} from "./abstract-ability.factory";
 import {User} from "../../model/user/entity/user.entity";
 import {UserAbilityFactory} from "../../model/user/ability/user-ability.factory";
 import {Group} from "../../model/group/entity/group.entity";
+import {GroupAbilityFactory} from "../../model/group/ability/group-ability.factory";
 
 @Injectable()
 export class AbilityCompoundFactory {
@@ -17,9 +18,9 @@ export class AbilityCompoundFactory {
     }
 
     public constructType(user: User) {
-        console.log(user);
         const groups: Group[] = user.groups.map(g => g.group as Group);
         new UserAbilityFactory(this.builder).constructAbilities(groups);
+        new GroupAbilityFactory(this.builder).constructAbilities(groups);
         return this.builder.build();
     }
 

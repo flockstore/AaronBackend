@@ -1,18 +1,19 @@
-import {UserService} from "../user.service";
-import {GroupService} from "../../group/group.service";
+
+import {GroupService} from "../group.service";
 import {Test, TestingModule} from "@nestjs/testing";
-import {GroupModule} from "../../group/group.module";
+import {GroupModule} from "../group.module";
 import {closeInMongodConnection, rootMongooseTestModule} from "../../../../test/mongoose-memory.helper";
-import {User, UserDocument} from "../entity/user.entity";
-import {UserModule} from "../user.module";
 import {Observable} from "rxjs";
-import {GroupDocument} from "../../group/entity/group.entity";
-import {userMock} from "../entity/user.mock";
+import {Group, GroupDocument} from "../entity/group.entity";
 import {map, mergeMap} from "rxjs/operators";
-import {groupMock, superPerms} from "../../group/entity/group.mock";
+import {groupMock, superPerms} from "../entity/group.mock";
 import {PermissionModule} from "../../../permission/permission.module";
 import {AbilityCompoundFactory} from "../../../permission/ability/ability-compound.factory";
 import {Action} from "../../../permission/interface/action.enum";
+import {UserService} from "../../user/user.service";
+import {UserModule} from "../../user/user.module";
+import {UserDocument} from "../../user/entity/user.entity";
+import {userMock} from "../../user/entity/user.mock";
 
 describe('UserAbilityFactory', () => {
 
@@ -42,11 +43,11 @@ describe('UserAbilityFactory', () => {
         expect(groupService).toBeDefined();
     });
 
-    it('should HAVE Management permissions', done => {
+    it('should HAVE management permissions on group', done => {
         createGroupAndAdd().subscribe(
             response => {
                 const permissions = compoundFactory.constructType(response.user);
-                expect(permissions.can(Action.Manage, User)).toBe(true);
+                expect(permissions.can(Action.Read, Group)).toBe(true);
                 done();
             },
             error => {
@@ -63,7 +64,7 @@ describe('UserAbilityFactory', () => {
     function createGroupAndAdd():Observable<{user: UserDocument, group: GroupDocument}> {
         return service.create(userMock).pipe(
             mergeMap(user =>
-                groupService.create({...groupMock, permissions: {user: superPerms}} as any).pipe(
+                groupService.create({...groupMock, permissions: {group: superPerms}} as any).pipe(
                     mergeMap(group =>
                         service.addGroup(user._id, group._id).pipe(
                             map(updatedUser => ({user: updatedUser, group}))
