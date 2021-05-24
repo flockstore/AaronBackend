@@ -1,5 +1,5 @@
 import {Test, TestingModule} from '@nestjs/testing';
-import {closeInMongodConnection, rootMongooseTestModule} from "../../../test/mongoose-memory.helper";
+import {closeInMongodConnection, rootMongooseTestModule} from "../../../test/utilities/mongoose-memory.helper";
 import {INestApplication} from "@nestjs/common";
 import * as request from "supertest";
 import {map} from "rxjs/operators";

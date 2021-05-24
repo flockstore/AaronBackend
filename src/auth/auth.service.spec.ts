@@ -1,7 +1,7 @@
 import {Test, TestingModule} from '@nestjs/testing';
 import {map, mergeMap} from "rxjs/operators";
 import {UserService} from "../model/user/user.service";
-import {closeInMongodConnection, rootMongooseTestModule} from "../../test/mongoose-memory.helper";
+import {closeInMongodConnection, rootMongooseTestModule} from "../../test/utilities/mongoose-memory.helper";
 import {UserDocument} from "../model/user/entity/user.entity";
 import {AuthModule} from "./auth.module";
 import {AuthService} from "./auth.service";

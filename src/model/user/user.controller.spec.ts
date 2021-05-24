@@ -1,7 +1,7 @@
 import {Test, TestingModule} from '@nestjs/testing';
 import {UserController} from './user.controller';
 import {UserService} from "./user.service";
-import {closeInMongodConnection, rootMongooseTestModule} from "../../../test/mongoose-memory.helper";
+import {closeInMongodConnection, rootMongooseTestModule} from "../../../test/utilities/mongoose-memory.helper";
 import {User} from "./entity/user.entity";
 import {INestApplication} from "@nestjs/common";
 import * as request from "supertest";

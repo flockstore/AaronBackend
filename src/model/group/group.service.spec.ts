@@ -1,5 +1,5 @@
 import {Test, TestingModule} from '@nestjs/testing';
-import {closeInMongodConnection, rootMongooseTestModule} from "../../../test/mongoose-memory.helper";
+import {closeInMongodConnection, rootMongooseTestModule} from "../../../test/utilities/mongoose-memory.helper";
 import {GroupService} from "./group.service";
 import {GroupDocument} from "./entity/group.entity";
 import {mergeMap} from "rxjs/operators";

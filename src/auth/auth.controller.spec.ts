@@ -5,7 +5,7 @@ import {map, mergeMap} from "rxjs/operators";
 import {UserService} from "../model/user/user.service";
 import {AuthService} from "./auth.service";
 import {AuthModule} from "./auth.module";
-import {closeInMongodConnection, rootMongooseTestModule} from "../../test/mongoose-memory.helper";
+import {closeInMongodConnection, rootMongooseTestModule} from "../../test/utilities/mongoose-memory.helper";
 import {userMock} from "../model/user/entity/user.mock";
 import {GroupModule} from "../model/group/group.module";
 import {UserModule} from "../model/user/user.module";
