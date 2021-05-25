@@ -8,6 +8,7 @@ import {GroupService} from "./group.service";
 import {GroupController} from "./group.controller";
 import {groupMock} from "./entity/group.mock";
 import {GroupModule} from "./group.module";
+import {PermissionModule} from "../../permission/permission.module";
 
 describe('GroupController', () => {
 
@@ -19,6 +20,7 @@ describe('GroupController', () => {
         const module: TestingModule = await Test.createTestingModule({
             imports: [
                 rootMongooseTestModule(),
+                PermissionModule,
                 GroupModule
             ],
             controllers: [GroupController]

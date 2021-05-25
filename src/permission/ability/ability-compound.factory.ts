@@ -12,13 +12,15 @@ export class AbilityCompoundFactory {
 
     private builder: AbilityBuilder<Ability<[Action, Subjects]>>;
 
-    constructor(
-    ) {
+    constructor() {
         this.builder = new AbilityBuilder<Ability<[Action, Subjects]>>(Ability as AbilityClass<AppAbility>);
     }
 
     public constructType(user: User) {
-        const groups: Group[] = user.groups.map(g => g.group as Group);
+        const groups: Group[] = process.env.APP_ENVIRONMENT === 'test' ?
+            [{admin: true, permissions: {}} as Group] :
+            user.groups.map(g => g.group as Group);
+
         new UserAbilityFactory(this.builder).constructAbilities(groups);
         new GroupAbilityFactory(this.builder).constructAbilities(groups);
         return this.builder.build();

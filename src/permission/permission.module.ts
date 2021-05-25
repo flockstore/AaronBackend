@@ -1,10 +1,10 @@
-import {Module} from '@nestjs/common';
+import {Global, Module} from '@nestjs/common';
 import {AbilityCompoundFactory} from "./ability/ability-compound.factory";
-import {ModelModule} from "../model/model.module";
+import {PolicyGuard} from "./guard/policy.guard";
 
+@Global()
 @Module({
-    imports: [ModelModule],
-    providers: [AbilityCompoundFactory],
-    exports: [AbilityCompoundFactory]
+    providers: [AbilityCompoundFactory, PolicyGuard],
+    exports: [AbilityCompoundFactory, PolicyGuard]
 })
 export class PermissionModule {}

@@ -3,6 +3,7 @@ import {Reflector} from "@nestjs/core";
 import {CHECK_POLICIES_KEY, PolicyHandler} from "../interface/policy-handler.interface";
 import {AppAbility} from "../ability/abstract-ability.factory";
 import {AbilityCompoundFactory} from "../ability/ability-compound.factory";
+import {User} from "../../model/user/entity/user.entity";
 
 @Injectable()
 export class PolicyGuard implements CanActivate {
@@ -19,15 +20,15 @@ export class PolicyGuard implements CanActivate {
                 context.getHandler(),
             ) || [];
 
-        const { user } = context.switchToHttp().getRequest();
-        const ability = this.abilityCompoundFactory.constructType();
+        const user: User = context.switchToHttp().getRequest().user;
+        const ability = this.abilityCompoundFactory.constructType(user);
 
         return policyHandlers.every((handler) =>
-            this.execPolicyHandler(handler, ability),
+                PolicyGuard.execPolicyHandler(handler, ability),
         );
     }
 
-    private execPolicyHandler(handler: PolicyHandler, ability: AppAbility) {
+    private static execPolicyHandler(handler: PolicyHandler, ability: AppAbility) {
         if (typeof handler === 'function') {
             return handler(ability);
         }

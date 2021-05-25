@@ -9,6 +9,7 @@ import {closeInMongodConnection, rootMongooseTestModule} from "../../test/utilit
 import {userMock} from "../model/user/entity/user.mock";
 import {GroupModule} from "../model/group/group.module";
 import {UserModule} from "../model/user/user.module";
+import {PermissionModule} from "../permission/permission.module";
 
 describe('AuthController', () => {
 
@@ -22,6 +23,7 @@ describe('AuthController', () => {
         const module: TestingModule = await Test.createTestingModule({
             imports: [
                 rootMongooseTestModule(),
+                PermissionModule,
                 GroupModule,
                 UserModule,
                 AuthModule
@@ -40,7 +42,7 @@ describe('AuthController', () => {
             mergeMap(rawUser =>
                 service.register(rawUser._id, 'testPassword')
             ),
-            map(user =>
+            map(() =>
                 request(app.getHttpServer())
                     .post('/auth/login')
                     .send({email: userMock.email, password: 'testPassword'})

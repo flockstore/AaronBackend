@@ -15,23 +15,23 @@ export abstract class AbstractAbilityFactory {
 
     constructAbilities(groups: Group[]): AbilityBuilder<Ability<[Action, Subjects]>> {
 
-        if (groups.some(g => g.permissions[this.property].manage) || groups.some(g => g.admin)) {
+        if (groups.some(g => g.permissions[this.property] && g.permissions[this.property].manage) || groups.some(g => g.admin)) {
             this.manage(true);
         }
 
-        if (groups.some(g => g.permissions[this.property].create)) {
+        if (groups.some(g => g.permissions[this.property] && g.permissions[this.property].create)) {
             this.create(true);
         }
 
-        if (groups.some(g => g.permissions[this.property].read)) {
+        if (groups.some(g => g.permissions[this.property] && g.permissions[this.property].read)) {
             this.read(true);
         }
 
-        if (groups.some(g => g.permissions[this.property].update)) {
+        if (groups.some(g => g.permissions[this.property] && g.permissions[this.property].update)) {
             this.update(true);
         }
 
-        if (groups.some(g => g.permissions[this.property].delete)) {
+        if (groups.some(g => g.permissions[this.property] && g.permissions[this.property].delete)) {
             this.delete(true);
         }
 

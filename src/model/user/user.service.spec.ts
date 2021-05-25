@@ -11,6 +11,7 @@ import {groupMock} from "../group/entity/group.mock";
 import {Observable} from "rxjs";
 import {GroupDocument} from "../group/entity/group.entity";
 import {UserModule} from "./user.module";
+import {PermissionModule} from "../../permission/permission.module";
 
 describe('UserService', () => {
 
@@ -22,6 +23,7 @@ describe('UserService', () => {
         const module: TestingModule = await Test.createTestingModule({
             imports: [
                 rootMongooseTestModule(),
+                PermissionModule,
                 GroupModule,
                 UserModule
             ]

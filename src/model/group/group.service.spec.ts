@@ -5,6 +5,7 @@ import {GroupDocument} from "./entity/group.entity";
 import {mergeMap} from "rxjs/operators";
 import {groupMock} from "./entity/group.mock";
 import {GroupModule} from "./group.module";
+import {PermissionModule} from "../../permission/permission.module";
 
 describe('GroupService', () => {
 
@@ -15,6 +16,7 @@ describe('GroupService', () => {
         const module: TestingModule = await Test.createTestingModule({
             imports: [
                 rootMongooseTestModule(),
+                PermissionModule,
                 GroupModule
             ]
         }).compile();

@@ -13,10 +13,10 @@ import {ModelModule} from "./model/model.module";
   imports: [
       GlobalConfigModule,
       ProviderModule,
+      PermissionModule,
       ModelModule,
       CommonModule,
       AuthModule,
-      PermissionModule
   ],
   controllers: [AppController],
   providers: [AppService],
