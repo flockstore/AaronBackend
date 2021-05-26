@@ -1,19 +1,13 @@
 import {Document} from "mongoose";
-import {IsNotEmpty} from "class-validator";
+import {PartialModel} from "../../../common/model/partial-model";
 
 export class Account extends Document {
-
-    @IsNotEmpty()
     name: string;
-
-    @IsNotEmpty()
     number: number;
-
-    @IsNotEmpty()
     bank: string;
-
     image: string;
-
 }
+
+export class AccountPartial extends PartialModel {}
 
 export type AccountDocument = Account & Document;

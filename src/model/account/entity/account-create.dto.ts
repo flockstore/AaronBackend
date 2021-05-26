@@ -1,9 +1,20 @@
-import {Account} from "./account.entity";
+import {AccountPartial} from "./account.entity";
 import {IsNotEmpty} from "class-validator";
 
-export class AccountCreate extends Account {
+export class AccountCreate extends AccountPartial {
 
     @IsNotEmpty()
     initialValue: string;
+
+    @IsNotEmpty()
+    name: string;
+
+    @IsNotEmpty()
+    number: number;
+
+    @IsNotEmpty()
+    bank: string;
+
+    image: string;
 
 }
