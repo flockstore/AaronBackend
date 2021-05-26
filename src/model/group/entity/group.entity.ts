@@ -22,6 +22,7 @@ export class Group extends Document {
 export class PermissionRegistry {
     user: CRUDOperation;
     group: CRUDOperation;
+    account: CRUDOperation;
 }
 
 export class CRUDOperation {

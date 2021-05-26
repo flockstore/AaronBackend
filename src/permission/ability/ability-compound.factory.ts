@@ -6,6 +6,7 @@ import {User} from "../../model/user/entity/user.entity";
 import {UserAbilityFactory} from "../../model/user/ability/user-ability.factory";
 import {Group} from "../../model/group/entity/group.entity";
 import {GroupAbilityFactory} from "../../model/group/ability/group-ability.factory";
+import {AccountAbilityFactory} from "../../model/account/ability/account-ability.factory";
 
 @Injectable()
 export class AbilityCompoundFactory {
@@ -23,6 +24,7 @@ export class AbilityCompoundFactory {
 
         new UserAbilityFactory(this.builder).constructAbilities(groups);
         new GroupAbilityFactory(this.builder).constructAbilities(groups);
+        new AccountAbilityFactory(this.builder).constructAbilities(groups);
         return this.builder.build();
     }
 

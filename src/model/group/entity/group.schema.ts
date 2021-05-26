@@ -32,6 +32,7 @@ export const GroupSchema = new mongoose.Schema({
     admin: {type: Boolean, default: false},
     permissions: {
         user: getCRUDPermission(),
-        group: getCRUDPermission()
+        group: getCRUDPermission(),
+        account: getCRUDPermission()
     }
 });
