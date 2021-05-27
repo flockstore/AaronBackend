@@ -4,7 +4,7 @@ import {IsNotEmpty} from "class-validator";
 export class AccountCreate extends AccountPartial {
 
     @IsNotEmpty()
-    initialValue: string;
+    initialValue: number;
 
     @IsNotEmpty()
     name: string;

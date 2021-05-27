@@ -5,6 +5,7 @@ import {AccountSchema} from "./entity/account.schema";
 import {AccountService} from "./account.service";
 import {AccountController} from "./account.controller";
 import {AccountCreationListener} from "./listener/account-creation.listener";
+import {TransactionModule} from "../transaction/transaction.module";
 
 @Module({
     imports: [
@@ -13,7 +14,8 @@ import {AccountCreationListener} from "./listener/account-creation.listener";
                 name: Account.name,
                 schema: AccountSchema
             }
-        ])
+        ]),
+        TransactionModule
     ],
     exports: [AccountService],
     controllers: [AccountController],

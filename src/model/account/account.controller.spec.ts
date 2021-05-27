@@ -2,7 +2,7 @@ import {Test, TestingModule} from '@nestjs/testing';
 import {closeInMongodConnection, rootMongooseTestModule} from "../../../test/utilities/mongoose-memory.helper";
 import {INestApplication} from "@nestjs/common";
 import * as request from "supertest";
-import {map} from "rxjs/operators";
+import {delay, map, mergeMap} from "rxjs/operators";
 import {PermissionModule} from "../../permission/permission.module";
 import {AccountService} from "./account.service";
 import {AccountModule} from "./account.module";
@@ -11,10 +11,14 @@ import {accountMock} from "./entity/account.mock";
 import {Account} from "./entity/account.entity";
 import {EventListenerProviderModule} from "../../provider/event/provider.module";
 import {TransactionModule} from "../transaction/transaction.module";
+import {Group} from "../group/entity/group.entity";
+import {from} from "rxjs";
+import {TransactionService} from "../transaction/transaction.service";
 
 describe('AccountController', () => {
 
     let service: AccountService;
+    let transactionService: TransactionService;
     let app: INestApplication;
 
     beforeEach(async () => {
@@ -32,16 +36,29 @@ describe('AccountController', () => {
 
         app = module.createNestApplication();
         service = module.get<AccountService>(AccountService);
+        transactionService = module.get<TransactionService>(TransactionService);
         await app.init();
 
     });
 
-    it('/account (POST)', () => {
-        return request(app.getHttpServer())
+    it('/account (POST)', done => {
+        from(request(app.getHttpServer())
             .post('/account')
             .send(accountMock)
             .expect(201)
-            .expect(res => res.body instanceof Account);
+            .expect(res => res.body instanceof Group)).pipe(
+                mergeMap(response =>
+                    transactionService.list({'related.id': response.body._id, 'related.action': 'account_creation'} as any)
+                ),
+                delay(500) // Makes time for the event listener and prevent early connection closing.
+        ).subscribe(
+            response => {
+                expect(response.length).toBe(1);
+                expect(response[0]).toBeDefined();
+                expect(response[0].exchangeValue).toBe(accountMock.initialValue);
+                done();
+            }
+        );
     });
 
 

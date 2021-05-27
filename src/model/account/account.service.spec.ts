@@ -6,6 +6,7 @@ import {AccountModule} from "./account.module";
 import {AccountService} from "./account.service";
 import {accountMock} from "./entity/account.mock";
 import {AccountCreate} from "./entity/account-create.dto";
+import {EventListenerProviderModule} from "../../provider/event/provider.module";
 
 describe('AccountService', () => {
 
@@ -17,7 +18,8 @@ describe('AccountService', () => {
             imports: [
                 rootMongooseTestModule(),
                 PermissionModule,
-                AccountModule
+                AccountModule,
+                EventListenerProviderModule
             ]
         }).compile();
 
