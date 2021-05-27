@@ -4,6 +4,8 @@ export const transactionMock: TransactionDocument = {
     baseValue: 15,
     previousValue: 0,
     exchangeValue: 15,
+    account: '',
+    addition: true,
     related: {
         action: 'Test'
     },

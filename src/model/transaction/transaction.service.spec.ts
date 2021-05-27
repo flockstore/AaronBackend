@@ -4,10 +4,16 @@ import {PermissionModule} from "../../permission/permission.module";
 import {TransactionService} from "./transaction.service";
 import {TransactionModule} from "./transaction.module";
 import {transactionMock} from "./entity/transaction.mock";
+import {AccountModule} from "../account/account.module";
+import {AccountService} from "../account/account.service";
+import {accountMock} from "../account/entity/account.mock";
+import {mergeMap} from "rxjs/operators";
+import {EventListenerProviderModule} from "../../provider/event/provider.module";
 
 describe('TransactionService', () => {
 
     let service: TransactionService;
+    let accountService: AccountService;
 
     beforeEach(async () => {
 
@@ -15,11 +21,14 @@ describe('TransactionService', () => {
             imports: [
                 rootMongooseTestModule(),
                 PermissionModule,
-                TransactionModule
+                TransactionModule,
+                AccountModule,
+                EventListenerProviderModule
             ]
         }).compile();
 
         service = module.get<TransactionService>(TransactionService);
+        accountService = module.get<AccountService>(AccountService);
 
     });
 
@@ -28,7 +37,9 @@ describe('TransactionService', () => {
     });
 
     it('should create a transaction', done => {
-        service.create(transactionMock).subscribe(
+        accountService.create(accountMock).pipe(
+            mergeMap(account => service.create({...transactionMock, account: account._id} as any))
+        ).subscribe(
             response => {
                 expect(response).toHaveProperty('_id');
                 done();

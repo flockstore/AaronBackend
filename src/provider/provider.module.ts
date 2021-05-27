@@ -1,12 +1,15 @@
 import {Module} from "@nestjs/common";
 import {MongoDatabaseProviderModule} from "./mongo/provider.module";
+import {EventListenerProviderModule} from "./event/provider.module";
 
 @Module({
     imports: [
-        MongoDatabaseProviderModule
+        MongoDatabaseProviderModule,
+        EventListenerProviderModule
     ],
     exports: [
-        MongoDatabaseProviderModule
+        MongoDatabaseProviderModule,
+        EventListenerProviderModule
     ]
 })
 export class ProviderModule {}

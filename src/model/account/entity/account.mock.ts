@@ -1,7 +1,7 @@
-import {AccountDocument} from "./account.entity";
+import {AccountCreate} from "./account-create.dto";
 
-export const accountMock: AccountDocument = {
-    name: 'Administrator',
+export const accountMock: AccountCreate = {
+    name: 'Personal Account',
     number: 123456789,
     bank: 'Bancolombia'
-} as AccountDocument;
+} as AccountCreate;
