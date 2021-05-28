@@ -1,4 +1,4 @@
-import { Module } from '@nestjs/common';
+import {Module} from '@nestjs/common';
 import {MongooseModule} from "@nestjs/mongoose";
 import {Transaction} from "./entity/transaction.entity";
 import {TransactionSchema} from "./entity/transaction.schema";

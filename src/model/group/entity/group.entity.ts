@@ -23,6 +23,7 @@ export class PermissionRegistry {
     user: CRUDOperation;
     group: CRUDOperation;
     account: CRUDOperation;
+    flow_category: CRUDOperation;
 }
 
 export class CRUDOperation {

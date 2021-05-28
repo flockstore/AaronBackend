@@ -33,6 +33,7 @@ export const GroupSchema = new mongoose.Schema({
     permissions: {
         user: getCRUDPermission(),
         group: getCRUDPermission(),
-        account: getCRUDPermission()
+        account: getCRUDPermission(),
+        flow_category: getCRUDPermission()
     }
 });
