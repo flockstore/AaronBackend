@@ -1,19 +1,19 @@
 import {Test, TestingModule} from '@nestjs/testing';
-import {closeInMongodConnection, rootMongooseTestModule} from "../../../test/utilities/mongoose-memory.helper";
-import {INestApplication} from "@nestjs/common";
-import * as request from "supertest";
-import {delay, map, mergeMap} from "rxjs/operators";
-import {PermissionModule} from "../../permission/permission.module";
-import {AccountService} from "./account.service";
-import {AccountModule} from "./account.module";
-import {AccountController} from "./account.controller";
-import {accountMock} from "./entity/account.mock";
-import {Account} from "./entity/account.entity";
-import {EventListenerProviderModule} from "../../provider/event/provider.module";
-import {TransactionModule} from "../transaction/transaction.module";
-import {Group} from "../group/entity/group.entity";
-import {from} from "rxjs";
-import {TransactionService} from "../transaction/transaction.service";
+import {closeInMongodConnection, rootMongooseTestModule} from '../../../test/utilities/mongoose-memory.helper';
+import {INestApplication} from '@nestjs/common';
+import * as request from 'supertest';
+import {delay, map, mergeMap} from 'rxjs/operators';
+import {PermissionModule} from '../../permission/permission.module';
+import {AccountService} from './account.service';
+import {AccountModule} from './account.module';
+import {AccountController} from './account.controller';
+import {accountMock} from './entity/account.mock';
+import {Account} from './entity/account.entity';
+import {EventListenerProviderModule} from '../../provider/event/provider.module';
+import {TransactionModule} from '../transaction/transaction.module';
+import {Group} from '../group/entity/group.entity';
+import {from} from 'rxjs';
+import {TransactionService} from '../transaction/transaction.service';
 
 describe('AccountController', () => {
 

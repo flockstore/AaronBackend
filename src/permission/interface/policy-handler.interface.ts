@@ -1,5 +1,5 @@
-import {AppAbility} from "../ability/abstract-ability.factory";
-import {SetMetadata} from "@nestjs/common";
+import {AppAbility} from '../ability/abstract-ability.factory';
+import {SetMetadata} from '@nestjs/common';
 
 export interface PolicyHandlerInterface {
     handle(ability: AppAbility): boolean;

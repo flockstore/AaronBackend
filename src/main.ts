@@ -1,8 +1,8 @@
 import {NestFactory} from '@nestjs/core';
 import {AppModule} from './app.module';
-import {NestExpressApplication} from "@nestjs/platform-express";
-import {ValidationPipe} from "@nestjs/common";
-import {AppConfigService} from "./config/app/config.service";
+import {NestExpressApplication} from '@nestjs/platform-express';
+import {ValidationPipe} from '@nestjs/common';
+import {AppConfigService} from './config/app/config.service';
 
 async function bootstrap() {
 

@@ -1,8 +1,8 @@
-import {Ability, AbilityBuilder, InferSubjects} from "@casl/ability";
-import {Document} from "mongoose";
-import {Action} from "../interface/action.enum";
-import {Type} from "@nestjs/common";
-import {Group} from "../../model/group/entity/group.entity";
+import {Ability, AbilityBuilder, InferSubjects} from '@casl/ability';
+import {Document} from 'mongoose';
+import {Action} from '../interface/action.enum';
+import {Type} from '@nestjs/common';
+import {Group} from '../../model/group/entity/group.entity';
 
 export type Subjects = InferSubjects<typeof Document> | 'all';
 export type AppAbility = Ability<[Action, Subjects]>;

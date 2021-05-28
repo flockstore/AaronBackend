@@ -1,5 +1,5 @@
-import {AccountPartial} from "./account.entity";
-import {IsNotEmpty} from "class-validator";
+import {AccountPartial} from './account.entity';
+import {IsNotEmpty} from 'class-validator';
 
 export class AccountCreate extends AccountPartial {
 

@@ -1,7 +1,7 @@
-import {PolicyHandlerInterface} from "../interface/policy-handler.interface";
-import {AppAbility} from "./abstract-ability.factory";
-import {Action} from "../interface/action.enum";
-import {Type} from "@nestjs/common";
+import {PolicyHandlerInterface} from '../interface/policy-handler.interface';
+import {AppAbility} from './abstract-ability.factory';
+import {Action} from '../interface/action.enum';
+import {Type} from '@nestjs/common';
 
 export class DefaultPolicyHandler implements PolicyHandlerInterface {
 

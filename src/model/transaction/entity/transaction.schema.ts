@@ -1,5 +1,6 @@
-import * as mongoose from "mongoose";
-import {Schema} from "mongoose";
+import * as mongoose from 'mongoose';
+import {Schema} from 'mongoose';
+import * as mongoosePopulate from 'mongoose-autopopulate';
 
 function getCompound() {
     return {
@@ -33,5 +34,5 @@ export const TransactionSchema = new mongoose.Schema({
     compound: [getCompound()]
 });
 
-TransactionSchema.plugin(require('mongoose-autopopulate'));
+TransactionSchema.plugin(mongoosePopulate);
 

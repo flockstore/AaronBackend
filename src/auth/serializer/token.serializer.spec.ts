@@ -1,8 +1,8 @@
-import {Test, TestingModule} from "@nestjs/testing";
-import {GlobalConfigModule} from "../../config/config.module";
-import {JwtModule} from "@nestjs/jwt";
-import {AuthConfigService} from "../../config/auth/config.service";
-import {TokenSerializer} from "./token.serializer";
+import {Test, TestingModule} from '@nestjs/testing';
+import {GlobalConfigModule} from '../../config/config.module';
+import {JwtModule} from '@nestjs/jwt';
+import {AuthConfigService} from '../../config/auth/config.service';
+import {TokenSerializer} from './token.serializer';
 
 describe('TokenSerializer', () => {
 

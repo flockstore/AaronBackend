@@ -1,5 +1,5 @@
-import {UserGroup, UserPartial} from "../user.entity";
-import {IsEmail, IsNotEmpty} from "class-validator";
+import {UserGroup, UserPartial} from '../user.entity';
+import {IsEmail, IsNotEmpty} from 'class-validator';
 
 export class UserCreate extends UserPartial {
 

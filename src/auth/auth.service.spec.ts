@@ -1,16 +1,16 @@
 import {Test, TestingModule} from '@nestjs/testing';
-import {map, mergeMap} from "rxjs/operators";
-import {UserService} from "../model/user/user.service";
-import {closeInMongodConnection, rootMongooseTestModule} from "../../test/utilities/mongoose-memory.helper";
-import {UserDocument} from "../model/user/entity/user.entity";
-import {AuthModule} from "./auth.module";
-import {AuthService} from "./auth.service";
-import {TokenSerializer} from "./serializer/token.serializer";
-import {Observable} from "rxjs";
-import {userMock} from "../model/user/entity/user.mock";
-import {GroupModule} from "../model/group/group.module";
-import {UserModule} from "../model/user/user.module";
-import {PermissionModule} from "../permission/permission.module";
+import {map, mergeMap} from 'rxjs/operators';
+import {UserService} from '../model/user/user.service';
+import {closeInMongodConnection, rootMongooseTestModule} from '../../test/utilities/mongoose-memory.helper';
+import {UserDocument} from '../model/user/entity/user.entity';
+import {AuthModule} from './auth.module';
+import {AuthService} from './auth.service';
+import {TokenSerializer} from './serializer/token.serializer';
+import {Observable} from 'rxjs';
+import {userMock} from '../model/user/entity/user.mock';
+import {GroupModule} from '../model/group/group.module';
+import {UserModule} from '../model/user/user.module';
+import {PermissionModule} from '../permission/permission.module';
 
 describe('AuthService', () => {
 
@@ -73,7 +73,7 @@ describe('AuthService', () => {
             ),
         ).subscribe(
             decrypted => {
-                expect((decrypted.token.data as {_id})._id == decrypted.user._id).toBe(true);
+                expect((decrypted.token.data as {_id})._id === decrypted.user._id).toBe(true);
                 done();
             },
 

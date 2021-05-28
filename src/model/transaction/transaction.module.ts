@@ -1,8 +1,8 @@
 import {Module} from '@nestjs/common';
-import {MongooseModule} from "@nestjs/mongoose";
-import {Transaction} from "./entity/transaction.entity";
-import {TransactionSchema} from "./entity/transaction.schema";
-import {TransactionService} from "./transaction.service";
+import {MongooseModule} from '@nestjs/mongoose';
+import {Transaction} from './entity/transaction.entity';
+import {TransactionSchema} from './entity/transaction.schema';
+import {TransactionService} from './transaction.service';
 
 @Module({
     imports: [

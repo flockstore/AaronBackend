@@ -1,5 +1,5 @@
-import {Document} from "mongoose";
-import {IsNotEmpty} from "class-validator";
+import {Document} from 'mongoose';
+import {IsNotEmpty} from 'class-validator';
 
 export class FlowCategory extends Document {
 

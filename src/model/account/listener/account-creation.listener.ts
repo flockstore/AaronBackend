@@ -1,8 +1,8 @@
-import {Injectable} from "@nestjs/common";
-import {OnEvent} from "@nestjs/event-emitter";
-import {TransactionService} from "../../transaction/transaction.service";
-import {AccountDocument} from "../entity/account.entity";
-import {Transaction} from "../../transaction/entity/transaction.entity";
+import {Injectable} from '@nestjs/common';
+import {OnEvent} from '@nestjs/event-emitter';
+import {TransactionService} from '../../transaction/transaction.service';
+import {AccountDocument} from '../entity/account.entity';
+import {Transaction} from '../../transaction/entity/transaction.entity';
 
 @Injectable()
 export class AccountCreationListener {

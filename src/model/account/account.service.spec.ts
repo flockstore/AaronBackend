@@ -1,12 +1,12 @@
 import {Test, TestingModule} from '@nestjs/testing';
-import {closeInMongodConnection, rootMongooseTestModule} from "../../../test/utilities/mongoose-memory.helper";
-import {mergeMap} from "rxjs/operators";
-import {PermissionModule} from "../../permission/permission.module";
-import {AccountModule} from "./account.module";
-import {AccountService} from "./account.service";
-import {accountMock} from "./entity/account.mock";
-import {AccountCreate} from "./entity/account-create.dto";
-import {EventListenerProviderModule} from "../../provider/event/provider.module";
+import {closeInMongodConnection, rootMongooseTestModule} from '../../../test/utilities/mongoose-memory.helper';
+import {mergeMap} from 'rxjs/operators';
+import {PermissionModule} from '../../permission/permission.module';
+import {AccountModule} from './account.module';
+import {AccountService} from './account.service';
+import {accountMock} from './entity/account.mock';
+import {AccountCreate} from './entity/account-create.dto';
+import {EventListenerProviderModule} from '../../provider/event/provider.module';
 
 describe('AccountService', () => {
 

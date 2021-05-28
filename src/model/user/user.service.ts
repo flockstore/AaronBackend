@@ -1,11 +1,11 @@
 import {Injectable} from '@nestjs/common';
-import {InjectModel} from "@nestjs/mongoose";
-import {User, UserDocument, UserPartial} from "./entity/user.entity";
-import {Model} from "mongoose";
-import {ModelService} from "../../common/service/model.service";
-import {from, Observable} from "rxjs";
-import {mergeMap} from "rxjs/operators";
-import {Group} from "../group/entity/group.entity";
+import {InjectModel} from '@nestjs/mongoose';
+import {User, UserDocument, UserPartial} from './entity/user.entity';
+import {Model} from 'mongoose';
+import {ModelService} from '../../common/service/model.service';
+import {from, Observable} from 'rxjs';
+import {mergeMap} from 'rxjs/operators';
+import {Group} from '../group/entity/group.entity';
 
 @Injectable()
 export class UserService extends ModelService<UserDocument, UserPartial> {

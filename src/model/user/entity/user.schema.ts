@@ -1,7 +1,8 @@
-import * as mongoose from "mongoose";
-import {Schema} from "mongoose";
+import * as mongoose from 'mongoose';
+import {Schema} from 'mongoose';
+import * as mongoosePopulate from 'mongoose-autopopulate';
 
-const validateEmail = function(email) {
+const validateEmail = (email) => {
     const re = /^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/;
     return re.test(email)
 };
@@ -27,4 +28,4 @@ export const UserSchema = new mongoose.Schema({
     salt: {type: String, required: false}
 });
 
-UserSchema.plugin(require('mongoose-autopopulate'));
+UserSchema.plugin(mongoosePopulate);

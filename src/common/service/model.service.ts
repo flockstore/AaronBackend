@@ -1,7 +1,7 @@
-import {Document, FilterQuery, Model, QueryOptions} from "mongoose";
-import {from, Observable} from "rxjs";
-import {PartialModel} from "../model/partial-model";
-import {map} from "rxjs/operators";
+import {Document, FilterQuery, Model, QueryOptions} from 'mongoose';
+import {from, Observable} from 'rxjs';
+import {PartialModel} from '../model/partial-model';
+import {map} from 'rxjs/operators';
 
 export abstract class ModelService<T extends Document, P extends PartialModel> {
 
@@ -26,7 +26,7 @@ export abstract class ModelService<T extends Document, P extends PartialModel> {
 
     delete(id: string): Observable<boolean> {
         return from(this.model.findByIdAndDelete(id)).pipe(
-            map(value => true)
+            map(() => true)
         );
     }
 

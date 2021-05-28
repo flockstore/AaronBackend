@@ -1,10 +1,10 @@
-import {Injectable, NotFoundException, UnauthorizedException} from "@nestjs/common";
-import {Observable, throwError} from "rxjs";
-import {UserDocument} from "../model/user/entity/user.entity";
-import {UserService} from "../model/user/user.service";
-import {PasswordSerializer} from "./serializer/password.serializer";
-import {map, mergeMap} from "rxjs/operators";
-import {TokenSerializer} from "./serializer/token.serializer";
+import {Injectable, NotFoundException, UnauthorizedException} from '@nestjs/common';
+import {Observable, throwError} from 'rxjs';
+import {UserDocument} from '../model/user/entity/user.entity';
+import {UserService} from '../model/user/user.service';
+import {PasswordSerializer} from './serializer/password.serializer';
+import {map, mergeMap} from 'rxjs/operators';
+import {TokenSerializer} from './serializer/token.serializer';
 
 @Injectable()
 export class AuthService {
@@ -24,8 +24,8 @@ export class AuthService {
         return this.findMatchUser(email).pipe(
             mergeMap(selectedUser =>
                 this.passwordSerializer.validate(selectedUser.password, password).pipe(
-                    map(password => {
-                        if (!password) {
+                    map(processedPassword => {
+                        if (!processedPassword) {
                             throwError(new UnauthorizedException('Invalid Password'));
                         }
                         return this.tokenSerializer.encryptPayload<any>({_id: selectedUser._id});
@@ -51,7 +51,7 @@ export class AuthService {
     private findMatchUser(email: string): Observable<UserDocument> {
         return this.userService.list({email, password: {$exists: true}}).pipe(
             map(user => {
-                if (user.length == 0) {
+                if (user.length === 0) {
                     throwError(new NotFoundException());
                 }
                 return user[0];

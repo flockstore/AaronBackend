@@ -4,6 +4,7 @@
     "exclude": ["**/some_folder/**"]
   },
   "rules": {
-    "indent": [true, "spaces", 4]
+    "indent": [true, "spaces", 4],
+    "quotemark": [true, "single", "avoid-escape", "avoid-template"]
   }
 }

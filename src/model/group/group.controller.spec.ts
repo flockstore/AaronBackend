@@ -1,14 +1,14 @@
 import {Test, TestingModule} from '@nestjs/testing';
-import {closeInMongodConnection, rootMongooseTestModule} from "../../../test/utilities/mongoose-memory.helper";
-import {INestApplication} from "@nestjs/common";
-import * as request from "supertest";
-import {map} from "rxjs/operators";
-import {Group} from "./entity/group.entity";
-import {GroupService} from "./group.service";
-import {GroupController} from "./group.controller";
-import {groupMock} from "./entity/group.mock";
-import {GroupModule} from "./group.module";
-import {PermissionModule} from "../../permission/permission.module";
+import {closeInMongodConnection, rootMongooseTestModule} from '../../../test/utilities/mongoose-memory.helper';
+import {INestApplication} from '@nestjs/common';
+import * as request from 'supertest';
+import {map} from 'rxjs/operators';
+import {Group} from './entity/group.entity';
+import {GroupService} from './group.service';
+import {GroupController} from './group.controller';
+import {groupMock} from './entity/group.mock';
+import {GroupModule} from './group.module';
+import {PermissionModule} from '../../permission/permission.module';
 
 describe('GroupController', () => {
 

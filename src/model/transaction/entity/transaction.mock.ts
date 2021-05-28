@@ -1,4 +1,4 @@
-import {TransactionDocument} from "./transaction.entity";
+import {TransactionDocument} from './transaction.entity';
 
 export const transactionMock: TransactionDocument = {
     baseValue: 15,

@@ -1,9 +1,9 @@
-import {CanActivate, ExecutionContext, Injectable} from "@nestjs/common";
-import {Reflector} from "@nestjs/core";
-import {CHECK_POLICIES_KEY, PolicyHandler} from "../interface/policy-handler.interface";
-import {AppAbility} from "../ability/abstract-ability.factory";
-import {AbilityCompoundFactory} from "../ability/ability-compound.factory";
-import {User} from "../../model/user/entity/user.entity";
+import {CanActivate, ExecutionContext, Injectable} from '@nestjs/common';
+import {Reflector} from '@nestjs/core';
+import {CHECK_POLICIES_KEY, PolicyHandler} from '../interface/policy-handler.interface';
+import {AppAbility} from '../ability/abstract-ability.factory';
+import {AbilityCompoundFactory} from '../ability/ability-compound.factory';
+import {User} from '../../model/user/entity/user.entity';
 
 @Injectable()
 export class PolicyGuard implements CanActivate {

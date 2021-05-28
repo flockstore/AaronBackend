@@ -1,14 +1,14 @@
 import {Test, TestingModule} from '@nestjs/testing';
-import {closeInMongodConnection, rootMongooseTestModule} from "../../../test/utilities/mongoose-memory.helper";
-import {PermissionModule} from "../../permission/permission.module";
-import {TransactionService} from "./transaction.service";
-import {TransactionModule} from "./transaction.module";
-import {transactionMock} from "./entity/transaction.mock";
-import {AccountModule} from "../account/account.module";
-import {AccountService} from "../account/account.service";
-import {accountMock} from "../account/entity/account.mock";
-import {mergeMap} from "rxjs/operators";
-import {EventListenerProviderModule} from "../../provider/event/provider.module";
+import {closeInMongodConnection, rootMongooseTestModule} from '../../../test/utilities/mongoose-memory.helper';
+import {PermissionModule} from '../../permission/permission.module';
+import {TransactionService} from './transaction.service';
+import {TransactionModule} from './transaction.module';
+import {transactionMock} from './entity/transaction.mock';
+import {AccountModule} from '../account/account.module';
+import {AccountService} from '../account/account.service';
+import {accountMock} from '../account/entity/account.mock';
+import {mergeMap} from 'rxjs/operators';
+import {EventListenerProviderModule} from '../../provider/event/provider.module';
 
 describe('TransactionService', () => {
 

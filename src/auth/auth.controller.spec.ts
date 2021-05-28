@@ -1,15 +1,15 @@
 import {Test, TestingModule} from '@nestjs/testing';
-import {INestApplication} from "@nestjs/common";
-import * as request from "supertest";
-import {map, mergeMap} from "rxjs/operators";
-import {UserService} from "../model/user/user.service";
-import {AuthService} from "./auth.service";
-import {AuthModule} from "./auth.module";
-import {closeInMongodConnection, rootMongooseTestModule} from "../../test/utilities/mongoose-memory.helper";
-import {userMock} from "../model/user/entity/user.mock";
-import {GroupModule} from "../model/group/group.module";
-import {UserModule} from "../model/user/user.module";
-import {PermissionModule} from "../permission/permission.module";
+import {INestApplication} from '@nestjs/common';
+import * as request from 'supertest';
+import {map, mergeMap} from 'rxjs/operators';
+import {UserService} from '../model/user/user.service';
+import {AuthService} from './auth.service';
+import {AuthModule} from './auth.module';
+import {closeInMongodConnection, rootMongooseTestModule} from '../../test/utilities/mongoose-memory.helper';
+import {userMock} from '../model/user/entity/user.mock';
+import {GroupModule} from '../model/group/group.module';
+import {UserModule} from '../model/user/user.module';
+import {PermissionModule} from '../permission/permission.module';
 
 describe('AuthController', () => {
 

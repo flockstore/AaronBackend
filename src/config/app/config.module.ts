@@ -1,8 +1,8 @@
-import {Module} from "@nestjs/common";
-import configuration from "./configuration";
-import {ConfigModule, ConfigService} from "@nestjs/config";
+import {Module} from '@nestjs/common';
+import configuration from './configuration';
+import {ConfigModule, ConfigService} from '@nestjs/config';
 import * as Joi from '@hapi/joi';
-import {AppConfigService} from "./config.service";
+import {AppConfigService} from './config.service';
 
 /**
  * Import and provide app configuration related classes.

@@ -1,6 +1,6 @@
-import {Module} from "@nestjs/common";
-import {MongoDatabaseProviderModule} from "./mongo/provider.module";
-import {EventListenerProviderModule} from "./event/provider.module";
+import {Module} from '@nestjs/common';
+import {MongoDatabaseProviderModule} from './mongo/provider.module';
+import {EventListenerProviderModule} from './event/provider.module';
 
 @Module({
     imports: [

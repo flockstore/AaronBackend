@@ -1,6 +1,6 @@
-import {Test, TestingModule} from "@nestjs/testing";
-import {PasswordSerializer} from "./password.serializer";
-import {mergeMap} from "rxjs/operators";
+import {Test, TestingModule} from '@nestjs/testing';
+import {PasswordSerializer} from './password.serializer';
+import {mergeMap} from 'rxjs/operators';
 
 describe('PasswordSerializer', () => {
 
@@ -16,7 +16,7 @@ describe('PasswordSerializer', () => {
 
     });
 
-    it('should be defined', function () {
+    it('should be defined', () => {
         expect(passwordSerializer).toBeDefined();
     });
 

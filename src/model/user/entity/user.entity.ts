@@ -1,6 +1,6 @@
 import {Document} from 'mongoose';
-import {PartialModel} from "../../../common/model/partial-model";
-import {Group} from "../../group/entity/group.entity";
+import {PartialModel} from '../../../common/model/partial-model';
+import {Group} from '../../group/entity/group.entity';
 
 export class User extends Document {
     name: string;

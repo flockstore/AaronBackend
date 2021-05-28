@@ -1,5 +1,5 @@
-import {Document} from "mongoose";
-import {PartialModel} from "../../../common/model/partial-model";
+import {Document} from 'mongoose';
+import {PartialModel} from '../../../common/model/partial-model';
 
 export class Account extends Document {
     name: string;

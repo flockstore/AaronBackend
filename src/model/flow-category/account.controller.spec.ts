@@ -1,15 +1,15 @@
 import {Test, TestingModule} from '@nestjs/testing';
-import {closeInMongodConnection, rootMongooseTestModule} from "../../../test/utilities/mongoose-memory.helper";
-import {INestApplication} from "@nestjs/common";
-import * as request from "supertest";
-import {map} from "rxjs/operators";
-import {PermissionModule} from "../../permission/permission.module";
-import {EventListenerProviderModule} from "../../provider/event/provider.module";
-import {FlowCategoryService} from "./flow-category.service";
-import {FlowCategoryController} from "./flow-category.controller";
-import {flowCategoryMock} from "./entity/flow-category.mock";
-import {FlowCategory} from "./entity/flow-category.entity";
-import {FlowCategoryModule} from "./flow-category.module";
+import {closeInMongodConnection, rootMongooseTestModule} from '../../../test/utilities/mongoose-memory.helper';
+import {INestApplication} from '@nestjs/common';
+import * as request from 'supertest';
+import {map} from 'rxjs/operators';
+import {PermissionModule} from '../../permission/permission.module';
+import {EventListenerProviderModule} from '../../provider/event/provider.module';
+import {FlowCategoryService} from './flow-category.service';
+import {FlowCategoryController} from './flow-category.controller';
+import {flowCategoryMock} from './entity/flow-category.mock';
+import {FlowCategory} from './entity/flow-category.entity';
+import {FlowCategoryModule} from './flow-category.module';
 
 describe('FlowCategoryController', () => {
 

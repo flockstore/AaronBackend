@@ -1,17 +1,17 @@
 import {Test, TestingModule} from '@nestjs/testing';
 import {UserService} from './user.service';
-import {UserDocument} from "./entity/user.entity";
-import {closeInMongodConnection, rootMongooseTestModule} from "../../../test/utilities/mongoose-memory.helper";
-import {map, mergeMap} from "rxjs/operators";
-import {UserCreate} from "./entity/dto/user-create.dto";
-import {userMock} from "./entity/user.mock";
-import {GroupModule} from "../group/group.module";
-import {GroupService} from "../group/group.service";
-import {groupMock} from "../group/entity/group.mock";
-import {Observable} from "rxjs";
-import {GroupDocument} from "../group/entity/group.entity";
-import {UserModule} from "./user.module";
-import {PermissionModule} from "../../permission/permission.module";
+import {UserDocument} from './entity/user.entity';
+import {closeInMongodConnection, rootMongooseTestModule} from '../../../test/utilities/mongoose-memory.helper';
+import {map, mergeMap} from 'rxjs/operators';
+import {UserCreate} from './entity/dto/user-create.dto';
+import {userMock} from './entity/user.mock';
+import {GroupModule} from '../group/group.module';
+import {GroupService} from '../group/group.service';
+import {groupMock} from '../group/entity/group.mock';
+import {Observable} from 'rxjs';
+import {GroupDocument} from '../group/entity/group.entity';
+import {UserModule} from './user.module';
+import {PermissionModule} from '../../permission/permission.module';
 
 describe('UserService', () => {
 

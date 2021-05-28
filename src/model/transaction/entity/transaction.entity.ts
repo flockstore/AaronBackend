@@ -1,6 +1,6 @@
-import {Document} from "mongoose";
-import {IsNotEmpty} from "class-validator";
-import {Account} from "../../account/entity/account.entity";
+import {Document} from 'mongoose';
+import {IsNotEmpty} from 'class-validator';
+import {Account} from '../../account/entity/account.entity';
 
 export class CompoundMeta {}
 

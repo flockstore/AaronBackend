@@ -1,4 +1,6 @@
-import {CRUDOperation, GroupDocument} from "./group.entity";
+// noinspection SpellCheckingInspection
+
+import {CRUDOperation, GroupDocument} from './group.entity';
 
 export const groupMock: GroupDocument = {
     name: 'Administrator',

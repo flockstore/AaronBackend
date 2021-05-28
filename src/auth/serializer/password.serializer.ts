@@ -1,10 +1,10 @@
-import {Injectable} from "@nestjs/common";
-import * as argon from "argon2";
-import {randomBytes} from "crypto";
-import {Buffer} from "buffer";
-import {from, Observable} from "rxjs";
-import {AuthorizationCompound} from "../interface/authorization-compound.interface";
-import {map} from "rxjs/operators";
+import {Injectable} from '@nestjs/common';
+import * as argon from 'argon2';
+import {randomBytes} from 'crypto';
+import {Buffer} from 'buffer';
+import {from, Observable} from 'rxjs';
+import {AuthorizationCompound} from '../interface/authorization-compound.interface';
+import {map} from 'rxjs/operators';
 
 @Injectable()
 export class PasswordSerializer {

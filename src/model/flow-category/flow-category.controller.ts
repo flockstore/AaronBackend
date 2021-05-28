@@ -1,11 +1,11 @@
 import {Body, Controller, Delete, Get, Param, Post, Put, UseGuards} from '@nestjs/common';
-import {Observable} from "rxjs";
-import {PolicyGuard} from "../../permission/guard/policy.guard";
-import {CheckPolicies} from "../../permission/interface/policy-handler.interface";
-import {DefaultPolicyHandler} from "../../permission/ability/default-policy.handler";
-import {Action} from "../../permission/interface/action.enum";
-import {FlowCategoryService} from "./flow-category.service";
-import {FlowCategory, FlowCategoryDocument} from "./entity/flow-category.entity";
+import {Observable} from 'rxjs';
+import {PolicyGuard} from '../../permission/guard/policy.guard';
+import {CheckPolicies} from '../../permission/interface/policy-handler.interface';
+import {DefaultPolicyHandler} from '../../permission/ability/default-policy.handler';
+import {Action} from '../../permission/interface/action.enum';
+import {FlowCategoryService} from './flow-category.service';
+import {FlowCategory, FlowCategoryDocument} from './entity/flow-category.entity';
 
 @Controller('flow-category')
 export class FlowCategoryController {

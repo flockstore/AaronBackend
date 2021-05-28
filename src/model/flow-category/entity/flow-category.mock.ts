@@ -1,4 +1,4 @@
-import {FlowCategoryDocument} from "./flow-category.entity";
+import {FlowCategoryDocument} from './flow-category.entity';
 
 export const flowCategoryMock: FlowCategoryDocument = {
     name: 'Beers',

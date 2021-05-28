@@ -1,11 +1,11 @@
 import {Body, Controller, Delete, Get, Param, Post, Put, UseGuards} from '@nestjs/common';
-import {Observable} from "rxjs";
-import {GroupService} from "./group.service";
-import {Group, GroupDocument} from "./entity/group.entity";
-import {PolicyGuard} from "../../permission/guard/policy.guard";
-import {CheckPolicies} from "../../permission/interface/policy-handler.interface";
-import {DefaultPolicyHandler} from "../../permission/ability/default-policy.handler";
-import {Action} from "../../permission/interface/action.enum";
+import {Observable} from 'rxjs';
+import {GroupService} from './group.service';
+import {Group, GroupDocument} from './entity/group.entity';
+import {PolicyGuard} from '../../permission/guard/policy.guard';
+import {CheckPolicies} from '../../permission/interface/policy-handler.interface';
+import {DefaultPolicyHandler} from '../../permission/ability/default-policy.handler';
+import {Action} from '../../permission/interface/action.enum';
 
 @Controller('group')
 export class GroupController {

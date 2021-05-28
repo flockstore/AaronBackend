@@ -1,5 +1,5 @@
-import * as mongoose from "mongoose";
-import {Schema} from "mongoose";
+import * as mongoose from 'mongoose';
+import {Schema} from 'mongoose';
 
 export const FlowCategorySchema = new mongoose.Schema({
     name: {type: String, required: true},
