@@ -4,7 +4,7 @@ import * as mongoosePopulate from 'mongoose-autopopulate';
 
 const validateEmail = (email) => {
     const re = /^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/;
-    return re.test(email)
+    return re.test(email);
 };
 
 export const UserSchema = new mongoose.Schema({

@@ -16,7 +16,7 @@ export abstract class ModelService<T extends Document, P extends PartialModel> {
         return from(this.model.findById(id));
     }
 
-    list(query?: FilterQuery<T>, projection? : any, options?: QueryOptions): Observable<T[]> {
+    list(query?: FilterQuery<T>, projection?: any, options?: QueryOptions): Observable<T[]> {
         return from(this.model.find(query, projection, options));
     }
 

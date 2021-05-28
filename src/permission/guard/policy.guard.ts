@@ -13,6 +13,13 @@ export class PolicyGuard implements CanActivate {
         private abilityCompoundFactory: AbilityCompoundFactory,
     ) {}
 
+    private static execPolicyHandler(handler: PolicyHandler, ability: AppAbility) {
+        if (typeof handler === 'function') {
+            return handler(ability);
+        }
+        return handler.handle(ability);
+    }
+
     async canActivate(context: ExecutionContext): Promise<boolean> {
         const policyHandlers =
             this.reflector.get<PolicyHandler[]>(
@@ -26,12 +33,5 @@ export class PolicyGuard implements CanActivate {
         return policyHandlers.every((handler) =>
                 PolicyGuard.execPolicyHandler(handler, ability),
         );
-    }
-
-    private static execPolicyHandler(handler: PolicyHandler, ability: AppAbility) {
-        if (typeof handler === 'function') {
-            return handler(ability);
-        }
-        return handler.handle(ability);
     }
 }

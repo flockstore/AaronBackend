@@ -6,8 +6,6 @@ import {AppConfigService} from './config.service';
 
 /**
  * Import and provide app configuration related classes.
- *
- * @module
  */
 @Module({
     imports: [

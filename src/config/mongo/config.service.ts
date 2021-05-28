@@ -3,8 +3,6 @@ import {ConfigService} from '@nestjs/config';
 
 /**
  * Service dealing with mongo config based operations.
- *
- * @class
  */
 @Injectable()
 export class MongoConfigService {

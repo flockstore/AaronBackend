@@ -36,7 +36,7 @@ export class UserService extends ModelService<UserDocument, UserPartial> {
                 record.groups = record.groups.filter(g => (g.group as Group)._id.toString() !== group.toString());
                 return from(record.save());
             })
-        )
+        );
     }
 
 }

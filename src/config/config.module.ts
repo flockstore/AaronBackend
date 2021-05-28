@@ -5,8 +5,6 @@ import {AuthConfigModule} from './auth/config.module';
 
 /**
  * Import and provide all the authentication configuration related modules.
- *
- * @module
  */
 @Module({
     imports: [

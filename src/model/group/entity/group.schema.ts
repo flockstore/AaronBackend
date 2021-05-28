@@ -22,7 +22,7 @@ function getCRUDPermission() {
             type: Boolean,
             default: false
         }
-    }
+    };
 }
 
 export const GroupSchema = new mongoose.Schema({

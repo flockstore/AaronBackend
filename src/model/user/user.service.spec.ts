@@ -176,7 +176,7 @@ describe('UserService', () => {
         );
     }
 
-    function createGroupAndAdd():Observable<{user: UserDocument, group: GroupDocument}> {
+    function createGroupAndAdd(): Observable<{user: UserDocument, group: GroupDocument}> {
         return service.create(userMock).pipe(
             mergeMap(user =>
                 groupService.create(groupMock).pipe(

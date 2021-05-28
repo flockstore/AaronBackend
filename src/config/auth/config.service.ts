@@ -3,8 +3,6 @@ import {ConfigService} from '@nestjs/config';
 
 /**
  * Service dealing with auth config based operations.
- *
- * @class
  */
 @Injectable()
 export class AuthConfigService {

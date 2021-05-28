@@ -4,4 +4,4 @@ export const flowCategoryMock: FlowCategoryDocument = {
     name: 'Beers',
     income: false,
     description: 'Some beers for the business'
-} as FlowCategoryDocument
+} as FlowCategoryDocument;
