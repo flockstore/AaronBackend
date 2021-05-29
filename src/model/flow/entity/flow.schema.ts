@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import {Schema} from 'mongoose';
+import * as mongoosePopulate from 'mongoose-autopopulate';
 
 export const FlowSchema = new mongoose.Schema({
     value: {type: Number, required: true},
@@ -18,3 +19,5 @@ export const FlowSchema = new mongoose.Schema({
         }
     ]
 });
+
+FlowSchema.plugin(mongoosePopulate);

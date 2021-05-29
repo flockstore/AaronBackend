@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import {Schema} from 'mongoose';
+import * as mongoosePopulate from 'mongoose-autopopulate';
 
 export const FlowCategorySchema = new mongoose.Schema({
     name: {type: String, required: true},
@@ -12,3 +13,6 @@ export const FlowCategorySchema = new mongoose.Schema({
         autopopulate: true
     },
 });
+
+
+FlowCategorySchema.plugin(mongoosePopulate);

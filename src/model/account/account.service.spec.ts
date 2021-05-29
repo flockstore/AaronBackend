@@ -44,10 +44,10 @@ describe('AccountService', () => {
         );
     });
 
-    it('should update a account', done => {
+    it('should update an account', done => {
 
         service.create(accountMock).pipe(
-            mergeMap(group => service.update(group._id, {name: 'Davivienda'} as AccountCreate))
+            mergeMap(account => service.update(account._id, {name: 'Davivienda'} as AccountCreate))
         ).subscribe(
             response => {
                 expect(response.name).toBe('Davivienda');
@@ -64,7 +64,7 @@ describe('AccountService', () => {
     it('should soft delete an account', done => {
 
         service.create(accountMock).pipe(
-            mergeMap(group => service.delete(group._id))
+            mergeMap(account => service.delete(account._id))
         ).subscribe(
             response => {
                 expect(response).toBe(true);

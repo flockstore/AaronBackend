@@ -24,6 +24,7 @@ export class PermissionRegistry {
     group: CRUDOperation;
     account: CRUDOperation;
     flow_category: CRUDOperation;
+    flow: CRUDOperation;
 }
 
 export class CRUDOperation {

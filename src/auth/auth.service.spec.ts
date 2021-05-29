@@ -73,7 +73,7 @@ describe('AuthService', () => {
             ),
         ).subscribe(
             decrypted => {
-                expect((decrypted.token.data as {_id})._id === decrypted.user._id).toBe(true);
+                expect((decrypted.token.data as {_id})._id.toString() === decrypted.user._id.toString()).toBe(true);
                 done();
             },
 

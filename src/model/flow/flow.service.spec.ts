@@ -12,6 +12,7 @@ import {FlowCategoryModule} from '../flow-category/flow-category.module';
 import {flowCategoryMock} from '../flow-category/entity/flow-category.mock';
 import {FlowCategory} from '../flow-category/entity/flow-category.entity';
 import {Observable} from 'rxjs';
+import {TransactionModule} from '../transaction/transaction.module';
 
 describe('FlowService', () => {
 
@@ -26,6 +27,7 @@ describe('FlowService', () => {
                 PermissionModule,
                 FlowModule,
                 FlowCategoryModule,
+                TransactionModule,
                 EventListenerProviderModule
             ]
         }).compile();
@@ -43,8 +45,7 @@ describe('FlowService', () => {
         createWithCategory().subscribe(
             response => {
                 expect(response.flow).toHaveProperty('_id');
-                expect(response.flow.category instanceof FlowCategory).toBe(true);
-                expect((response.flow.category as FlowCategory)._id).toBe(response.category._id);
+                expect((response.flow.category as FlowCategory)._id).toStrictEqual(response.category._id);
                 done();
             },
             error => {
@@ -95,7 +96,7 @@ describe('FlowService', () => {
     function createWithCategory(): Observable<{flow: Flow, category: FlowCategory}> {
         return flowCategoryService.create(flowCategoryMock).pipe(
             mergeMap(category =>
-                service.create(flowMock).pipe(
+                service.create({...flowMock, category: category._id} as any).pipe(
                     map(flow => ({flow, category}))
                 )
             )

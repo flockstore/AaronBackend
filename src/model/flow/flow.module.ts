@@ -3,6 +3,7 @@ import {MongooseModule} from '@nestjs/mongoose';
 import {FlowSchema} from './entity/flow.schema';
 import {Flow} from './entity/flow.entity';
 import {FlowService} from './flow.service';
+import {FlowController} from './flow.controller';
 
 @Module({
     imports: [
@@ -14,6 +15,7 @@ import {FlowService} from './flow.service';
         ])
     ],
     providers: [FlowService],
+    controllers: [FlowController],
     exports: [FlowService]
 })
 export class FlowModule {}

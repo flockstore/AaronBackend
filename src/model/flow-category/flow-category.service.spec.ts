@@ -47,7 +47,7 @@ describe('FlowCategoryService', () => {
     it('should update a bank flow category', done => {
 
         service.create(flowCategoryMock).pipe(
-            mergeMap(group => service.update(group._id, {name: 'Drinking'} as FlowCategoryDocument))
+            mergeMap(category => service.update(category._id, {name: 'Drinking'} as FlowCategoryDocument))
         ).subscribe(
             response => {
                 expect(response.name).toBe('Drinking');
@@ -64,7 +64,7 @@ describe('FlowCategoryService', () => {
     it('should soft delete an bank flow category', done => {
 
         service.create(flowCategoryMock).pipe(
-            mergeMap(group => service.delete(group._id))
+            mergeMap(category => service.delete(category._id))
         ).subscribe(
             response => {
                 expect(response).toBe(true);

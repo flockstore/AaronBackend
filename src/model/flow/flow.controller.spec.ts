@@ -2,22 +2,25 @@ import {Test, TestingModule} from '@nestjs/testing';
 import {closeInMongodConnection, rootMongooseTestModule} from '../../../test/utilities/mongoose-memory.helper';
 import {INestApplication} from '@nestjs/common';
 import * as request from 'supertest';
-import {delay, map, mergeMap} from 'rxjs/operators';
+import {map, mergeMap} from 'rxjs/operators';
 import {PermissionModule} from '../../permission/permission.module';
-import {AccountService} from './account.service';
-import {AccountModule} from './account.module';
-import {AccountController} from './account.controller';
-import {accountMock} from './entity/account.mock';
-import {Account} from './entity/account.entity';
 import {EventListenerProviderModule} from '../../provider/event/provider.module';
 import {TransactionModule} from '../transaction/transaction.module';
 import {from} from 'rxjs';
-import {TransactionService} from '../transaction/transaction.service';
+import {FlowService} from './flow.service';
+import {FlowController} from './flow.controller';
+import {FlowCategoryController} from '../flow-category/flow-category.controller';
+import {FlowCategoryService} from '../flow-category/flow-category.service';
+import {flowCategoryMock} from '../flow-category/entity/flow-category.mock';
+import {flowMock} from './entity/flowMock';
+import {Flow} from './entity/flow.entity';
+import {FlowCategory} from '../flow-category/entity/flow-category.entity';
+import functionHelper from '../../../test/utilities/function.helper';
 
-describe('AccountController', () => {
+describe('FlowController', () => {
 
-    let service: AccountService;
-    let transactionService: TransactionService;
+    let service: FlowService;
+    let categoryService: FlowCategoryService;
     let app: INestApplication;
 
     beforeEach(async () => {
@@ -26,35 +29,38 @@ describe('AccountController', () => {
             imports: [
                 rootMongooseTestModule(),
                 PermissionModule,
-                AccountModule,
+                FlowController,
+                FlowCategoryController,
                 TransactionModule,
                 EventListenerProviderModule
             ],
-            controllers: [AccountController]
+            controllers: [FlowController]
         }).compile();
 
         app = module.createNestApplication();
-        service = module.get<AccountService>(AccountService);
-        transactionService = module.get<TransactionService>(TransactionService);
+        service = module.get<FlowService>(FlowService);
+        categoryService = module.get<FlowCategoryService>(FlowCategoryService);
         await app.init();
 
     });
 
-    it('/account (POST)', done => {
-        from(request(app.getHttpServer())
-            .post('/account')
-            .send(accountMock)
-            .expect(201)
-            .expect(res => res.body instanceof Account)).pipe(
-                mergeMap(response =>
-                    transactionService.list({'related.id': response.body._id, 'related.action': 'account_creation'} as any)
-                ),
-                delay(500) // Makes time for the event listener and prevent early connection closing.
+    it('/flow (POST)', done => {
+
+        categoryService.create(flowCategoryMock).pipe(
+            mergeMap(category =>
+                from(request(app.getHttpServer())
+                    .post('/flow')
+                    .send({...flowMock, category: category._id})
+                    .expect(201)
+                    .expect(res => res.body instanceof Flow)
+                ).pipe(
+                    map(flow => ({flow, category}))
+                )
+            )
         ).subscribe(
             response => {
-                expect(response.length).toBe(1);
-                expect(response[0]).toBeDefined();
-                expect(response[0].exchangeValue).toBe(accountMock.initialValue);
+                expect(response.flow).toHaveProperty('_id');
+                expect((response.flow.body.category as FlowCategory)._id).toStrictEqual(response.category._id);
                 done();
             }
         );
@@ -62,18 +68,18 @@ describe('AccountController', () => {
 
 
     it('/account/:id (GET)', () => {
-        return service.create(accountMock).pipe(
+        return functionHelper.createWithCategory(categoryService, service).pipe(
             map(account =>
                 request(app.getHttpServer())
-                    .get('/account/' + account._id)
+                    .get('/account/' + account.flow._id)
                     .expect(200)
-                    .expect(res => res.body instanceof Account)
+                    .expect(res => res.body instanceof Flow)
             )
         ).toPromise();
     });
 
     it('/account/:id (PUT)', () => {
-        return service.create(accountMock).pipe(
+        return functionHelper.createWithCategory(categoryService, service).pipe(
             map(account =>
                 request(app.getHttpServer())
                     .put('/account/' + account._id)
