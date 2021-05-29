@@ -9,13 +9,13 @@ import {TransactionModule} from '../transaction/transaction.module';
 import {from} from 'rxjs';
 import {FlowService} from './flow.service';
 import {FlowController} from './flow.controller';
-import {FlowCategoryController} from '../flow-category/flow-category.controller';
 import {FlowCategoryService} from '../flow-category/flow-category.service';
 import {flowCategoryMock} from '../flow-category/entity/flow-category.mock';
 import {flowMock} from './entity/flowMock';
 import {Flow} from './entity/flow.entity';
-import {FlowCategory} from '../flow-category/entity/flow-category.entity';
 import functionHelper from '../../../test/utilities/function.helper';
+import {FlowModule} from './flow.module';
+import {FlowCategoryModule} from '../flow-category/flow-category.module';
 
 describe('FlowController', () => {
 
@@ -29,12 +29,11 @@ describe('FlowController', () => {
             imports: [
                 rootMongooseTestModule(),
                 PermissionModule,
-                FlowController,
-                FlowCategoryController,
+                FlowModule,
+                FlowCategoryModule,
                 TransactionModule,
                 EventListenerProviderModule
-            ],
-            controllers: [FlowController]
+            ]
         }).compile();
 
         app = module.createNestApplication();
@@ -44,57 +43,50 @@ describe('FlowController', () => {
 
     });
 
-    it('/flow (POST)', done => {
-
-        categoryService.create(flowCategoryMock).pipe(
+    it('/flow (POST)', () => {
+        return categoryService.create(flowCategoryMock).pipe(
             mergeMap(category =>
                 from(request(app.getHttpServer())
                     .post('/flow')
                     .send({...flowMock, category: category._id})
                     .expect(201)
-                    .expect(res => res.body instanceof Flow)
+                    .expect(res => res.body instanceof Flow && res.body._id.toString() === category._id)
                 ).pipe(
                     map(flow => ({flow, category}))
                 )
             )
-        ).subscribe(
-            response => {
-                expect(response.flow).toHaveProperty('_id');
-                expect((response.flow.body.category as FlowCategory)._id).toStrictEqual(response.category._id);
-                done();
-            }
-        );
+        ).toPromise();
     });
 
 
-    it('/account/:id (GET)', () => {
+    it('/flow/:id (GET)', () => {
         return functionHelper.createWithCategory(categoryService, service).pipe(
             map(account =>
                 request(app.getHttpServer())
-                    .get('/account/' + account.flow._id)
+                    .get('/flow/' + account.flow._id)
                     .expect(200)
                     .expect(res => res.body instanceof Flow)
             )
         ).toPromise();
     });
 
-    it('/account/:id (PUT)', () => {
+    it('/flow/:id (PUT)', () => {
         return functionHelper.createWithCategory(categoryService, service).pipe(
-            map(account =>
+            map(category =>
                 request(app.getHttpServer())
-                    .put('/account/' + account._id)
-                    .send({...accountMock, name: 'Premium Account'})
+                    .put('/flow/' + category.flow._id)
+                    .send({notes: 'Invoice 777'})
                     .expect(200)
-                    .expect(res => res.body instanceof Account && res.body.name === 'Premium Account')
+                    .expect(res => res.body instanceof Flow && res.body.notes === 'Invoice 777')
             )
         ).toPromise();
     });
 
-    it('/account/:id (DELETE)', () => {
-        return service.create(accountMock).pipe(
-            map(account =>
+    it('/flow/:id (DELETE)', () => {
+        return functionHelper.createWithCategory(categoryService, service).pipe(
+            map(category =>
                 request(app.getHttpServer())
-                    .delete('/account/' + account._id)
+                    .delete('/flow/' + category.flow._id)
                     .expect(200)
                     .expect(res => res.body === true)
             )
