@@ -4,6 +4,7 @@ import {Conciliation} from './entiy/conciliation.entity';
 import {ConciliationSchema} from './entiy/conciliation.schema';
 import {ConciliationService} from './conciliation.service';
 import {ConciliationController} from './conciliation.controller';
+import {TransactionModule} from '../transaction/transaction.module';
 
 @Module({
     imports: [
@@ -12,7 +13,8 @@ import {ConciliationController} from './conciliation.controller';
                 name: Conciliation.name,
                 schema: ConciliationSchema
             }
-        ])
+        ]),
+        TransactionModule
     ],
     providers: [ConciliationService],
     controllers: [ConciliationController],

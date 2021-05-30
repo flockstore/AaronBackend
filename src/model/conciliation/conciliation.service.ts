@@ -1,13 +1,12 @@
 import {BadRequestException, Injectable, NotFoundException} from '@nestjs/common';
-import {InjectModel} from '@nestjs/mongoose';
-import {Model} from 'mongoose';
+import {InjectConnection, InjectModel} from '@nestjs/mongoose';
+import {Connection, Error, Model} from 'mongoose';
 import {ModelService} from '../../common/service/model.service';
 import {Conciliation, ConciliationDocument} from './entiy/conciliation.entity';
 import {from, Observable, throwError} from 'rxjs';
 import {UserDocument} from '../user/entity/user.entity';
 import {TransactionService} from '../transaction/transaction.service';
 import {map, mergeMap} from 'rxjs/operators';
-import * as mongoose from 'mongoose';
 import {Transaction} from '../transaction/entity/transaction.entity';
 import {AccountDocument} from '../account/entity/account.entity';
 
@@ -16,6 +15,7 @@ export class ConciliationService extends ModelService<ConciliationDocument, Conc
 
     constructor(
         @InjectModel(Conciliation.name) private conciliationModel: Model<ConciliationDocument>,
+        @InjectConnection() private connection: Connection,
         private transactionService: TransactionService
     ) {
         super(conciliationModel);
@@ -27,14 +27,14 @@ export class ConciliationService extends ModelService<ConciliationDocument, Conc
             mergeMap(record => {
 
                 if (!record) {
-                    throwError(new NotFoundException('Conciliation not found'));
+                    return throwError(new NotFoundException('Conciliation not found'));
                 }
 
                 if (record.authorized) {
-                    throwError(new BadRequestException('Conciliation already authorized'));
+                    return throwError(new BadRequestException('Conciliation already authorized'));
                 }
 
-                return from(mongoose.startSession()).pipe(
+                return from(this.connection.startSession()).pipe(
                     mergeMap(session => {
 
                         session.startTransaction();
