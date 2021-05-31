@@ -16,6 +16,8 @@ import {UserService} from '../user/user.service';
 import {conciliationMock} from './entiy/conciliation.mock';
 import {accountMock} from '../account/entity/account.mock';
 import {Conciliation} from './entiy/conciliation.entity';
+import {userMock} from '../user/entity/user.mock';
+import {from} from 'rxjs';
 
 describe('AccountController', () => {
 
@@ -76,6 +78,27 @@ describe('AccountController', () => {
                     .expect(res => res.body instanceof Conciliation && res.body._id === conciliation._id)
             )
         ).toPromise();
+    });
+
+    it('/conciliation/authorize/:id (PUT)', () => {
+
+        return userService.create(userMock).pipe(
+            mergeMap(user =>
+                accountService.create(accountMock).pipe(map(account => ({user, account})))
+            ),
+            mergeMap(compound =>
+                service.create({...conciliationMock, account: compound.account._id} as any).pipe(
+                    map(conciliation => ({...compound, conciliation}))
+                )
+            ),
+            map(compound =>
+                from(request(app.getHttpServer())
+                    .put('/conciliation/authorize/' + compound.conciliation._id)
+                    .expect(200)
+                    .expect(res => res.body instanceof Conciliation && res.body.authorized)),
+            ),
+        ).toPromise();
+
     });
 
     afterEach(async () => {
