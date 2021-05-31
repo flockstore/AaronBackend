@@ -2,7 +2,7 @@ import {BadRequestException, Injectable, NotFoundException} from '@nestjs/common
 import {InjectConnection, InjectModel} from '@nestjs/mongoose';
 import {Connection, Error, Model} from 'mongoose';
 import {ModelService} from '../../common/service/model.service';
-import {Conciliation, ConciliationDocument} from './entiy/conciliation.entity';
+import {Conciliation, ConciliationDocument} from './entiy/contact.entity';
 import {from, Observable, throwError} from 'rxjs';
 import {UserDocument} from '../user/entity/user.entity';
 import {TransactionService} from '../transaction/transaction.service';

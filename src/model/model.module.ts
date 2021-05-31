@@ -6,6 +6,7 @@ import {TransactionModule} from './transaction/transaction.module';
 import {FlowCategoryModule} from './flow-category/flow-category.module';
 import {FlowModule} from './flow/flow.module';
 import {ConciliationModule} from './conciliation/conciliation.module';
+import {ContactModule} from './contact/contact.module';
 
 @Module({
     imports: [
@@ -13,6 +14,7 @@ import {ConciliationModule} from './conciliation/conciliation.module';
         GroupModule,
         AccountModule,
         ConciliationModule,
+        ContactModule,
         TransactionModule,
         FlowCategoryModule,
         FlowModule
@@ -22,6 +24,7 @@ import {ConciliationModule} from './conciliation/conciliation.module';
         GroupModule,
         AccountModule,
         ConciliationModule,
+        ContactModule,
         TransactionModule,
         FlowCategoryModule,
         FlowModule

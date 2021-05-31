@@ -2,7 +2,7 @@ import * as mongoose from 'mongoose';
 import {Schema} from 'mongoose';
 import * as mongoosePopulate from 'mongoose-autopopulate';
 
-export const ConciliationSchema = new mongoose.Schema({
+export const ContactSchema = new mongoose.Schema({
     account: {
         type: Schema.Types.ObjectId,
         ref: 'Account',
@@ -21,4 +21,4 @@ export const ConciliationSchema = new mongoose.Schema({
 });
 
 
-ConciliationSchema.plugin(mongoosePopulate);
+ContactSchema.plugin(mongoosePopulate);
