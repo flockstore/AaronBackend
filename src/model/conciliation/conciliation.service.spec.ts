@@ -42,7 +42,7 @@ describe('ConciliationService', () => {
         accountService = module.get<AccountService>(AccountService);
         userService = module.get<UserService>(UserService);
 
-        transactionService = module.get(TransactionService);
+        transactionService = module.get<TransactionService>(TransactionService);
 
     });
 

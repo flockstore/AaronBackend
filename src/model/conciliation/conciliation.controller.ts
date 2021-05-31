@@ -1,4 +1,4 @@
-import {Body, Controller, Get, Param, Post, UseGuards} from '@nestjs/common';
+import {Body, Controller, Get, Param, Post, Put, Request, UseGuards} from '@nestjs/common';
 import {Observable} from 'rxjs';
 import {PolicyGuard} from '../../permission/guard/policy.guard';
 import {CheckPolicies} from '../../permission/interface/policy-handler.interface';
@@ -26,6 +26,13 @@ export class ConciliationController {
     @CheckPolicies(DefaultPolicyHandler.check(Action.Read, Account))
     find(@Param('id') id: string): Observable<ConciliationDocument> {
         return this.conciliationService.get(id);
+    }
+
+    @Put('authorize/:id')
+    @UseGuards(PolicyGuard)
+    @CheckPolicies(DefaultPolicyHandler.check(Action.Manage, Account))
+    authorize(@Param('id') id: string, @Request() request): Observable<ConciliationDocument> {
+        return this.conciliationService.authorize(id, request.user);
     }
 
 }
