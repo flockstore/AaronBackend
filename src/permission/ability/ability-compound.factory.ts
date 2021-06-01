@@ -11,6 +11,7 @@ import {FlowCategoryAbilityFactory} from '../../model/flow-category/ability/flow
 import {FlowAbilityFactory} from '../../model/flow/ability/flow-ability.factory';
 import {ContactAbilityFactory} from '../../model/contact/ability/contact-ability.factory';
 import {TaxAbilityFactory} from '../../model/tax/ability/tax-ability.factory';
+import {ProductAbilityFactory} from '../../model/product/ability/product-ability.factory';
 
 @Injectable()
 export class AbilityCompoundFactory {
@@ -33,6 +34,7 @@ export class AbilityCompoundFactory {
         new FlowAbilityFactory(this.builder).constructAbilities(groups);
         new ContactAbilityFactory(this.builder).constructAbilities(groups);
         new TaxAbilityFactory(this.builder).constructAbilities(groups);
+        new ProductAbilityFactory(this.builder).constructAbilities(groups);
         return this.builder.build();
     }
 
