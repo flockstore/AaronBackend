@@ -36,6 +36,7 @@ export const GroupSchema = new mongoose.Schema({
         account: getCRUDPermission(),
         flow_category: getCRUDPermission(),
         flow: getCRUDPermission(),
-        contact: getCRUDPermission()
+        contact: getCRUDPermission(),
+        invoice: getCRUDPermission()
     }
 });

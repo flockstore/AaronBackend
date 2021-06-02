@@ -6,7 +6,7 @@ import {DefaultPolicyHandler} from '../../permission/ability/default-policy.hand
 import {Action} from '../../permission/interface/action.enum';
 import {ConciliationService} from './conciliation.service';
 import {Account} from '../account/entity/account.entity';
-import {Conciliation, ConciliationDocument} from './entiy/contact.entity';
+import {Conciliation, ConciliationDocument} from './entiy/conciliation.entity';
 
 @Controller('conciliation')
 export class ConciliationController {

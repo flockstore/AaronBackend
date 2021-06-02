@@ -5,7 +5,7 @@ import {PermissionModule} from '../../permission/permission.module';
 import {EventListenerProviderModule} from '../../provider/event/provider.module';
 import {ConciliationService} from './conciliation.service';
 import {ConciliationModule} from './conciliation.module';
-import {contactMock} from './entiy/contact.mock';
+import {conciliationMock} from './entiy/conciliation.mock';
 import {AccountService} from '../account/account.service';
 import {AccountModule} from '../account/account.module';
 import {accountMock} from '../account/entity/account.mock';
@@ -53,7 +53,7 @@ describe('ConciliationService', () => {
 
     it('should create a conciliation record', done => {
         accountService.create(accountMock).pipe(
-            mergeMap(account => service.create({...contactMock, account: account._id} as any))
+            mergeMap(account => service.create({...conciliationMock, account: account._id} as any))
         )
         .subscribe(
             response => {
@@ -69,7 +69,7 @@ describe('ConciliationService', () => {
 
     it('should authorize the conciliation', done => {
         accountService.create(accountMock).pipe(
-            mergeMap(account => service.create({...contactMock, account: account._id} as any)),
+            mergeMap(account => service.create({...conciliationMock, account: account._id} as any)),
             mergeMap(conciliation =>
                 userService.create(userMock).pipe(
                     map(user => ({conciliation, user}))

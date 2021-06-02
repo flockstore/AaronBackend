@@ -13,9 +13,9 @@ import {GroupModule} from '../group/group.module';
 import {ConciliationService} from './conciliation.service';
 import {AccountService} from '../account/account.service';
 import {UserService} from '../user/user.service';
-import {contactMock} from './entiy/contact.mock';
+import {conciliationMock} from './entiy/conciliation.mock';
 import {accountMock} from '../account/entity/account.mock';
-import {Conciliation} from './entiy/contact.entity';
+import {Conciliation} from './entiy/conciliation.entity';
 import {userMock} from '../user/entity/user.mock';
 import {from} from 'rxjs';
 
@@ -58,7 +58,7 @@ describe('AccountController', () => {
             map(account =>
                 request(app.getHttpServer())
                     .post('/conciliation')
-                    .send({...contactMock, account: account._id})
+                    .send({...conciliationMock, account: account._id})
                     .expect(201)
                     .expect(res => res.body instanceof Conciliation)
             )
@@ -69,7 +69,7 @@ describe('AccountController', () => {
     it('/conciliation/:id (GET)', () => {
         return accountService.create(accountMock).pipe(
             mergeMap(account =>
-                service.create({...contactMock, account: account._id} as any)
+                service.create({...conciliationMock, account: account._id} as any)
             ),
             map(conciliation =>
                 request(app.getHttpServer())
@@ -87,7 +87,7 @@ describe('AccountController', () => {
                 accountService.create(accountMock).pipe(map(account => ({user, account})))
             ),
             mergeMap(compound =>
-                service.create({...contactMock, account: compound.account._id} as any).pipe(
+                service.create({...conciliationMock, account: compound.account._id} as any).pipe(
                     map(conciliation => ({...compound, conciliation}))
                 )
             ),
