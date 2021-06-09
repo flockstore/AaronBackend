@@ -13,6 +13,7 @@ import functionHelper from '../../../test/utilities/function.helper';
 import {AuthModule} from '../../auth/auth.module';
 import {AuthService} from '../../auth/auth.service';
 import {PermissionModule} from '../../permission/permission.module';
+import {MailProviderModule} from '../../provider/mail/provider.module';
 
 describe('UserController', () => {
 
@@ -29,6 +30,7 @@ describe('UserController', () => {
                 GroupModule,
                 UserModule,
                 AuthModule,
+                MailProviderModule
             ],
             controllers: [UserController]
         }).compile();

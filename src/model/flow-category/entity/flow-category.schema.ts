@@ -1,8 +1,6 @@
-import * as mongoose from 'mongoose';
 import {Schema} from 'mongoose';
-import * as mongoosePopulate from 'mongoose-autopopulate';
 
-export const FlowCategorySchema = new mongoose.Schema({
+export const FlowCategorySchema = new Schema({
     name: {type: String, required: true},
     income: {type: Boolean, default: true},
     description: {type: String, default: ''},
@@ -13,6 +11,3 @@ export const FlowCategorySchema = new mongoose.Schema({
         autopopulate: true
     },
 });
-
-
-FlowCategorySchema.plugin(mongoosePopulate);

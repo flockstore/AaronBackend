@@ -10,6 +10,7 @@ import {userMock} from '../model/user/entity/user.mock';
 import {GroupModule} from '../model/group/group.module';
 import {UserModule} from '../model/user/user.module';
 import {PermissionModule} from '../permission/permission.module';
+import {MailProviderModule} from '../provider/mail/provider.module';
 
 describe('AuthController', () => {
 
@@ -26,7 +27,8 @@ describe('AuthController', () => {
                 PermissionModule,
                 GroupModule,
                 UserModule,
-                AuthModule
+                AuthModule,
+                MailProviderModule
             ]
         }).compile();
 

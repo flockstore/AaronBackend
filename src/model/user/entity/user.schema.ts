@@ -1,6 +1,5 @@
 import * as mongoose from 'mongoose';
 import {Schema} from 'mongoose';
-import * as mongoosePopulate from 'mongoose-autopopulate';
 
 const validateEmail = (email) => {
     const re = /^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/;
@@ -27,5 +26,3 @@ export const UserSchema = new mongoose.Schema({
     password: {type: String, required: false},
     salt: {type: String, required: false}
 });
-
-UserSchema.plugin(mongoosePopulate);

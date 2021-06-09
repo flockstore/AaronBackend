@@ -1,8 +1,6 @@
-import * as mongoose from 'mongoose';
 import {Schema} from 'mongoose';
-import * as mongoosePopulate from 'mongoose-autopopulate';
 
-export const FlowSchema = new mongoose.Schema({
+export const FlowSchema = new Schema({
     value: {type: Number, required: true},
     category: {
         type: Schema.Types.ObjectId,
@@ -19,5 +17,3 @@ export const FlowSchema = new mongoose.Schema({
         }
     ]
 });
-
-FlowSchema.plugin(mongoosePopulate);

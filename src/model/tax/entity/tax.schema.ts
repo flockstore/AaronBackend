@@ -1,7 +1,6 @@
-import * as mongoose from 'mongoose';
-import * as mongoosePopulate from 'mongoose-autopopulate';
+import {Schema} from 'mongoose';
 
-export const TaxSchema = new mongoose.Schema({
+export const TaxSchema = new Schema({
     name: {
         type: String,
         required: true
@@ -11,6 +10,3 @@ export const TaxSchema = new mongoose.Schema({
         required: true
     }
 });
-
-
-TaxSchema.plugin(mongoosePopulate);

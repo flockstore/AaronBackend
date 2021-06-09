@@ -12,6 +12,7 @@ import {Observable} from 'rxjs';
 import {GroupDocument} from '../group/entity/group.entity';
 import {UserModule} from './user.module';
 import {PermissionModule} from '../../permission/permission.module';
+import {MailProviderModule} from '../../provider/mail/provider.module';
 
 describe('UserService', () => {
 
@@ -25,7 +26,8 @@ describe('UserService', () => {
                 rootMongooseTestModule(),
                 PermissionModule,
                 GroupModule,
-                UserModule
+                UserModule,
+                MailProviderModule
             ]
         }).compile();
 

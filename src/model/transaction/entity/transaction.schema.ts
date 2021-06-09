@@ -1,6 +1,4 @@
-import * as mongoose from 'mongoose';
 import {Schema} from 'mongoose';
-import * as mongoosePopulate from 'mongoose-autopopulate';
 
 function getCompound() {
     return {
@@ -19,7 +17,7 @@ function getCompound() {
     };
 }
 
-export const TransactionSchema = new mongoose.Schema({
+export const TransactionSchema = new Schema({
     baseValue: {type: Number, required: true},
     previousValue: {type: Number, required: true},
     exchangeValue: {type: Number, required: true},
@@ -33,6 +31,3 @@ export const TransactionSchema = new mongoose.Schema({
     related: getCompound(),
     compound: [getCompound()]
 });
-
-TransactionSchema.plugin(mongoosePopulate);
-

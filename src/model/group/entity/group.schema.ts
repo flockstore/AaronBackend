@@ -1,4 +1,4 @@
-import * as mongoose from 'mongoose';
+import {Schema} from 'mongoose';
 
 function getCRUDPermission() {
     return {
@@ -25,7 +25,7 @@ function getCRUDPermission() {
     };
 }
 
-export const GroupSchema = new mongoose.Schema({
+export const GroupSchema = new Schema({
     name: {type: String, required: true},
     color: {type: String, required: true},
     priority: {type: Number, required: true},

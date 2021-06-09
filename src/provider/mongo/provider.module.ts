@@ -2,6 +2,7 @@ import {Module} from '@nestjs/common';
 import {MongooseModule} from '@nestjs/mongoose';
 import {MongoConfigModule} from '../../config/mongo/config.module';
 import {MongoConfigService} from '../../config/mongo/config.service';
+import * as mongooseAutopopulate from 'mongoose-autopopulate';
 
 @Module({
     imports: [
@@ -11,7 +12,11 @@ import {MongoConfigService} from '../../config/mongo/config.service';
                 uri: mongoService.uri,
                 useCreateIndex: true,
                 useNewUrlParser: true,
-                useFindAndModify: false
+                useFindAndModify: false,
+                connectionFactory: (connection) => {
+                    connection.plugin(mongooseAutopopulate);
+                    return connection;
+                }
             }),
             inject: [MongoConfigService]
         })

@@ -1,8 +1,6 @@
-import * as mongoose from 'mongoose';
 import {Schema} from 'mongoose';
-import * as mongoosePopulate from 'mongoose-autopopulate';
 
-export const ContactSchema = new mongoose.Schema({
+export const ContactSchema = new Schema({
     name: {
         type: String,
         required: true
@@ -30,6 +28,3 @@ export const ContactSchema = new mongoose.Schema({
         autopopulate: true
     },
 });
-
-
-ContactSchema.plugin(mongoosePopulate);

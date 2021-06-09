@@ -1,6 +1,4 @@
-import * as mongoose from 'mongoose';
 import {Schema} from 'mongoose';
-import * as mongoosePopulate from 'mongoose-autopopulate';
 
 function getDiscount() {
     return {
@@ -13,7 +11,7 @@ function getDiscount() {
     };
 }
 
-export const InvoiceSchema = new mongoose.Schema({
+export const InvoiceSchema = new Schema({
     customer: {
         type: Schema.Types.ObjectId,
         ref: 'Contact',
@@ -43,5 +41,3 @@ export const InvoiceSchema = new mongoose.Schema({
     }],
     discounts: [getDiscount()]
 });
-
-InvoiceSchema.plugin(mongoosePopulate);

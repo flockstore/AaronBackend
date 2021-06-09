@@ -5,6 +5,7 @@ import {UserService} from '../model/user/user.service';
 import {PasswordSerializer} from './serializer/password.serializer';
 import {map, mergeMap} from 'rxjs/operators';
 import {TokenSerializer} from './serializer/token.serializer';
+import {MailService} from '../provider/mail/service/mail.service';
 
 @Injectable()
 export class AuthService {
@@ -12,7 +13,8 @@ export class AuthService {
     constructor(
         private userService: UserService,
         private passwordSerializer: PasswordSerializer,
-        private tokenSerializer: TokenSerializer
+        private tokenSerializer: TokenSerializer,
+        private mailService: MailService
     ) {}
 
     /**
@@ -45,6 +47,31 @@ export class AuthService {
             mergeMap(compound =>
                 this.userService.update(id, {password: compound.hash, salt: compound.salt.toString()} as any).pipe()
             )
+        );
+    }
+
+    /**
+     * Send an email to a registered user in order to recover a password.
+     * @param email       to recover.
+     */
+    public recovery(email: string): Observable<void> {
+        return this.userService.list({email}).pipe(
+            mergeMap(users => {
+
+                if (users.length < 1) {
+                    throwError(new NotFoundException('User with email not found'));
+                }
+
+                const user: UserDocument = users[0];
+
+                return this.mailService.sendMail(
+                    'recovery',
+                    user.email,
+                    'Password Recovery',
+                    user
+                );
+
+            })
         );
     }
 

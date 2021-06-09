@@ -11,6 +11,7 @@ import {JwtAuthGuard} from './guard/jwt-auth.guard';
 import {AuthController} from './auth.controller';
 import {JwtStrategy} from './strategy/jwt.strategy';
 import {PassportModule} from '@nestjs/passport';
+import {MailProviderModule} from '../provider/mail/provider.module';
 
 @Module({
     providers: [
@@ -30,6 +31,7 @@ import {PassportModule} from '@nestjs/passport';
         GlobalConfigModule,
         UserModule,
         PassportModule,
+        MailProviderModule,
         JwtModule.registerAsync({
             imports: [GlobalConfigModule],
             useFactory: async (authConfigService: AuthConfigService) => ({

@@ -8,6 +8,7 @@ import {PolicyGuard} from '../../permission/guard/policy.guard';
 import {CheckPolicies} from '../../permission/interface/policy-handler.interface';
 import {DefaultPolicyHandler} from '../../permission/ability/default-policy.handler';
 import {Action} from '../../permission/interface/action.enum';
+import {Public} from '../../auth/guard/jwt-auth.guard';
 
 @Controller('user')
 export class UserController {
@@ -15,9 +16,7 @@ export class UserController {
     constructor(private userService: UserService) {
     }
 
-    @Post()
-    @UseGuards(PolicyGuard)
-    @CheckPolicies(DefaultPolicyHandler.check(Action.Manage, User))
+    @Post() @Public()
     create(@Body() user: UserCreate): Observable<UserDocument> {
         return this.userService.create(user);
     }

@@ -1,4 +1,4 @@
-import {Body, Controller, Post} from '@nestjs/common';
+import {Body, Controller, Param, Post} from '@nestjs/common';
 import {AuthService} from './auth.service';
 import {Observable} from 'rxjs';
 import {UserLoginDto} from './entity/user-login.dto';
@@ -13,6 +13,12 @@ export class AuthController {
     @Post('login')
     public login(@Body() login: UserLoginDto): Observable<string> {
         return this.authService.login(login.email, login.password);
+    }
+
+    @Public()
+    @Post('recovery')
+    public recovery(@Param('email') email: string): Observable<void> {
+        return this.authService.recovery(email);
     }
 
 }

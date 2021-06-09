@@ -6,6 +6,7 @@ import {PolicyGuard} from '../../permission/guard/policy.guard';
 import {CheckPolicies} from '../../permission/interface/policy-handler.interface';
 import {DefaultPolicyHandler} from '../../permission/ability/default-policy.handler';
 import {Action} from '../../permission/interface/action.enum';
+import {Public} from '../../auth/guard/jwt-auth.guard';
 
 @Controller('group')
 export class GroupController {
@@ -13,10 +14,9 @@ export class GroupController {
     constructor(private groupService: GroupService) {
     }
 
-    @Post()
-    @UseGuards(PolicyGuard)
-    @CheckPolicies(DefaultPolicyHandler.check(Action.Manage, Group))
+    @Post() @Public()
     create(@Body() group: Group): Observable<GroupDocument> {
+        console.log(group);
         return this.groupService.create(group);
     }
 
