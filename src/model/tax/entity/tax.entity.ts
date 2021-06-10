@@ -1,7 +1,10 @@
 import {Document} from 'mongoose';
 import {IsNotEmpty} from 'class-validator';
+import {PartialModel} from '../../../common/model/partial-model';
 
-export class Tax extends Document {
+export class TaxPartial extends PartialModel {}
+
+export class Tax extends TaxPartial {
 
     @IsNotEmpty()
     name: string;

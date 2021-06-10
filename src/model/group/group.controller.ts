@@ -14,9 +14,10 @@ export class GroupController {
     constructor(private groupService: GroupService) {
     }
 
-    @Post() @Public()
+    @Post()
+    @UseGuards(PolicyGuard)
+    @CheckPolicies(DefaultPolicyHandler.check(Action.Manage, Group))
     create(@Body() group: Group): Observable<GroupDocument> {
-        console.log(group);
         return this.groupService.create(group);
     }
 

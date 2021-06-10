@@ -1,8 +1,11 @@
 import {Document} from 'mongoose';
 import {IsNotEmpty} from 'class-validator';
 import {Account} from '../../account/entity/account.entity';
+import {PartialModel} from '../../../common/model/partial-model';
 
 export class CompoundMeta {}
+
+export class TransactionPartial extends PartialModel {}
 
 export class TransactionCompound {
 
@@ -15,7 +18,7 @@ export class TransactionCompound {
 
 }
 
-export class Transaction extends Document {
+export class Transaction extends TransactionPartial {
 
     @IsNotEmpty()
     baseValue: number;

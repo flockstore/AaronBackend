@@ -2,7 +2,7 @@ import {BadRequestException, Injectable, NotFoundException} from '@nestjs/common
 import {InjectConnection, InjectModel} from '@nestjs/mongoose';
 import {Connection, Error, Model} from 'mongoose';
 import {ModelService} from '../../common/service/model.service';
-import {Conciliation, ConciliationDocument} from './entiy/conciliation.entity';
+import {Conciliation, ConciliationDocument, ConciliationPartial} from './entiy/conciliation.entity';
 import {from, Observable, throwError} from 'rxjs';
 import {UserDocument} from '../user/entity/user.entity';
 import {TransactionService} from '../transaction/transaction.service';
@@ -11,7 +11,7 @@ import {Transaction} from '../transaction/entity/transaction.entity';
 import {AccountDocument} from '../account/entity/account.entity';
 
 @Injectable()
-export class ConciliationService extends ModelService<ConciliationDocument, ConciliationDocument> {
+export class ConciliationService extends ModelService<ConciliationDocument, ConciliationPartial> {
 
     constructor(
         @InjectModel(Conciliation.name) private conciliationModel: Model<ConciliationDocument>,

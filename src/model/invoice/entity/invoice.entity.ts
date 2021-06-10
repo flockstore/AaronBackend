@@ -3,8 +3,11 @@ import {IsNotEmpty} from 'class-validator';
 import {Contact} from '../../contact/entity/contact.entity';
 import {ProductDiscount, ProductDocument} from '../../product/entity/product.entity';
 import {TaxDocument} from '../../tax/entity/tax.entity';
+import {PartialModel} from '../../../common/model/partial-model';
 
-export class Invoice extends Document {
+export class InvoicePartial extends PartialModel {}
+
+export class Invoice extends InvoicePartial {
 
     @IsNotEmpty()
     customer: string | Contact;

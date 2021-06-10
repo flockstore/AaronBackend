@@ -1,7 +1,10 @@
 import {Document} from 'mongoose';
 import {IsNotEmpty} from 'class-validator';
+import {PartialModel} from '../../../common/model/partial-model';
 
-export class Group extends Document {
+export class GroupPartial extends PartialModel {}
+
+export class Group extends GroupPartial {
 
     @IsNotEmpty()
     name: string;

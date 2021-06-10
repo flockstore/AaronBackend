@@ -1,8 +1,11 @@
 import {Document} from 'mongoose';
 import {IsNotEmpty} from 'class-validator';
 import {DiscountType} from '../../invoice/entity/invoice.entity';
+import {PartialModel} from '../../../common/model/partial-model';
 
-export class Product extends Document {
+export class ProductPartial extends PartialModel {}
+
+export class Product extends ProductPartial {
 
     @IsNotEmpty()
     name: string;
