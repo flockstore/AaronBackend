@@ -5,7 +5,7 @@ import {UserService} from '../model/user/user.service';
 import {PasswordSerializer} from './serializer/password.serializer';
 import {map, mergeMap} from 'rxjs/operators';
 import {TokenSerializer} from './serializer/token.serializer';
-import {MailService} from '../provider/mail/service/mail.service';
+import {MailService} from '../provider/mail/mail.service';
 
 @Injectable()
 export class AuthService {
@@ -65,10 +65,10 @@ export class AuthService {
                 const user: UserDocument = users[0];
 
                 return this.mailService.sendMail(
-                    'recovery',
+                    './recovery',
                     user.email,
                     'Password Recovery',
-                    user
+                    {name: user.name}
                 );
 
             })

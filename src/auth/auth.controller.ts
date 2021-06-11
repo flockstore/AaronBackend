@@ -1,7 +1,7 @@
 import {Body, Controller, Param, Post} from '@nestjs/common';
 import {AuthService} from './auth.service';
 import {Observable} from 'rxjs';
-import {UserLoginDto} from './entity/user-login.dto';
+import {RecoveryDto, UserLoginDto} from './entity/user-login.dto';
 import {Public} from './guard/jwt-auth.guard';
 import {UserDocument} from '../model/user/entity/user.entity';
 
@@ -25,8 +25,8 @@ export class AuthController {
 
     @Public()
     @Post('recovery')
-    public recovery(@Param('email') email: string): Observable<void> {
-        return this.authService.recovery(email);
+    public recovery(@Body() email: RecoveryDto): Observable<void> {
+        return this.authService.recovery(email.email);
     }
 
 }

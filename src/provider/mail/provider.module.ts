@@ -4,7 +4,7 @@ import {EmailConfigModule} from '../../config/mail/config.module';
 import {EmailConfigService} from '../../config/mail/config.service';
 import { join } from 'path';
 import {HandlebarsAdapter} from '@nestjs-modules/mailer/dist/adapters/handlebars.adapter';
-import {MailService} from './service/mail.service';
+import {MailService} from './mail.service';
 
 @Module({
     imports: [
@@ -16,7 +16,7 @@ import {MailService} from './service/mail.service';
                     secure: emailConfigService.secure,
                     auth: {
                         user: emailConfigService.user,
-                        password: emailConfigService.password
+                        pass: emailConfigService.password
                     }
                 },
                 defaults: {

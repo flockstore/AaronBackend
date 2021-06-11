@@ -20,6 +20,7 @@ export class MailService {
         subject: string,
         context: any
     ): Observable<void> {
+
         return from(this.mailerService.sendMail({
             to,
             subject,

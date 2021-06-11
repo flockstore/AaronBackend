@@ -9,3 +9,8 @@ export class UserLoginDto {
     password: string;
 
 }
+
+export class RecoveryDto {
+    @IsNotEmpty()
+    email: string;
+}
