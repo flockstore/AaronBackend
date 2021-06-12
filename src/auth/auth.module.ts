@@ -12,10 +12,13 @@ import {AuthController} from './auth.controller';
 import {JwtStrategy} from './strategy/jwt.strategy';
 import {PassportModule} from '@nestjs/passport';
 import {MailProviderModule} from '../provider/mail/provider.module';
+import {RecoveryService} from './recovery.service';
+import {CacheProviderModule} from '../provider/cache/provider.module';
 
 @Module({
     providers: [
         PasswordSerializer,
+        RecoveryService,
         AuthService,
         TokenSerializer,
         JwtStrategy,
@@ -32,6 +35,7 @@ import {MailProviderModule} from '../provider/mail/provider.module';
         UserModule,
         PassportModule,
         MailProviderModule,
+        CacheProviderModule,
         JwtModule.registerAsync({
             imports: [GlobalConfigModule],
             useFactory: async (authConfigService: AuthConfigService) => ({

@@ -1,11 +1,10 @@
 import {Injectable, NotFoundException, UnauthorizedException} from '@nestjs/common';
-import {Observable, throwError} from 'rxjs';
+import {Observable} from 'rxjs';
 import {UserDocument} from '../model/user/entity/user.entity';
 import {UserService} from '../model/user/user.service';
 import {PasswordSerializer} from './serializer/password.serializer';
 import {map, mergeMap} from 'rxjs/operators';
 import {TokenSerializer} from './serializer/token.serializer';
-import {MailService} from '../provider/mail/mail.service';
 
 @Injectable()
 export class AuthService {
@@ -13,8 +12,7 @@ export class AuthService {
     constructor(
         private userService: UserService,
         private passwordSerializer: PasswordSerializer,
-        private tokenSerializer: TokenSerializer,
-        private mailService: MailService
+        private tokenSerializer: TokenSerializer
     ) {}
 
     /**
@@ -28,7 +26,7 @@ export class AuthService {
                 this.passwordSerializer.validate(selectedUser.password, password).pipe(
                     map(processedPassword => {
                         if (!processedPassword) {
-                            throwError(new UnauthorizedException('Invalid Password'));
+                            throw new UnauthorizedException('Invalid Password');
                         }
                         return this.tokenSerializer.encryptPayload<any>({_id: selectedUser._id});
                     })
@@ -50,36 +48,11 @@ export class AuthService {
         );
     }
 
-    /**
-     * Send an email to a registered user in order to recover a password.
-     * @param email       to recover.
-     */
-    public recovery(email: string): Observable<void> {
-        return this.userService.list({email}).pipe(
-            mergeMap(users => {
-
-                if (users.length < 1) {
-                    throwError(new NotFoundException('User with email not found'));
-                }
-
-                const user: UserDocument = users[0];
-
-                return this.mailService.sendMail(
-                    './recovery',
-                    user.email,
-                    'Password Recovery',
-                    {name: user.name}
-                );
-
-            })
-        );
-    }
-
     private findMatchUser(email: string): Observable<UserDocument> {
         return this.userService.list({email, password: {$exists: true}}).pipe(
             map(user => {
                 if (user.length === 0) {
-                    throwError(new NotFoundException());
+                    throw new NotFoundException();
                 }
                 return user[0];
             })

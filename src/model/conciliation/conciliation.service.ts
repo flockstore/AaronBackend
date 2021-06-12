@@ -3,7 +3,7 @@ import {InjectConnection, InjectModel} from '@nestjs/mongoose';
 import {Connection, Error, Model} from 'mongoose';
 import {ModelService} from '../../common/service/model.service';
 import {Conciliation, ConciliationDocument, ConciliationPartial} from './entiy/conciliation.entity';
-import {from, Observable, throwError} from 'rxjs';
+import {from, Observable} from 'rxjs';
 import {UserDocument} from '../user/entity/user.entity';
 import {TransactionService} from '../transaction/transaction.service';
 import {map, mergeMap} from 'rxjs/operators';
@@ -27,11 +27,11 @@ export class ConciliationService extends ModelService<ConciliationDocument, Conc
             mergeMap(record => {
 
                 if (!record) {
-                    return throwError(new NotFoundException('Conciliation not found'));
+                    throw new NotFoundException('Conciliation not found');
                 }
 
                 if (record.authorized) {
-                    return throwError(new BadRequestException('Conciliation already authorized'));
+                    throw new BadRequestException('Conciliation already authorized');
                 }
 
                 return from(this.connection.startSession()).pipe(
