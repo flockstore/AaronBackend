@@ -10,7 +10,7 @@ import {Flow, FlowDocument} from './entity/flow.entity';
 import {FlowCategoryService} from '../flow-category/flow-category.service';
 import {FlowCategoryModule} from '../flow-category/flow-category.module';
 import {flowCategoryMock} from '../flow-category/entity/flow-category.mock';
-import {FlowCategory} from '../flow-category/entity/flow-category.entity';
+import {FlowCategory, FlowCategoryDocument} from '../flow-category/entity/flow-category.entity';
 import {Observable} from 'rxjs';
 import {TransactionModule} from '../transaction/transaction.module';
 
@@ -45,7 +45,7 @@ describe('FlowService', () => {
         createWithCategory().subscribe(
             response => {
                 expect(response.flow).toHaveProperty('_id');
-                expect((response.flow.category as FlowCategory)._id).toStrictEqual(response.category._id);
+                expect((response.flow.category as FlowCategoryDocument)._id).toStrictEqual((response.category as FlowCategoryDocument)._id);
                 done();
             },
             error => {
@@ -58,7 +58,7 @@ describe('FlowService', () => {
     it('should update a bank flow', done => {
 
         createWithCategory().pipe(
-            mergeMap(flowCompound => service.update(flowCompound.flow._id, {notes: 'Invoice 777'} as FlowDocument))
+            mergeMap(flowCompound => service.update((flowCompound.flow as FlowDocument)._id, {notes: 'Invoice 777'} as FlowDocument))
         ).subscribe(
             response => {
                 expect(response.notes).toBe('Invoice 777');
@@ -75,7 +75,7 @@ describe('FlowService', () => {
     it('should soft delete an bank flow', done => {
 
         createWithCategory().pipe(
-            mergeMap(flowCompound => service.delete(flowCompound.flow._id))
+            mergeMap(flowCompound => service.delete((flowCompound.flow as FlowDocument)._id))
         ).subscribe(
             response => {
                 expect(response).toBe(true);

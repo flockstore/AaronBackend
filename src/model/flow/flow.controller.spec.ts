@@ -12,7 +12,7 @@ import {FlowController} from './flow.controller';
 import {FlowCategoryService} from '../flow-category/flow-category.service';
 import {flowCategoryMock} from '../flow-category/entity/flow-category.mock';
 import {flowMock} from './entity/flowMock';
-import {Flow} from './entity/flow.entity';
+import {Flow, FlowDocument} from './entity/flow.entity';
 import functionHelper from '../../../test/utilities/function.helper';
 import {FlowModule} from './flow.module';
 import {FlowCategoryModule} from '../flow-category/flow-category.module';
@@ -50,7 +50,7 @@ describe('FlowController', () => {
                     .post('/flow')
                     .send({...flowMock, category: category._id})
                     .expect(201)
-                    .expect(res => res.body instanceof Flow && res.body._id.toString() === category._id)
+                    .expect(res => res.body instanceof Flow && (res.body as FlowDocument)._id.toString() === category._id)
                 ).pipe(
                     map(flow => ({flow, category}))
                 )
@@ -63,7 +63,7 @@ describe('FlowController', () => {
         return functionHelper.createWithCategory(categoryService, service).pipe(
             map(account =>
                 request(app.getHttpServer())
-                    .get('/flow/' + account.flow._id)
+                    .get('/flow/' + (account.flow as FlowDocument)._id)
                     .expect(200)
                     .expect(res => res.body instanceof Flow)
             )
@@ -74,7 +74,7 @@ describe('FlowController', () => {
         return functionHelper.createWithCategory(categoryService, service).pipe(
             map(category =>
                 request(app.getHttpServer())
-                    .put('/flow/' + category.flow._id)
+                    .put('/flow/' + (category.flow as FlowDocument)._id)
                     .send({notes: 'Invoice 777'})
                     .expect(200)
                     .expect(res => res.body instanceof Flow && res.body.notes === 'Invoice 777')
@@ -86,7 +86,7 @@ describe('FlowController', () => {
         return functionHelper.createWithCategory(categoryService, service).pipe(
             map(category =>
                 request(app.getHttpServer())
-                    .delete('/flow/' + category.flow._id)
+                    .delete('/flow/' + (category.flow as FlowDocument)._id)
                     .expect(200)
                     .expect(res => res.body === true)
             )

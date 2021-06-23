@@ -15,7 +15,7 @@ import {AccountService} from '../account/account.service';
 import {UserService} from '../user/user.service';
 import {conciliationMock} from './entiy/conciliation.mock';
 import {accountMock} from '../account/entity/account.mock';
-import {Conciliation} from './entiy/conciliation.entity';
+import {Conciliation, ConciliationDocument} from './entiy/conciliation.entity';
 import {userMock} from '../user/entity/user.mock';
 import {from} from 'rxjs';
 
@@ -75,7 +75,7 @@ describe('AccountController', () => {
                 request(app.getHttpServer())
                     .get('/conciliation/' + conciliation._id)
                     .expect(200)
-                    .expect(res => res.body instanceof Conciliation && res.body._id === conciliation._id)
+                    .expect(res => res.body instanceof Conciliation && (res.body as ConciliationDocument)._id === conciliation._id)
             )
         ).toPromise();
     });

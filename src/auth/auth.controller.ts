@@ -1,7 +1,7 @@
 import {Body, Controller, Post} from '@nestjs/common';
 import {AuthService} from './auth.service';
 import {Observable} from 'rxjs';
-import {RecoveryDto, UserLoginDto} from './entity/user-login.dto';
+import {PasswordUpdateDto, RecoveryDto, UserLoginDto, ValidateRecoveryDto} from './entity/user-login.dto';
 import {Public} from './guard/jwt-auth.guard';
 import {UserDocument} from '../model/user/entity/user.entity';
 import {RecoveryService} from './recovery.service';
@@ -28,6 +28,18 @@ export class AuthController {
     @Post('recovery')
     public recovery(@Body() email: RecoveryDto): Observable<void> {
         return this.recoveryService.sendRecovery(email.email);
+    }
+
+    @Public()
+    @Post('validate-recovery')
+    public validateRecovery(@Body() recovery: ValidateRecoveryDto): Observable<boolean> {
+        return this.recoveryService.validateRecovery(recovery.email, recovery.code);
+    }
+
+    @Public()
+    @Post('update-password')
+    public updatePassword(@Body() recovery: PasswordUpdateDto): Observable<boolean> {
+        return this.recoveryService.updatePassword(recovery.email, recovery.code, recovery.password);
     }
 
 }
