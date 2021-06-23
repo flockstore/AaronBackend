@@ -5,6 +5,7 @@ import {PasswordUpdateDto, RecoveryDto, UserLoginDto, ValidateRecoveryDto} from 
 import {Public} from './guard/jwt-auth.guard';
 import {UserDocument} from '../model/user/entity/user.entity';
 import {RecoveryService} from './recovery.service';
+import {map} from 'rxjs/operators';
 
 @Controller('auth')
 export class AuthController {
@@ -13,8 +14,10 @@ export class AuthController {
 
     @Public()
     @Post('login')
-    public login(@Body() login: UserLoginDto): Observable<string> {
-        return this.authService.login(login.email, login.password);
+    public login(@Body() login: UserLoginDto): Observable<{token: string}> {
+        return this.authService.login(login.email, login.password).pipe(
+            map(token => ({token}))
+        );
     }
 
     // Must be removed when verification via mail created
